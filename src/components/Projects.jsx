@@ -22,6 +22,7 @@ const Projects = () => {
               "MySQL",
               "Socket.io",
             ]}
+            gitLink="https://github.com/Faruk314/UnityNetWeb"
           />
           <ProjectCard
             title={"Ecommerc Site"}

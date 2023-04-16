@@ -2,9 +2,9 @@ import React from "react";
 
 import { RiGithubLine } from "react-icons/ri";
 
-const ProjectCard = ({ title, desc, technologies }) => {
+const ProjectCard = ({ title, desc, technologies, gitLink }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:cursor-pointer">
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
         <img
           className="w-full h-[20rem] object-cover object-center"
@@ -14,25 +14,27 @@ const ProjectCard = ({ title, desc, technologies }) => {
         <div className="p-4">
           <h3 className="font-bold text-indigo-600 text-lg mb-2">{title}</h3>
           <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            My Facebook clone is a web-based social media platform that
+            replicates many of the core features of the original Facebook site.
+            The application includes user profiles, friend connections,
+            notifications, news feeds, multimedia posts, likes and comments, and
+            real-time messaging using Socket.IO. The front-end was developed
+            using React, while the back-end was built with Node.js and Express.
           </p>
 
           <div className="flex space-x-2 mt-3">
-            <button
-              href="https://github.com"
-              className="bg-gray-900 text-white px-4 rounded-md font-medium hover:bg-gray-800"
-            >
-              Live Demo
+            <button className="bg-gray-800 text-white px-4 py-2 rounded-md font-medium hover:bg-gray-700 flex items-center space-x-2">
+              <span className="icon">visibility</span>
+              <span>Live Demo</span>
             </button>
 
-            <button
-              href="https://github.com"
-              className="bg-gray-900 text-white px-4 py-2 rounded-md font-medium hover:bg-gray-800 flex items-center space-x-1"
+            <a
+              href={gitLink}
+              className="bg-gray-800 text-white px-4 py-2 rounded-md font-medium hover:bg-gray-700 flex items-center space-x-2"
             >
               <RiGithubLine />
-              <span>Git Hub</span>
-            </button>
+              <span>GitHub</span>
+            </a>
           </div>
         </div>
         <div className="bg-gray-100 p-4">

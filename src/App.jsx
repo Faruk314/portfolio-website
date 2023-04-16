@@ -11,7 +11,6 @@ function App() {
       <Home />
       <Technologies />
       <Projects />
-      <Contact />
     </>
   );
 }

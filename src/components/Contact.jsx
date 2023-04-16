@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="flex flex-col items-center justify-center h-screen"
+      className="flex flex-col items-center justify-center h-screen px-4"
     >
       <h1 className="text-4xl font-bold mb-6">Contact Me</h1>
       <p className="text-gray-500 text-lg mb-12">

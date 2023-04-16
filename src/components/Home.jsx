@@ -1,5 +1,5 @@
 import React from "react";
-import { GrView } from "react-icons/gr";
+import { AiOutlineGithub } from "react-icons/ai";
 
 const Home = () => {
   const scrollToPage = (id) => {
@@ -8,16 +8,8 @@ const Home = () => {
   };
 
   return (
-    <div id="home" className="bg-gray-100 h-[50rem] flex items-center">
+    <div id="home" className="bg-white h-[55rem] flex items-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Hi, I'm Faruk Spahic
-          </h1>
-          <p className="text-xl font-medium text-gray-600">
-            Full Stack Web Developer
-          </p>
-        </div> */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <img
@@ -28,28 +20,35 @@ const Home = () => {
           </div>
           <div>
             <div className="">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                Hi, I'm Faruk Spahic
+              <h1 className="text-3xl font-bold text-gray-900 mb-4 flex space-x-2">
+                <span>Hi, I'm Faruk Spahic</span>{" "}
+                <span className="emoji">👋</span>
               </h1>
-              <p className="text-xl font-medium text-gray-600">
-                Full Stack Web Developer
+              <p className="text-xl font-medium text-gray-600 flex space-x-2">
+                <span>Full Stack Web Developer</span>
+
+                <a href="https://github.com/Faruk314">
+                  <AiOutlineGithub className="" size={25} />
+                </a>
               </p>
             </div>
-            <p className="text-gray-600 leading-loose pt-4">
-              Hello, I'm Faruk Spahic, a Full Stack Developer with a passion for
-              creating dynamic web applications that solve real-world problems.I
-              have experience working with a range of technologies, including
-              HTML, CSS, JavaScript, Node.js, React, and more. As a Full Stack
-              Developer, I'm skilled in both front-end and back-end development,
-              which allows me to create seamless user experiences from start to
-              finish.
+            <p className="leading-loose pt-4">
+              Hi, I'm Faruk Spahic, a Full Stack Developer specializing in
+              creating dynamic web applications that solve real-world problems.
+              With skills in both front-end and back-end development, I can
+              deliver seamless user experiences. From e-commerce to social media
+              platforms, I have experience working on a range of web
+              applications, both large and small. I'm always looking to learn
+              and incorporate new technologies to create innovative and
+              impactful solutions that make a difference.
             </p>
-            <div className="mt-6">
+
+            <div className="mt-5">
               <button
                 onClick={() => scrollToPage("projects")}
-                className="bg-gray-900 text-white px-4 py-2 rounded-md font-medium hover:bg-gray-800 flex items-center space-x-2"
+                className="bg-gray-800 text-white px-4 py-2 rounded-md font-medium hover:bg-gray-700 flex items-center space-x-2"
               >
-                <GrView className="bg-white" />
+                <span className="icon"> visibility</span>
                 <span>View My Projects</span>
               </button>
             </div>

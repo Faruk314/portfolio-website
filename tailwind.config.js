@@ -2,9 +2,24 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      sans: ["Roboto", "Helvetica", "Arial", "sans-serif"],
+      emoji: [
+        "Noto Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Arial Unicode MS",
+        "sans-serif",
+      ],
+      icon: ["Material Icons", "sans-serif"],
+    },
     extend: {
-      fontFamily: {
-        sans: ["Montserrat", "sans-serif"],
+      typography: {
+        DEFAULT: {
+          css: {
+            fontFamily: "sans",
+          },
+        },
       },
     },
   },

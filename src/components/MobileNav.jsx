@@ -5,10 +5,10 @@ const MobileNav = ({ scrollToPage }) => {
     <div className="absolute top-10 right-0 md:hidden">
       <div className="bg-gray-800 py-4">
         <span
-          onClick={() => scrollToPage("home")}
+          onClick={() => scrollToPage("about")}
           className="block px-4 py-2 text-white hover:bg-gray-700 hover:cursor-pointer"
         >
-          Home
+          About
         </span>
         <span
           onClick={() => scrollToPage("technologies")}

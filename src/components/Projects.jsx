@@ -13,7 +13,7 @@ const Projects = () => {
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProjectCard
-            title={"Facebook Clone"}
+            title={"UnityNet"}
             technologies={[
               "React",
               "Typescript",

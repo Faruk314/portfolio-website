@@ -60,8 +60,11 @@ const Technologies = () => {
               Frontend
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {technologies.slice(0, 4).map((technology) => (
-                <div className="bg-gray-100 shadow-lg rounded-lg overflow-hidden flex flex-col items-center justify-center">
+              {technologies.slice(0, 4).map((technology, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-100 shadow-lg rounded-lg overflow-hidden flex flex-col items-center justify-center"
+                >
                   <div className="bg-white w-[10rem] h-[8rem] flex items-center justify-center">
                     <img
                       className="w-[7rem] h-[7rem] object-contain"
@@ -82,8 +85,11 @@ const Technologies = () => {
               Backend
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {technologies.slice(4).map((technology) => (
-                <div className="bg-gray-100 shadow-lg rounded-lg overflow-hidden flex flex-col items-center justify-center">
+              {technologies.slice(4).map((technology, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-100 shadow-lg rounded-lg overflow-hidden flex flex-col items-center justify-center"
+                >
                   <div className="bg-white w-[10rem] h-[8rem] flex items-center justify-center lg:h-[10rem]">
                     <img
                       className="w-[7rem] h-[7rem] object-contain"

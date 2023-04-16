@@ -14,12 +14,12 @@ const ProjectCard = ({ title, desc, technologies, gitLink }) => {
         <div className="p-4">
           <h3 className="font-bold text-indigo-600 text-lg mb-2">{title}</h3>
           <p className="text-gray-700 text-base">
-            My Facebook clone is a web-based social media platform that
-            replicates many of the core features of the original Facebook site.
-            The application includes user profiles, friend connections,
-            notifications, news feeds, multimedia posts, likes and comments, and
-            real-time messaging using Socket.IO. The front-end was developed
-            using React, while the back-end was built with Node.js and Express.
+            UnityNet is a web-based social media platform that replicates many
+            of the core features of the original Facebook site. The application
+            includes user profiles, friend connections, notifications, news
+            feeds, multimedia posts, likes and comments, and real-time messaging
+            using Socket.IO. The front-end was developed using React, while the
+            back-end was built with Node.js and Express.
           </p>
 
           <div className="flex space-x-2 mt-3">

@@ -1,14 +1,14 @@
 import React from "react";
 import { AiOutlineGithub } from "react-icons/ai";
 
-const Home = () => {
+const About = () => {
   const scrollToPage = (id) => {
     const page = document.getElementById(id);
     page.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <div id="home" className="bg-white h-[55rem] flex items-center">
+    <div id="about" className="bg-white h-[55rem] flex items-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
@@ -59,4 +59,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 import MobileNav from "./MobileNav";
 
 const Navbar = () => {
@@ -44,11 +45,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
-              <span className="font-bold text-3xl">Faruk Spahic</span>
-            </a>
-          </div>
+          <span
+            onClick={() => scrollToPage("about")}
+            className="font-bold text-3xl hover:cursor-pointer"
+          >
+            Faruk Spahic
+          </span>
 
           <div className="relative">
             <GiHamburgerMenu
@@ -63,11 +65,10 @@ const Navbar = () => {
           <div className="hidden md:flex items-center justify-center">
             <div className="flex items-center text-1xl font-bold">
               <span
-                onClick={() => scrollToPage("home")}
-                href="/"
+                onClick={() => scrollToPage("about")}
                 className="ml-8 hover:text-gray-300 hover:cursor-pointer"
               >
-                Home
+                About
               </span>
               <span
                 onClick={() => scrollToPage("technologies")}
@@ -80,12 +81,6 @@ const Navbar = () => {
                 className="ml-8 hover:text-gray-300 hover:cursor-pointer"
               >
                 Projects
-              </span>
-              <span
-                onClick={() => scrollToPage("contact")}
-                className="ml-8 hover:text-gray-300 hover:cursor-pointer"
-              >
-                Contact
               </span>
             </div>
           </div>

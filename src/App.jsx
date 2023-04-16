@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
-import About from "./components/About";
+import Technologies from "./components/Technologies";
 import Contact from "./components/Contact";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       <Navbar />
       <Home />
-      <About />
+      <Technologies />
       <Projects />
       <Contact />
     </>

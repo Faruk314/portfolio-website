@@ -50,7 +50,7 @@ const Technologies = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-40">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Technologies I'm Using
+            Technologies I am Using
           </h2>
         </div>
 

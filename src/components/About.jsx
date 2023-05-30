@@ -13,17 +13,17 @@ const About = () => {
       <div className="flex flex-col items-center justify-center md:grid md:grid-cols-2 md:max-w-5xl md:mx-auto">
         <img className="h-[20rem] md:h-[25rem]" src={me} alt="Portfolio" />
 
-        <div className="flex flex-col items-center text-center px-2 md:text-left md:items-start">
+        <div className="flex flex-col items-center px-2 text-center md:text-left md:items-start">
           <div className="flex flex-col items-center md:items-start">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex space-x-2">
+            <h1 className="flex mb-4 space-x-2 text-2xl font-bold text-gray-900 md:text-3xl">
               <span className="">Hi, I am Faruk Spahic</span>{" "}
               <span className="emoji">👋</span>
             </h1>
-            <p className="text-xl font-medium text-gray-600 flex space-x-2">
+            <p className="flex space-x-2 text-xl font-medium text-gray-600">
               Full Stack Web Developer
             </p>
           </div>
-          <p className="leading-loose pt-4">
+          <p className="pt-4 leading-loose">
             Hi, I am Faruk Spahic, a Full Stack Developer specializing in
             creating dynamic web applications that solve real-world problems.
             With skills in both front-end and back-end development, I can
@@ -34,11 +34,11 @@ const About = () => {
             make a difference.
           </p>
 
-          <div className="flex space-x-1 items-center my-5">
+          <div className="flex items-center my-5 space-x-1">
             <a href="">
-              <AiFillLinkedin size={30} />
+              <AiFillLinkedin size={30} className="text-gray-800" />
             </a>
-            <a href="https://github.com/Faruk314">
+            <a href="https://github.com/Faruk314" className="text-gray-800">
               <AiOutlineGithub className="" size={30} />
             </a>
           </div>
@@ -46,7 +46,7 @@ const About = () => {
           <div className="">
             <button
               onClick={() => scrollToPage("projects")}
-              className="bg-gray-800 text-white px-4 py-2 rounded-md font-medium hover:bg-gray-700 flex items-center space-x-2"
+              className="flex items-center px-4 py-2 space-x-2 font-medium text-white bg-gray-800 rounded-md hover:bg-gray-700"
             >
               <span className="icon"> visibility</span>
               <span>View My Projects</span>

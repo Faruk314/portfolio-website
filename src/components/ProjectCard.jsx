@@ -2,7 +2,14 @@ import React, { useState } from "react";
 
 import { RiGithubLine } from "react-icons/ri";
 
-const ProjectCard = ({ title, desc, technologies, gitLink, image }) => {
+const ProjectCard = ({
+  title,
+  desc,
+  technologies,
+  gitLink,
+  image,
+  liveLink,
+}) => {
   return (
     // <div className="relative overflow-hidden bg-white rounded-lg shadow-lg hover:cursor-pointer">
     //   <div className="overflow-hidden bg-white rounded-lg shadow-lg">
@@ -42,7 +49,7 @@ const ProjectCard = ({ title, desc, technologies, gitLink, image }) => {
     //   </button>
     // </div>
     <div className="shadow-md md:flex">
-      <img src={image} alt="" className="w-full h-[25rem]" />
+      <img src={image} alt="" className="w-[33rem] h-[25rem]" />
 
       <div className="flex flex-col justify-between w-full bg-white">
         <div className="p-4">
@@ -51,14 +58,24 @@ const ProjectCard = ({ title, desc, technologies, gitLink, image }) => {
           <p className="my-5 text-gray-800">{desc}</p>
 
           <div className="flex space-x-2">
-            <button className="flex items-center px-4 py-2 space-x-2 font-medium text-white bg-gray-800 rounded-md hover:bg-gray-700">
-              <span className="icon"> visibility</span>
-              <span>Live</span>
-            </button>
-            <button className="flex items-center px-4 py-2 space-x-2 font-medium text-white bg-gray-800 rounded-md hover:bg-gray-700">
-              <RiGithubLine size={20} />
-              <span>gitHub</span>
-            </button>
+            {liveLink && (
+              <a
+                href={liveLink}
+                className="flex items-center px-4 py-2 space-x-2 font-medium text-white bg-gray-800 rounded-md hover:bg-gray-700"
+              >
+                <span className="icon">visibility</span>
+                <span>Live</span>
+              </a>
+            )}
+            {gitLink && (
+              <a
+                href={gitLink}
+                className="flex items-center px-4 py-2 space-x-2 font-medium text-white bg-gray-800 rounded-md hover:bg-gray-700"
+              >
+                <RiGithubLine size={20} />
+                <span>gitHub</span>
+              </a>
+            )}
           </div>
         </div>
 

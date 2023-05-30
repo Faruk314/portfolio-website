@@ -18,7 +18,7 @@ const Projects = () => {
               "React",
               "Typescript",
               "NodeJS",
-              "Tailwind CSS",
+              "Tailwind",
               "MySQL",
               "Socket.io",
             ]}
@@ -30,20 +30,22 @@ const Projects = () => {
           />
           <ProjectCard
             title={"Fashion Flock"}
-            technologies={["React", "NodeJS", "Tailwind CSS", "MongoDB"]}
+            technologies={["React", "NodeJS", "Tailwind", "MongoDB"]}
             desc={
               "FashionFlock is designed to provide a seamless online shopping experience. With a user-friendly interface, secure payment integration using Stripe, and a versatile shopping cart feature, FashionFlock ensures an enjoyable and hassle-free journey for shoppers."
             }
             image={"/images/fashionFlock.png"}
+            gitLink="https://github.com/Faruk314/FashionFlock"
           />
 
           <ProjectCard
             title={"Tuzla Taxi"}
-            technologies={["React", "Tailwind CSS", "PHP"]}
+            technologies={["React", "Tailwind", "PHP"]}
             desc={
               "A client project I developed for a local taxi company in Tuzla. This website enables customers to conveniently book taxis through a user-friendly form. As the developer, I optimized the site for a seamless booking experience and enhanced the client's online presence."
             }
             image={"/images/tuzlaTaxi.png"}
+            liveLink={"https://tuzlataxi.com"}
           />
         </div>
       </div>

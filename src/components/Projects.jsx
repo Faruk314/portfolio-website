@@ -25,11 +25,7 @@ const Projects = () => {
             gitLink="https://github.com/Faruk314/UnityNetWeb"
           />
           <ProjectCard
-            title={"Ecommerc Site"}
-            technologies={["React", "NodeJS", "Tailwind CSS", "MongoDB"]}
-          />
-          <ProjectCard
-            title={"Something else"}
+            title={"Fashion Flock"}
             technologies={["React", "NodeJS", "Tailwind CSS", "MongoDB"]}
           />
         </div>

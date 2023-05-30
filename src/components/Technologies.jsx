@@ -63,18 +63,16 @@ const Technologies = () => {
               {technologies.slice(0, 4).map((technology, index) => (
                 <div
                   key={index}
-                  className="bg-gray-100 shadow-lg rounded-lg overflow-hidden flex flex-col items-center justify-center"
+                  className="shadow-lg rounded-lg flex flex-col items-center justify-center"
                 >
-                  <div className="bg-white w-[10rem] h-[8rem] flex items-center justify-center">
+                  <div className="bg-white w-[10rem] h-[10rem] flex items-center justify-center">
                     <img
                       className="w-[7rem] h-[7rem] object-contain"
                       alt={technology.name}
                       src={technology.image}
                     />
                   </div>
-                  <h3 className="font-bold text-black text-lg my-2">
-                    {technology.name}
-                  </h3>
+                  <h3 className="text-black text-lg my-2">{technology.name}</h3>
                 </div>
               ))}
             </div>
@@ -97,9 +95,7 @@ const Technologies = () => {
                       src={technology.image}
                     />
                   </div>
-                  <h3 className="font-bold text-black text-lg my-2">
-                    {technology.name}
-                  </h3>
+                  <h3 className="text-black text-lg my-2">{technology.name}</h3>
                 </div>
               ))}
             </div>

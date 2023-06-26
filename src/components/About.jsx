@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
+import { AiOutlineGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
 import me from "../images/me.jpg";
 
 const About = () => {
@@ -16,7 +16,7 @@ const About = () => {
         <div className="flex flex-col items-center px-2 text-center md:text-left md:items-start">
           <div className="flex flex-col items-center md:items-start">
             <h1 className="flex mb-4 space-x-2 text-2xl font-bold text-gray-900 md:text-3xl">
-              <span className="">Hi, I am Faruk Spahic</span>{" "}
+              <span className="text-3xl">Hi, I am Faruk Spahic</span>{" "}
               <span className="emoji">👋</span>
             </h1>
             <p className="flex space-x-2 text-xl font-medium text-gray-600">
@@ -53,6 +53,7 @@ const About = () => {
             </button>
 
             <button className="flex items-center px-4 py-2 space-x-2 font-medium text-black border border-black rounded-md hover:bg-gray-900 hover:text-white">
+              <AiOutlineMail size={20} />
               <span>Contact</span>
             </button>
           </div>

@@ -14,7 +14,7 @@ const ProjectCard = ({
     <div className="grid lg:space-x-20 lg:grid-cols-2">
       <img src={image} alt="" className="h-[30rem] w-full border" />
 
-      <div className="flex flex-col justify-between p-10 space-y-5 shadow-md">
+      <div className="flex flex-col justify-between p-10 space-y-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
         <div className="flex flex-col space-y-5">
           <h2 className="text-3xl font-bold">{title}</h2>
 

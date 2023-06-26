@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="bg-white text-black"
+      className="text-black bg-white"
       style={
         scroll
           ? {
@@ -43,13 +43,13 @@ const Navbar = () => {
           : { position: "" }
       }
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="px-4 mx-auto border-black shadow-md sm:px-6 lg:px-8">
+        <div className="container flex items-center justify-between h-16 mx-auto">
           <span
             onClick={() => scrollToPage("about")}
-            className="font-bold text-3xl hover:cursor-pointer"
+            className="text-3xl font-bold hover:cursor-pointer"
           >
-            Faruk Spahic
+            FS
           </span>
 
           <div className="relative">
@@ -62,8 +62,8 @@ const Navbar = () => {
             {isOpen && <MobileNav scrollToPage={scrollToPage} />}
           </div>
 
-          <div className="hidden md:flex items-center justify-center">
-            <div className="flex items-center text-1xl font-bold">
+          <div className="items-center justify-center hidden md:flex">
+            <div className="flex items-center font-bold text-1xl">
               <span
                 onClick={() => scrollToPage("about")}
                 className="ml-8 hover:text-gray-300 hover:cursor-pointer"

@@ -36,20 +36,24 @@ const About = () => {
 
           <div className="flex items-center my-5 space-x-1">
             <a href="">
-              <AiFillLinkedin size={30} className="text-gray-800" />
+              <AiFillLinkedin size={30} className="text-gray-900" />
             </a>
-            <a href="https://github.com/Faruk314" className="text-gray-800">
+            <a href="https://github.com/Faruk314" className="text-gray-900">
               <AiOutlineGithub className="" size={30} />
             </a>
           </div>
 
-          <div className="">
+          <div className="flex space-x-2">
             <button
               onClick={() => scrollToPage("projects")}
-              className="flex items-center px-4 py-2 space-x-2 font-medium text-white bg-gray-800 rounded-md hover:bg-gray-700"
+              className="flex items-center px-4 py-2 space-x-2 font-medium text-white bg-gray-900 rounded-md hover:bg-gray-700"
             >
               <span className="icon"> visibility</span>
               <span>View My Projects</span>
+            </button>
+
+            <button className="flex items-center px-4 py-2 space-x-2 font-medium text-black border border-black rounded-md hover:bg-gray-900 hover:text-white">
+              <span>Contact</span>
             </button>
           </div>
         </div>

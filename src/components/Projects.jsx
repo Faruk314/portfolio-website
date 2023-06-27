@@ -5,11 +5,13 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="container flex flex-col mx-auto mt-20 md:space-y-20"
+      className="container flex flex-col mx-auto space-y-10 md:space-y-20 md:mt-20"
     >
       <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold text-gray-900">My Projects</h1>
-        <p className="mb-10 text-xl font-medium text-gray-600">
+        <h1 className="mb-4 text-2xl font-bold text-gray-900 md:text-4xl">
+          My Projects
+        </h1>
+        <p className="font-medium text-gray-600 md:text-xl md:mb-10">
           Check out some of my recent work.
         </p>
       </div>

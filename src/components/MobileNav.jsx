@@ -2,8 +2,8 @@ import React from "react";
 
 const MobileNav = ({ scrollToPage }) => {
   return (
-    <div className="absolute top-10 right-0 md:hidden">
-      <div className="bg-gray-800 py-4">
+    <div className="absolute right-0 z-30 top-10 md:hidden">
+      <div className="py-4 bg-gray-800">
         <span
           onClick={() => scrollToPage("about")}
           className="block px-4 py-2 text-white hover:bg-gray-700 hover:cursor-pointer"

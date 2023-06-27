@@ -64,22 +64,22 @@ const Technologies = () => {
   return (
     <div id="technologies" className="py-20">
       <div className="mb-5 text-center">
-        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        <h2 className="text-2xl font-extrabold text-gray-900 md:text-4xl">
           Technologies I am Using
         </h2>
       </div>
 
-      <div className="flex max-w-5xl mx-auto my-10 space-x-5">
+      <div className="flex flex-col max-w-5xl mx-auto my-10 md:space-x-5 md:flex-row">
         <div className="w-full">
-          <p className="mb-5 text-xl font-medium text-center text-gray-600">
+          <p className="text-xl font-medium text-center text-gray-600 md:mb-5">
             Frontend
           </p>
           <div className="h-[20rem] flex flex-col justify-center items-center">
-            <ul className="flex flex-col space-y-2 text-xl font-bold">
+            <ul className="flex flex-col space-y-2 font-bold md:text-xl">
               {technologies.slice(0, 6).map((item, index) => (
                 <div className="flex items-center space-x-2">
                   {frontedIconsArray[index]}
-                  <li className="p-1 px-2 text-center border border-black rounded-md">
+                  <li className="p-1 text-center border border-black rounded-md md:px-2">
                     {item.name}
                   </li>
                 </div>
@@ -89,15 +89,15 @@ const Technologies = () => {
         </div>
 
         <div className="w-full">
-          <p className="mb-5 text-xl font-medium text-center text-gray-600">
+          <p className="text-xl font-medium text-center text-gray-600 md:mb-5">
             Backend
           </p>
           <div className="flex flex-col justify-center items-center h-[20rem]">
-            <ul className="flex flex-col space-y-2 text-xl font-bold">
+            <ul className="flex flex-col space-y-2 font-bold md:text-xl">
               {technologies.slice(6).map((item, index) => (
                 <div className="flex items-center space-x-2">
                   {backendIconsArray[index]}
-                  <li className="p-1 text-center border border-black rounded-md">
+                  <li className="p-1 text-center border border-black rounded-md md:px-2">
                     {item.name}
                   </li>
                 </div>

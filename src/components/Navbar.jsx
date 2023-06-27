@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="text-black bg-white"
+      className="z-20 text-black bg-white"
       style={
         scroll
           ? {
@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="container flex items-center justify-between h-16 mx-auto">
           <span
             onClick={() => scrollToPage("about")}
-            className="text-3xl font-bold hover:cursor-pointer"
+            className="text-2xl font-bold md:text-3xl hover:cursor-pointer"
           >
             FS
           </span>

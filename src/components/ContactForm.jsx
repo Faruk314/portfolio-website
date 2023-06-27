@@ -20,7 +20,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="my-20">
+    <section id="contact" className="my-20">
       <div className="flex flex-col items-center justify-center space-y-5 text-center md:mb-20">
         <h2 className="text-2xl font-extrabold text-gray-900 md:text-4xl">
           Contact me
@@ -57,7 +57,7 @@ const ContactForm = () => {
             </a>
           </div>
         </div>
-        <form className="flex flex-col items-center justify-center py-10 mx-auto space-y-5 md:py-20">
+        <form className="flex flex-col items-center justify-center py-8 mx-auto space-y-5 md:py-20">
           <div className="flex flex-col w-[20rem] lg:w-[30rem]">
             <label className="text-gray-600">Name</label>
             <input className="w-full p-2 border border-black rounded-sm focus:outline-none" />
@@ -67,7 +67,7 @@ const ContactForm = () => {
 
             <label className="mt-10 text-gray-600">Message</label>
             <textarea
-              rows={3}
+              rows={4}
               className="w-full p-2 border border-black rounded-sm focus:outline-none"
             />
           </div>

@@ -5,6 +5,7 @@ import {
   SiExpress,
   SiMongodb,
   SiSocketdotio,
+  SiRedis,
 } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs, FaDocker } from "react-icons/fa";
@@ -40,6 +41,7 @@ const Technologies = () => {
     },
 
     { name: "Docker" },
+    { name: "Redis" },
 
     // Add more technologies here as needed
   ];
@@ -59,6 +61,7 @@ const Technologies = () => {
     <SiMongodb size={30} />,
     <SiSocketdotio size={30} />,
     <FaDocker size={30} />,
+    <SiRedis size={30} />,
   ];
 
   return (
@@ -77,7 +80,7 @@ const Technologies = () => {
           <div className="h-[20rem] flex flex-col justify-center items-center">
             <ul className="flex flex-col space-y-2 font-bold md:text-xl">
               {technologies.slice(0, 6).map((item, index) => (
-                <div className="flex items-center space-x-2">
+                <div key={index} className="flex items-center space-x-2">
                   {frontedIconsArray[index]}
                   <li className="p-1 text-center border border-black rounded-md md:px-2">
                     {item.name}
@@ -95,7 +98,7 @@ const Technologies = () => {
           <div className="flex flex-col justify-center items-center h-[20rem]">
             <ul className="flex flex-col space-y-2 font-bold md:text-xl">
               {technologies.slice(6).map((item, index) => (
-                <div className="flex items-center space-x-2">
+                <div key={index} className="flex items-center space-x-2">
                   {backendIconsArray[index]}
                   <li className="p-1 text-center border border-black rounded-md md:px-2">
                     {item.name}

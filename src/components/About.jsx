@@ -68,7 +68,10 @@ const About = () => {
               <span>my projects</span>
             </button>
 
-            <button className="flex items-center px-2 py-1 space-x-1 font-medium text-black border border-black rounded-md md:space-x-2 md:px-4 md:py-2 hover:bg-gray-900 hover:text-white">
+            <button
+              onClick={() => scrollToPage("contact")}
+              className="flex items-center px-2 py-1 space-x-1 font-medium text-black border border-black rounded-md md:space-x-2 md:px-4 md:py-2 hover:bg-gray-900 hover:text-white"
+            >
               <AiOutlineMail size={20} />
               <span>Contact</span>
             </button>

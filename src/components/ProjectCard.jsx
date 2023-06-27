@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { RiGithubLine } from "react-icons/ri";
 import classNames from "classnames";
+import { GrGallery } from "react-icons/gr";
+import Gallery from "./Gallery";
 
 const ProjectCard = ({
   title,
@@ -18,18 +20,45 @@ const ProjectCard = ({
   } = useInView({
     triggerOnce: true,
   });
+  const [isHovering, setIsHovering] = useState(false);
+  const [isAnimationComplete, setIsAnimationComplete] = useState(false);
+  const [galleryOpen, setOpenGallery] = useState(false);
+
+  useEffect(() => {
+    if (myElementVisible) {
+      setTimeout(() => {
+        setIsAnimationComplete(true);
+      }, 2000);
+    }
+  }, [myElementVisible]);
 
   return (
     <div className="grid lg:space-x-20 lg:grid-cols-2">
-      <img
-        id="cardImage"
+      <div
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
         ref={myRef}
-        src={image}
-        alt=""
-        className={classNames("h-[30rem] w-full border", {
-          "animate-left": myElementVisible,
-        })}
-      />
+        className="relative"
+      >
+        <img
+          id="cardImage"
+          src={image}
+          alt=""
+          className={classNames("relative h-[30rem] w-full border", {
+            "animate-left": myElementVisible,
+          })}
+        />
+        {isHovering && isAnimationComplete && (
+          <div className="absolute inset-0 bg-[rgb(0,0,0,0.5)] flex justify-center items-center">
+            <button
+              onClick={() => setOpenGallery(true)}
+              className="rounded-md bg-white w-[3rem] h-[3rem] flex items-center justify-center"
+            >
+              <GrGallery size={30} className="" />
+            </button>
+          </div>
+        )}
+      </div>
 
       <div
         className={classNames(
@@ -47,8 +76,11 @@ const ProjectCard = ({
           </p>
 
           <div className="flex flex-wrap gap-2">
-            {technologies.map((item) => (
-              <div className="p-[0.2rem] md:p-1 md:px-2 text-sm md:text-lg font-bold text-black border border-black rounded-md">
+            {technologies.map((item, index) => (
+              <div
+                key={index}
+                className="p-[0.2rem] md:p-1 md:px-2 text-sm md:text-lg font-bold text-black border border-black rounded-md"
+              >
                 {item}
               </div>
             ))}
@@ -73,6 +105,7 @@ const ProjectCard = ({
           </a>
         </div>
       </div>
+      {galleryOpen && <Gallery />}
     </div>
   );
 };

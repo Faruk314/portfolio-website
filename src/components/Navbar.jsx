@@ -84,7 +84,7 @@ const Navbar = () => {
               </span>
 
               <span
-                onClick={() => scrollToPage("projects")}
+                onClick={() => scrollToPage("contact")}
                 className="ml-8 hover:text-gray-300 hover:cursor-pointer"
               >
                 Contact

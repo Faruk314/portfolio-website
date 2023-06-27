@@ -32,6 +32,37 @@ const Projects = () => {
         }
         image="/images/socialMedia.png"
       />
+
+      <ProjectCard
+        title="TicTacToe Online"
+        desc={
+          "Online Tic Tac Toe game that allows players to enjoy multiplayer matches with friends, add players to friends, and even play against the computer in both easy and hard difficulty modes"
+        }
+        technologies={[
+          "React",
+          "Typescript",
+          "NodeJS",
+          "Tailwind",
+          "MySQL",
+          "Socket.io",
+          "Redis",
+        ]}
+      />
+      <ProjectCard
+        title="Slagalica"
+        desc={
+          "An engaging game that offers fun and challenges for players of all ages. Test your knowledge and skills across various categories, including puzzles, trivia, and word games.Have the exciting opportunity to invite your friends to play and also enjoy single-player gameplay."
+        }
+        technologies={[
+          "React",
+          "Typescript",
+          "NodeJS",
+          "Tailwind",
+          "MySQL",
+          "Socket.io",
+          "Redis",
+        ]}
+      />
       <ProjectCard
         title={"Fashion Flock"}
         technologies={["React", "NodeJS", "Tailwind", "MongoDB"]}

@@ -23,6 +23,9 @@ const ProjectCard = ({
   const [isHovering, setIsHovering] = useState(false);
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
   const [galleryOpen, setOpenGallery] = useState(false);
+  const [imagesCategory, setImagesCategory] = useState("");
+
+  console.log(imagesCategory);
 
   useEffect(() => {
     if (myElementVisible) {
@@ -51,7 +54,10 @@ const ProjectCard = ({
         {isHovering && isAnimationComplete && (
           <div className="absolute inset-0 bg-[rgb(0,0,0,0.5)] flex justify-center items-center">
             <button
-              onClick={() => setOpenGallery(true)}
+              onClick={() => {
+                setImagesCategory(title);
+                setOpenGallery(true);
+              }}
               className="rounded-md bg-white w-[3rem] h-[3rem] flex items-center justify-center"
             >
               <GrGallery size={30} className="" />

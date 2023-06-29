@@ -24,6 +24,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 @media (max-width: 600px) {
   #cardImage {
     height: 18rem;

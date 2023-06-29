@@ -59,16 +59,20 @@ const ContactForm = () => {
         </div>
         <form className="flex flex-col items-center justify-center py-8 mx-auto space-y-5 md:py-20">
           <div className="flex flex-col w-[20rem] lg:w-[30rem]">
-            <label className="text-gray-600">Name</label>
-            <input className="w-full p-2 border border-black rounded-sm focus:outline-none" />
+            <input
+              className="w-full p-2 border border-black rounded-sm focus:outline-none"
+              placeholder="Name"
+            />
 
-            <label className="mt-5 text-gray-600">Email</label>
-            <input className="w-full p-2 border border-black rounded-sm focus:outline-none" />
+            <input
+              className="w-full p-2 mt-5 border border-black rounded-sm focus:outline-none"
+              placeholder="Email"
+            />
 
-            <label className="mt-10 text-gray-600">Message</label>
             <textarea
               rows={4}
-              className="w-full p-2 border border-black rounded-sm focus:outline-none"
+              className="w-full p-2 mt-10 border border-black rounded-sm focus:outline-none"
+              placeholder="Message"
             />
           </div>
 

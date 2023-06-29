@@ -31,7 +31,7 @@ const ContactForm = () => {
         </p>
       </div>
 
-      <div className="container grid md:grid-cols-2 lg:flex-row mx-auto md:shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+      <div className="container grid md:grid-cols-2 lg:flex-row mx-auto mt-10 md:mt-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
         <div className="items-center justify-center hidden text-white bg-gray-900 md:flex">
           <div className="flex flex-col space-y-5">
             <a

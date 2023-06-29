@@ -12,7 +12,7 @@ const Gallery = ({ images, setOpenGallery }) => {
       >
         X
       </button>
-      <div className="relative w-[80rem] h-[50rem] flex justify-center bg-black">
+      <div className="relative h-[30rem] w-[30rem] md:w-[80rem] md:h-[50rem] flex justify-center bg-black">
         <img src={images[currentIndex]} alt="" className="object-contain" />
 
         <button
@@ -23,7 +23,7 @@ const Gallery = ({ images, setOpenGallery }) => {
               setCurrentIndex(0);
             }
           }}
-          className="absolute top-[50%] right-[-3rem] p-2 bg-white text-xl hover:bg-gray-600"
+          className="absolute ml-11 top-[100%] lg:top-[50%] lg:right-[-3rem] p-2 bg-white text-xl hover:bg-gray-600"
         >
           <AiOutlineRight className="" />
         </button>
@@ -36,7 +36,7 @@ const Gallery = ({ images, setOpenGallery }) => {
               setCurrentIndex(images.length - 1);
             }
           }}
-          className="absolute top-[50%] left-[-3rem] p-2 bg-white text-xl hover:bg-gray-600"
+          className="absolute mr-11 top-[100%] lg:top-[50%] lg:left-[-3rem] p-2 bg-white text-xl hover:bg-gray-600"
         >
           <AiOutlineLeft className="" />
         </button>

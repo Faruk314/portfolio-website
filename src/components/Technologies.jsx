@@ -74,7 +74,7 @@ const Technologies = () => {
 
       <div className="flex flex-col max-w-5xl mx-auto my-10 md:space-x-5 md:flex-row">
         <div className="w-full">
-          <p className="text-xl font-medium text-center text-gray-600 md:mb-5">
+          <p className="text-xl font-medium text-center text-gray-600">
             Frontend
           </p>
           <div className="h-[20rem] flex flex-col justify-center items-center">

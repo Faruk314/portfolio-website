@@ -57,7 +57,7 @@ const ContactForm = () => {
               className="flex items-center space-x-2 underline text hover:text-gray-600"
             >
               <AiOutlineMail size={30} />
-              <span>farukspahictz@gmail.com</span>
+              <span>farukspahicdev@gmail.com</span>
             </a>
 
             <a href="" className="flex space-x-2 hover:text-gray-600">

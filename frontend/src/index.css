@@ -45,6 +45,17 @@ body {
   }
 }
 
+@keyframes slideInFromUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @keyframes slideInFromRight {
   0% {
     transform: translateX(100%);
@@ -62,6 +73,10 @@ body {
 
 .animate-right {
   animation: slideInFromRight 1.8s forwards;
+}
+
+.animate-up {
+  animation: slideInFromUp 1.5s forwards;
 }
 
 @keyframes fadeIn {

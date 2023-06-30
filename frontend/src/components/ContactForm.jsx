@@ -2,11 +2,21 @@ import React, { useState } from "react";
 import { IoMdSend } from "react-icons/io";
 import { AiOutlineMail, AiOutlineLinkedin } from "react-icons/ai";
 import { RiGithubLine } from "react-icons/ri";
+import { useInView } from "react-intersection-observer";
+import classNames from "classnames";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const {
+    ref: myRef,
+    inView: myElementVisible,
+    entry,
+  } = useInView({
+    triggerOnce: true,
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +41,15 @@ const ContactForm = () => {
         </p>
       </div>
 
-      <div className="container grid md:grid-cols-2 lg:flex-row mx-auto mt-10 md:mt-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+      <div
+        ref={myRef}
+        className={classNames(
+          "container grid md:grid-cols-2 lg:flex-row mx-auto mt-10 md:mt-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)]",
+          {
+            "animate-up": myElementVisible,
+          }
+        )}
+      >
         <div className="items-center justify-center hidden text-white bg-gray-900 md:flex">
           <div className="flex flex-col space-y-5">
             <a

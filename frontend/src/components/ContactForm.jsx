@@ -4,11 +4,13 @@ import { AiOutlineMail, AiOutlineLinkedin } from "react-icons/ai";
 import { RiGithubLine } from "react-icons/ri";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
+import axios from "axios";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [notif, setNotif] = useState("");
 
   const {
     ref: myRef,
@@ -18,19 +20,41 @@ const ContactForm = () => {
     triggerOnce: true,
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission logic here
     // You can send the form data to a server or perform any other actions
     console.log("Form submitted:", name, email, message);
+
+    if (!name || !email || !message) {
+      setNotif("Please fill out all the fields");
+
+      return;
+    }
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/contact/sendMail",
+        {
+          name,
+          email,
+          message,
+        }
+      );
+      setName("");
+      setEmail("");
+      setMessage("");
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+      setNotif(error.response.data.message);
+    }
+
     // Reset form fields
-    setName("");
-    setEmail("");
-    setMessage("");
   };
 
   return (
-    <section id="contact" className="my-20">
+    <section id="contact" className="mt-10 mb-20 md:mt-0">
       <div className="flex flex-col items-center justify-center space-y-5 text-center md:mb-20">
         <h2 className="text-2xl font-extrabold text-gray-900 md:text-4xl">
           Contact me
@@ -53,44 +77,57 @@ const ContactForm = () => {
         <div className="items-center justify-center hidden text-white bg-gray-900 md:flex">
           <div className="flex flex-col space-y-5">
             <a
-              href=""
+              href="mailto:farukspahicdev@gmail.com"
               className="flex items-center space-x-2 underline text hover:text-gray-600"
             >
               <AiOutlineMail size={30} />
               <span>farukspahicdev@gmail.com</span>
             </a>
 
-            <a href="" className="flex space-x-2 hover:text-gray-600">
+            <a
+              href="https://github.com/Faruk314"
+              className="flex space-x-2 hover:text-gray-600"
+            >
               <RiGithubLine size={30} />
               <div>
                 <span className="text-2xl font-bold">GitHub</span>
               </div>
             </a>
 
-            <a href="" className="flex space-x-2 hover:text-gray-600">
+            {/* <a href="" className="flex space-x-2 hover:text-gray-600">
               <AiOutlineLinkedin size={30} />
               <div>
                 <span className="text-2xl font-bold">Linkedin</span>
               </div>
-            </a>
+            </a> */}
           </div>
         </div>
-        <form className="flex flex-col items-center justify-center py-8 mx-auto space-y-5 md:py-20">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col items-center justify-center py-8 mx-auto space-y-5 md:py-20"
+        >
           <div className="flex flex-col w-[20rem] lg:w-[30rem]">
             <input
               className="w-full p-2 border border-black rounded-sm focus:outline-none"
               placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
 
             <input
+              type="email"
               className="w-full p-2 mt-5 border border-black rounded-sm focus:outline-none"
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
 
             <textarea
               rows={4}
               className="w-full p-2 mt-10 border border-black rounded-sm focus:outline-none"
               placeholder="Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
 
@@ -101,6 +138,7 @@ const ContactForm = () => {
             <IoMdSend size={20} />
             <span>Submit</span>
           </button>
+          {notif && <p className="text-red-500">{notif}</p>}
         </form>
       </div>
     </section>

@@ -51,9 +51,9 @@ const About = () => {
           </p>
 
           <div className="flex items-center my-5 space-x-1">
-            <a href="">
+            {/* <a href="">
               <AiFillLinkedin size={30} className="text-gray-900" />
-            </a>
+            </a> */}
             <a href="https://github.com/Faruk314" className="text-gray-900">
               <AiOutlineGithub className="" size={30} />
             </a>

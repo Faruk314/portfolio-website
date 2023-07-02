@@ -3,8 +3,8 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <section id="projects" className="w-full">
-      <div className="container flex flex-col mx-auto space-y-10 md:space-y-20 md:mt-20">
+    <section id="projects" className="w-full overflow-x-hidden md:py-20">
+      <div className="container flex flex-col mx-auto space-y-10 md:space-y-20">
         <div className="text-center">
           <h1 className="mb-4 text-2xl font-bold text-gray-900 md:text-4xl">
             My Projects
@@ -45,6 +45,7 @@ const Projects = () => {
             "Socket.io",
             "Redis",
           ]}
+          gitLink="https://github.com/Faruk314/TicTacToeOnline"
         />
         <ProjectCard
           title="Slagalica"
@@ -60,6 +61,7 @@ const Projects = () => {
             "Socket.io",
             "Redis",
           ]}
+          gitLink="https://github.com/Faruk314/Slagalica"
         />
         <ProjectCard
           title={"Fashion Flock"}

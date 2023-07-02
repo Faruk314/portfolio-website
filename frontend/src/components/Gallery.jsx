@@ -8,7 +8,7 @@ const Gallery = ({ images, setOpenGallery }) => {
     <div className="fixed inset-0 bg-[rgb(0,0,0,0.9)] z-40 flex items-center justify-center">
       <button
         onClick={() => setOpenGallery(false)}
-        className="absolute top-2 left-2 h-[2rem] hover:bg-gray-600 w-[2rem] text-xl font-bold bg-white rounded-full"
+        className="absolute top-2 left-2 h-[2rem] hover:bg-gray-600 w-[2rem] text-xl bg-white rounded-full"
       >
         X
       </button>

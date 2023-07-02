@@ -5,12 +5,15 @@ import { RiGithubLine } from "react-icons/ri";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import axios from "axios";
+import Confirmation from "./Confirmation";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [notif, setNotif] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const {
     ref: myRef,
@@ -22,15 +25,15 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    // You can send the form data to a server or perform any other actions
-    console.log("Form submitted:", name, email, message);
 
     if (!name || !email || !message) {
-      setNotif("Please fill out all the fields");
-
+      setOpenModal(true);
+      setNotif("Please fill out all the fields before submitting the form.");
       return;
     }
+
+    setLoading(true);
+    setOpenModal(true);
 
     try {
       const response = await axios.post(
@@ -41,16 +44,16 @@ const ContactForm = () => {
           message,
         }
       );
+      setNotif(response.data);
+      setLoading(false);
       setName("");
       setEmail("");
       setMessage("");
-      console.log(response.data);
     } catch (error) {
       console.log(error);
-      setNotif(error.response.data.message);
+      setLoading(false);
+      setNotif(error.response.data);
     }
-
-    // Reset form fields
   };
 
   return (
@@ -138,31 +141,18 @@ const ContactForm = () => {
             <IoMdSend size={20} />
             <span>Submit</span>
           </button>
-          {notif && <p className="text-red-500">{notif}</p>}
         </form>
       </div>
+      {openModal && (
+        <Confirmation
+          setOpenModal={setOpenModal}
+          loading={loading}
+          message={notif}
+          setNotif={setNotif}
+          setLoading={setLoading}
+        />
+      )}
     </section>
-    // <section className="flex flex-col items-center justify-center bg-white h-[40rem]">
-    //   <h2 className="my-5 text-4xl font-bold text-center">Contact</h2>
-
-    //   <div className="flex flex-col mx-2 w-[25rem]">
-    //     <label className="text-gray-600">Name</label>
-    //     <input className="p-1 bg-gray-100 border border-black rounded focus:outline-none" />
-
-    //     <label className="mt-5 text-gray-600">Email</label>
-    //     <input className="p-1 bg-gray-100 border border-black rounded focus:outline-none" />
-
-    //     <label className="mt-5 text-gray-600">Message</label>
-    //     <textarea
-    //       rows={5}
-    //       className="p-1 bg-gray-100 border border-black rounded focus:outline-none"
-    //     />
-
-    //     <button className="flex items-center px-4 py-2 mx-auto my-5 space-x-2 font-medium text-white bg-gray-800 rounded-md hover:bg-gray-700">
-    //       Submit
-    //     </button>
-    //   </div>
-    // </section>
   );
 };
 

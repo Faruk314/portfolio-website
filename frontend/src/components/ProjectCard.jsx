@@ -72,14 +72,6 @@ const ProjectCard = ({
     },
   };
 
-  useEffect(() => {
-    if (myElementVisible) {
-      setTimeout(() => {
-        setIsAnimationComplete(true);
-      }, 2000);
-    }
-  }, [myElementVisible]);
-
   return (
     <div>
       <div className="grid lg:space-x-20 lg:grid-cols-2">
@@ -94,12 +86,10 @@ const ProjectCard = ({
               id="cardImage"
               src={imageCategories[title].images[0]}
               alt=""
-              className={classNames("relative h-[30rem] w-full border", {
-                "animate-left": myElementVisible,
-              })}
+              className={classNames("relative h-[30rem] w-full border")}
             />
           )}
-          {isHovering && isAnimationComplete && (
+          {isHovering && (
             <div className="absolute inset-0 bg-[rgb(0,0,0,0.5)] flex justify-center items-center">
               <button
                 onClick={() => {

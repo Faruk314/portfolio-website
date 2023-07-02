@@ -27,9 +27,22 @@ const About = () => {
       })}
     >
       <div className="flex flex-col items-center justify-center md:grid md:grid-cols-2 md:max-w-5xl md:mx-auto">
-        <img className="h-[15rem] md:h-[25rem]" src={me} alt="Portfolio" />
+        <img
+          className={classNames("h-[15rem] md:h-[25rem]", {
+            "animate-left": myElementVisible,
+          })}
+          src={me}
+          alt="Portfolio"
+        />
 
-        <div className="flex flex-col items-center px-2 text-center md:text-left md:items-start">
+        <div
+          className={classNames(
+            "flex flex-col items-center px-2 text-center md:text-left md:items-start",
+            {
+              "animate-right": myElementVisible,
+            }
+          )}
+        >
           <div className="flex flex-col items-center md:items-start">
             <h1 className="flex mb-4 space-x-2 text-2xl font-bold text-gray-900 md:text-3xl">
               <span className="md:text-3xl">Hi, I am Faruk Spahic</span>{" "}

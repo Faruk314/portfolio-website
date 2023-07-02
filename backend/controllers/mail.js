@@ -92,12 +92,19 @@ export const sendMail = asyncHandler(async (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
-      res.status(500).json("An error occurred while sending the email.");
+      res
+        .status(500)
+        .json(
+          "There was an issue sending your message. Please try again or contact me directly at farukspahicdev@gmail.com."
+        );
+      return;
     } else {
       console.log("Email sent:", info.response);
       res
         .status(200)
-        .json("Thank you for your message! We will get back to you soon.");
+        .json(
+          "Your message has been successfully sent. Thank you for reaching out!"
+        );
     }
   });
 });

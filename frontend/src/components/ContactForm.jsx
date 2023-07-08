@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { IoMdSend } from "react-icons/io";
-import { AiOutlineMail, AiOutlineLinkedin } from "react-icons/ai";
 import { RiGithubLine } from "react-icons/ri";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
@@ -72,14 +71,11 @@ const ContactForm = () => {
 
       <div
         ref={myRef}
-        className={classNames(
-          "container grid md:grid-cols-2 lg:flex-row mx-auto mt-10 md:mt-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)]",
-          {
-            "animate-up": myElementVisible,
-          }
-        )}
+        className={classNames("grid items-center mx-auto mt-10 md:mt-0", {
+          "animate-up": myElementVisible,
+        })}
       >
-        <div className="items-center justify-center hidden text-white bg-gray-900 md:flex">
+        {/* <div className="items-center justify-center hidden text-white bg-gray-900 md:flex">
           <div className="flex flex-col space-y-5">
             <a
               href="mailto:farukspahicdev@gmail.com"
@@ -99,19 +95,13 @@ const ContactForm = () => {
               </div>
             </a>
 
-            {/* <a href="" className="flex space-x-2 hover:text-gray-600">
-              <AiOutlineLinkedin size={30} />
-              <div>
-                <span className="text-2xl font-bold">Linkedin</span>
-              </div>
-            </a> */}
           </div>
-        </div>
+        </div> */}
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col items-center justify-center py-20 mx-auto space-y-5"
+          className="flex flex-col items-center justify-center px-4 py-4 mx-4 space-y-5 shadow-md md:mx-auto md:py-20 md:px-20"
         >
-          <div className="flex flex-col w-[19rem] lg:w-[30rem]">
+          <div className="flex flex-col w-[18rem] md:w-[20rem] lg:w-[30rem] ">
             <input
               className="w-full p-2 border border-black rounded-sm focus:outline-none"
               placeholder="Name"
@@ -138,7 +128,7 @@ const ContactForm = () => {
 
           <button
             type="submit"
-            className="flex items-center px-2 py-2 space-x-2 font-medium text-white bg-gray-900 rounded-md text-md md:text-lg md:px-4 md:py-2 hover:bg-gray-700"
+            className="flex items-center px-4 py-2 space-x-2 font-medium text-white bg-gray-900 rounded-md text-md md:text-lg hover:bg-gray-700"
           >
             <IoMdSend size={20} />
             <span>Submit</span>

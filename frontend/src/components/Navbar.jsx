@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link } from "react-router-dom";
 import MobileNav from "./MobileNav";
+import { AiOutlineMail } from "react-icons/ai";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
@@ -45,12 +45,15 @@ const Navbar = () => {
     >
       <div className="px-4 mx-auto border-black shadow-md sm:px-6 lg:px-8">
         <div className="container flex items-center justify-between h-16 mx-auto">
-          <span
-            onClick={() => scrollToPage("about")}
-            className="text-2xl font-bold md:text-3xl hover:cursor-pointer"
+          <a
+            href="mailto:farukspahicdev@gmail.com"
+            className="flex items-center space-x-2 font-bold underline text hover:text-gray-600"
           >
-            FS
-          </span>
+            <AiOutlineMail size={25} />
+            <span className="text-[0.9rem] md:text-[1rem]">
+              farukspahicdev@gmail.com
+            </span>
+          </a>
 
           <div className="relative">
             <GiHamburgerMenu

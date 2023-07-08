@@ -52,7 +52,9 @@ const ContactForm = () => {
     } catch (error) {
       console.log(error);
       setLoading(false);
-      setNotif(error.response.data);
+      setNotif(
+        " There was an issue sending your message. Please try again or contact me directly at farukspahicdev@gmail.com."
+      );
     }
   };
 
@@ -107,9 +109,9 @@ const ContactForm = () => {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col items-center justify-center py-8 mx-auto space-y-5 md:py-20"
+          className="flex flex-col items-center justify-center py-20 mx-auto space-y-5"
         >
-          <div className="flex flex-col w-[20rem] lg:w-[30rem]">
+          <div className="flex flex-col w-[19rem] lg:w-[30rem]">
             <input
               className="w-full p-2 border border-black rounded-sm focus:outline-none"
               placeholder="Name"

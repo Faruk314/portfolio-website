@@ -28,7 +28,7 @@ const About = () => {
     >
       <div className="flex flex-col items-center justify-center md:grid md:grid-cols-2 md:max-w-5xl md:mx-auto">
         <img
-          className={classNames("h-[15rem] md:h-[25rem]", {
+          className={classNames("h-[18rem] md:h-[25rem]", {
             "animate-left": myElementVisible,
           })}
           src={me}
@@ -56,11 +56,7 @@ const About = () => {
             Hi, I am Faruk Spahic, a Full Stack Developer specializing in
             creating dynamic web applications that solve real-world problems.
             With skills in both front-end and back-end development, I can
-            deliver seamless user experiences. From e-commerce to social media
-            platforms, I have experience working on a range of web applications,
-            both large and small. I'm always looking to learn and incorporate
-            new technologies to create innovative and impactful solutions that
-            make a difference.
+            deliver seamless user experiences.
           </p>
 
           <div className="flex items-center my-5 space-x-1">
@@ -75,15 +71,15 @@ const About = () => {
           <div className="flex space-x-2 md:text-lg">
             <button
               onClick={() => scrollToPage("projects")}
-              className="flex items-center px-2 py-1 space-x-2 font-medium text-white bg-gray-900 rounded-md md:px-4 md:py-2 hover:bg-gray-700"
+              className="flex items-center px-2 py-2 space-x-2 font-medium text-white bg-gray-900 rounded-md md:px-4 md:py-2 hover:bg-gray-700"
             >
               <span className="icon"> visibility</span>
-              <span>my projects</span>
+              <span>My projects</span>
             </button>
 
             <button
               onClick={() => scrollToPage("contact")}
-              className="flex items-center px-2 py-1 space-x-1 font-medium text-black border border-black rounded-md md:space-x-2 md:px-4 md:py-2 hover:bg-gray-900 hover:text-white"
+              className="flex items-center px-2 py-2 space-x-1 font-medium text-black border border-black rounded-md md:space-x-2 md:px-4 md:py-2 hover:bg-gray-900 hover:text-white"
             >
               <AiOutlineMail size={20} />
               <span>Contact</span>

@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <section id="projects" className="w-full overflow-x-hidden md:py-20">
+    <section id="projects" className="w-full py-20 overflow-x-hidden">
       <div className="container flex flex-col mx-auto space-y-10 md:space-y-20">
         <div className="text-center">
           <h1 className="mb-4 text-2xl font-bold text-gray-900 md:text-4xl">

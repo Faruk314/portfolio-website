@@ -134,7 +134,7 @@ const ProjectCard = ({
             {liveLink && (
               <a
                 href={liveLink}
-                className="flex items-center px-2 md:px-4 text-[0.9rem] md:text-lg py-1 md:py-2 space-x-1 md:space-x-2 font-medium text-white bg-gray-900 rounded-md hover:bg-gray-700"
+                className="flex items-center px-4 text-[0.9rem] md:text-lg py-2 space-x-1 md:space-x-2 font-medium text-white bg-gray-900 rounded-md hover:bg-gray-700"
               >
                 <span className="icon">visibility</span>
                 <span>Live</span>
@@ -144,7 +144,7 @@ const ProjectCard = ({
             {gitLink && (
               <a
                 href={gitLink}
-                className="flex items-center px-2 md:px-4 py-1 md:py-2 text-[0.9rem] md:text-lg space-x-1 md:space-x-2 font-medium text-black border border-black rounded-md hover:bg-gray-900 hover:text-white"
+                className="flex items-center px-4 py-2 text-[0.9rem] md:text-lg space-x-1 md:space-x-2 font-medium text-black border border-black rounded-md hover:bg-gray-900 hover:text-white"
               >
                 <RiGithubLine size={20} />
                 <span>gitHub</span>

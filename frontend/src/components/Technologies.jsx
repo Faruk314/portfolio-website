@@ -72,7 +72,7 @@ const Technologies = () => {
         </h2>
       </div>
 
-      <div className="flex flex-col max-w-5xl mx-auto my-10 md:space-x-5 md:flex-row">
+      <div className="flex max-w-5xl mx-2 my-10 md:mx-auto">
         <div className="w-full">
           <p className="text-xl font-medium text-center text-gray-600">
             Frontend

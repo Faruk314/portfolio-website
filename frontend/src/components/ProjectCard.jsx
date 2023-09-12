@@ -34,6 +34,27 @@ const ProjectCard = ({
         "/images/socialMediaImages/photoOpened.png",
       ],
     },
+    ChessOnline: {
+      images: [
+        "/images/chessImages/game.png",
+        "/images/chessImages/menu.png",
+        "/images/chessImages/login.png",
+        "/images/chessImages/findMatch.png",
+        "/images/chessImages/friendReq.png",
+        "/images/chessImages/friends.png",
+        "/images/chessImages/avatar.png",
+      ],
+    },
+
+    OnlineLudoGame: {
+      images: [
+        "/images/ludoImages/login.png",
+        "/images/ludoImages/game.png",
+        "/images/ludoImages/menu.png",
+        "/images/ludoImages/findMatch1.png",
+        "/images/ludoImages/findMatch2.png",
+      ],
+    },
     "TicTacToe Online": {
       images: [
         "/images/ticTacImages/menu.png",
@@ -84,7 +105,7 @@ const ProjectCard = ({
           {title && (
             <img
               id="cardImage"
-              src={imageCategories[title].images[0]}
+              src={imageCategories[title]?.images[0]}
               alt=""
               className={classNames("relative h-[30rem] w-full border")}
             />
@@ -134,7 +155,7 @@ const ProjectCard = ({
             {liveLink && (
               <a
                 href={liveLink}
-                className="flex items-center px-4 text-[0.9rem] md:text-lg py-2 space-x-1 md:space-x-2 font-medium text-white bg-gray-900 rounded-md hover:bg-gray-700"
+                className="flex items-center px-4 text-[0.9rem] md:text-lg py-2 space-x-1 md:space-x-2 font-medium text-white bg-gray-900 rounded-md hover:bg-transparent hover:border-gray-900 hover:text-gray-900 border"
               >
                 <span className="icon">visibility</span>
                 <span>Live</span>

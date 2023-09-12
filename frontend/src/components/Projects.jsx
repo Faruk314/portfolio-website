@@ -32,6 +32,42 @@ const Projects = () => {
         />
 
         <ProjectCard
+          title="OnlineLudoGame"
+          desc={
+            "An online Ludo game that offers local and multiplayer modes, so you can enjoy matches with friends or find opponents easily."
+          }
+          technologies={[
+            "React",
+            "Typescript",
+            "NodeJS",
+            "Tailwind",
+            "MySQL",
+            "Socket.io",
+            "Redis",
+          ]}
+          gitLink="https://github.com/Faruk314/OnlineLudoGame"
+          image="/images/ludoImages/login.png"
+        />
+
+        <ProjectCard
+          title="ChessOnline"
+          desc={
+            "Online Chess game that lets players enjoy multiplayer matches with friends and build their friends list. This game focuses on social interactions and multiplayer chess experiences."
+          }
+          technologies={[
+            "React",
+            "Typescript",
+            "NodeJS",
+            "Tailwind",
+            "MySQL",
+            "Socket.io",
+            "Redis",
+          ]}
+          gitLink="https://github.com/Faruk314/ChessOnline"
+          image="/images/chessImages/menu.png"
+        />
+
+        <ProjectCard
           title="TicTacToe Online"
           desc={
             "Online Tic Tac Toe game that allows players to enjoy multiplayer matches with friends, add players to friends, and even play against the computer in both easy and hard difficulty modes"

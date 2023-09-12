@@ -56,34 +56,38 @@ const About = () => {
             Hi, I am Faruk Spahic, a Full Stack Developer specializing in
             creating dynamic web applications that solve real-world problems.
             With skills in both front-end and back-end development, I can
-            deliver seamless user experiences.
+            deliver seamless user experiences. From e-commerce to social media
+            platforms, I have experience working on a range of web applications,
+            both large and small. I'm always looking to learn and incorporate
+            new technologies to create innovative and impactful solutions that
+            make a difference.
           </p>
 
-          <div className="flex items-center my-5 space-x-1">
-            {/* <a href="">
+          {/* <div className="flex items-center my-5 space-x-1"> */}
+          {/* <a href="">
               <AiFillLinkedin size={30} className="text-gray-900" />
             </a> */}
-            <a href="https://github.com/Faruk314" className="text-gray-900">
+          {/* <a href="https://github.com/Faruk314" className="text-gray-900">
               <AiOutlineGithub className="" size={30} />
-            </a>
-          </div>
+            </a> */}
+          {/* </div> */}
 
-          <div className="flex space-x-2 md:text-lg">
+          <div className="flex my-10 space-x-2 md:text-lg">
             <button
               onClick={() => scrollToPage("projects")}
-              className="flex items-center px-2 py-2 space-x-2 font-medium text-white bg-gray-900 rounded-md md:px-4 md:py-2 hover:bg-gray-700"
+              className="flex items-center px-2 py-2 space-x-2 font-medium text-white bg-gray-900 border rounded-md md:px-4 md:py-2 hover:bg-transparent hover:border-gray-900 hover:text-gray-900"
             >
               <span className="icon"> visibility</span>
               <span>My projects</span>
             </button>
 
-            <button
-              onClick={() => scrollToPage("contact")}
+            <a
+              href="https://github.com/Faruk314"
               className="flex items-center px-2 py-2 space-x-1 font-medium text-black border border-black rounded-md md:space-x-2 md:px-4 md:py-2 hover:bg-gray-900 hover:text-white"
             >
-              <AiOutlineMail size={20} />
-              <span>Contact</span>
-            </button>
+              <AiOutlineGithub className="" size={20} />
+              <span>GitHub</span>
+            </a>
           </div>
         </div>
       </div>

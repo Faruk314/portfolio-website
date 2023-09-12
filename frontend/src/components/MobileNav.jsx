@@ -23,12 +23,12 @@ const MobileNav = ({ scrollToPage }) => {
           Projects
         </span>
 
-        <span
+        {/* <span
           onClick={() => scrollToPage("contact")}
           className="block px-4 py-2 text-white hover:bg-gray-700 hover:cursor-pointer"
         >
           Contact
-        </span>
+        </span> */}
       </div>
     </div>
   );

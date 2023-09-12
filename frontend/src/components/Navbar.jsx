@@ -44,7 +44,7 @@ const Navbar = () => {
       }
     >
       <div className="px-4 mx-auto border-black shadow-md sm:px-6 lg:px-8">
-        <div className="container flex items-center justify-between h-16 mx-auto">
+        <div className="container flex items-center justify-between h-20 mx-auto">
           <a
             href="mailto:farukspahicdev@gmail.com"
             className="flex items-center space-x-2 font-bold underline text hover:text-gray-600"
@@ -86,12 +86,12 @@ const Navbar = () => {
                 Projects
               </span>
 
-              <span
+              {/* <span
                 onClick={() => scrollToPage("contact")}
                 className="ml-8 hover:text-gray-300 hover:cursor-pointer"
               >
                 Contact
-              </span>
+              </span> */}
             </div>
           </div>
         </div>

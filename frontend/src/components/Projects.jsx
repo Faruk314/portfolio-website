@@ -107,6 +107,7 @@ const Projects = () => {
           }
           image={"/images/fashionFlock.png"}
           gitLink="https://github.com/Faruk314/FashionFlock"
+          liveLink={"https://fashionflock.farukspahic.com/"}
         />
 
         <ProjectCard

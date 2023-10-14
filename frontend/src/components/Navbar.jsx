@@ -30,22 +30,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className="z-20 text-black bg-white"
-      style={
-        scroll
-          ? {
-              position: "fixed",
-              top: 0,
-              width: "100%",
-              transition: "0.5s ease-in",
-            }
-          : { position: "" }
-      }
-    >
-      <div className="px-4 mx-auto border-black shadow-md sm:px-6 lg:px-8">
-        <div className="container flex items-center justify-between h-20 mx-auto">
-          <a
+    <nav className="z-20 text-black bg-white">
+      <div className="px-4 mx-auto border-black lg:px-8">
+        <div className="flex items-center justify-between max-w-5xl mx-auto py-7">
+          {/* <a
             href="mailto:farukspahicdev@gmail.com"
             className="flex items-center space-x-2 font-bold underline text hover:text-gray-600"
           >
@@ -53,7 +41,12 @@ const Navbar = () => {
             <span className="text-[0.9rem] md:text-[1rem]">
               farukspahicdev@gmail.com
             </span>
-          </a>
+          </a> */}
+
+          <div>
+            <h1 className="text-2xl font-bold">Faruk Spahic</h1>
+            <span className="text-gray-500">Full Stack Web Dev</span>
+          </div>
 
           <div className="relative">
             <GiHamburgerMenu
@@ -66,25 +59,26 @@ const Navbar = () => {
           </div>
 
           <div className="items-center justify-center hidden md:flex">
-            <div className="flex items-center font-bold text-1xl">
+            <div className="flex items-center font-medium text-[1.09rem]">
               <span
                 onClick={() => scrollToPage("about")}
-                className="ml-8 hover:text-gray-300 hover:cursor-pointer"
+                className="ml-8 hover:text-blue-500 hover:cursor-pointer"
               >
                 About
               </span>
               <span
                 onClick={() => scrollToPage("technologies")}
-                className="ml-8 hover:text-gray-300 hover:cursor-pointer"
+                className="ml-8 hover:text-blue-500 hover:cursor-pointer"
               >
                 Technologies
               </span>
-              <span
+
+              <button
                 onClick={() => scrollToPage("projects")}
-                className="ml-8 hover:text-gray-300 hover:cursor-pointer"
+                className="flex ml-8 items-center justify-center w-full px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-md md:px-4 md:py-2 hover:bg-transparent hover:text-blue-500"
               >
-                Projects
-              </span>
+                <span>projects</span>
+              </button>
 
               {/* <span
                 onClick={() => scrollToPage("contact")}

@@ -3,6 +3,7 @@ import { AiOutlineGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
 import me from "../images/me.jpg";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
+import GitButton from "./utils/GitButton";
 
 const About = () => {
   const {
@@ -22,45 +23,61 @@ const About = () => {
     <div
       ref={myRef}
       id="about"
-      className={classNames("h-[60rem] flex", {
-        "animate-fade ": myElementVisible,
-      })}
+      className={classNames(
+        "py-10 px-2 md:px-0 md:py-0 md:h-[70vh] bg-[url(../public/images/grid.jpg)] gradient flex"
+      )}
     >
-      <div className="flex flex-col items-center justify-center md:grid md:grid-cols-2 md:max-w-5xl md:mx-auto">
-        <img
-          className={classNames("h-[18rem] md:h-[25rem]", {
-            "animate-left": myElementVisible,
-          })}
-          src={me}
-          alt="Portfolio"
-        />
-
-        <div
+      <div className="z-10 flex flex-col items-center justify-center md:space-x-20 md:flex-row md:max-w-5xl md:mx-auto">
+        {/* <img
           className={classNames(
-            "flex flex-col items-center px-2 text-center md:text-left md:items-start",
+            "h-[19rem] md:hidden md:w-max md:h-[25rem] noSelect",
             {
               "animate-right": myElementVisible,
             }
           )}
+          src={me}
+          alt="Portfolio"
+        /> */}
+
+        <div
+          className={classNames(
+            "flex flex-col items-center px-2 text-center md:text-left md:items-start"
+          )}
         >
-          <div className="flex flex-col items-center md:items-start">
+          <div
+            className={classNames("flex flex-col items-center md:items-start", {
+              "animate-up": myElementVisible,
+            })}
+          >
             <h1 className="flex mb-4 space-x-2 text-2xl font-bold text-gray-900 md:text-3xl">
               <span className="md:text-3xl">Hi, I am Faruk Spahic</span>{" "}
               <span className="emoji">👋</span>
             </h1>
-            <p className="flex space-x-2 font-medium text-gray-600 md:text-xl">
+            <p
+              className={classNames("flex space-x-2 text-gray-500 md:text-xl")}
+            >
               Full Stack Web Developer
             </p>
           </div>
-          <p className="pt-4 leading-7 text-sm md:text-[1rem]  md:leading-loose">
+          <p
+            className={classNames(
+              "pt-4 leading-7 text-sm md:text-[1rem] md:leading-loose",
+              {
+                "animate-up": myElementVisible,
+              }
+            )}
+          >
             Hi, I am Faruk Spahic, a Full Stack Developer specializing in
             creating dynamic web applications that solve real-world problems.
             With skills in both front-end and back-end development, I can
-            deliver seamless user experiences. From e-commerce to social media
-            platforms, I have experience working on a range of web applications,
-            both large and small. I'm always looking to learn and incorporate
-            new technologies to create innovative and impactful solutions that
-            make a difference.
+            deliver seamless user experiences.
+            <span className="hidden md:inline">
+              {" "}
+              From e-commerce to social media platforms, I have experience
+              working on a range of web applications, both large and small. I'm
+              always looking to learn and incorporate new technologies to create
+              innovative and impactful solutions that make a difference.
+            </span>
           </p>
 
           {/* <div className="flex items-center my-5 space-x-1"> */}
@@ -72,24 +89,29 @@ const About = () => {
             </a> */}
           {/* </div> */}
 
-          <div className="flex my-10 space-x-2 md:text-lg">
+          <div className="flex flex-col w-full my-10 space-y-2 md:space-y-0 md:space-x-2 md:w-max md:flex-row md:text-lg">
             <button
               onClick={() => scrollToPage("projects")}
-              className="flex items-center px-2 py-2 space-x-2 font-medium text-white bg-gray-900 border rounded-md md:px-4 md:py-2 hover:bg-transparent hover:border-gray-900 hover:text-gray-900"
+              className="flex items-center justify-center w-full hover:bg-white px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-md md:px-4 md:py-2 hover:bg-transparent hover:text-blue-500"
             >
               <span className="icon"> visibility</span>
               <span>My projects</span>
             </button>
 
-            <a
-              href="https://github.com/Faruk314"
-              className="flex items-center px-2 py-2 space-x-1 font-medium text-black border border-black rounded-md md:space-x-2 md:px-4 md:py-2 hover:bg-gray-900 hover:text-white"
-            >
-              <AiOutlineGithub className="" size={20} />
-              <span>GitHub</span>
-            </a>
+            <GitButton />
           </div>
         </div>
+
+        <img
+          className={classNames(
+            "h-[19rem] hidden md:block md:w-max md:h-[25rem] noSelect",
+            {
+              "animate-right": myElementVisible,
+            }
+          )}
+          src={me}
+          alt="Portfolio"
+        />
       </div>
     </div>
   );

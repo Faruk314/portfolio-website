@@ -40,7 +40,6 @@ const Technologies = () => {
       name: "Socket.io",
     },
 
-    { name: "Docker" },
     { name: "Redis" },
 
     // Add more technologies here as needed
@@ -65,108 +64,48 @@ const Technologies = () => {
   ];
 
   return (
-    <div id="technologies" className="py-20">
-      <div className="mb-5 text-center">
-        <h2 className="text-2xl font-extrabold text-gray-900 md:text-4xl">
+    <div id="technologies" className="md:py-20">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-xl font-extrabold text-gray-900 md:text-3xl">
           Technologies I am Using
         </h2>
       </div>
 
-      <div className="flex max-w-5xl mx-2 my-10 md:mx-auto">
-        <div className="w-full">
-          <p className="text-xl font-medium text-center text-gray-600">
-            Frontend
-          </p>
-          <div className="h-[20rem] flex flex-col justify-center items-center">
-            <ul className="flex flex-col space-y-2 font-bold md:text-xl">
-              {technologies.slice(0, 6).map((item, index) => (
-                <div key={index} className="flex items-center space-x-2">
+      <div className="flex justify-between max-w-5xl mx-2 mt-10 md:mx-auto">
+        <div className="flex flex-col">
+          <div className="flex flex-col space-y-2 font-bold md:text-xl">
+            <span className="font-medium text-gray-500">Frontend</span>
+            {technologies.slice(0, 6).map((item, index) => (
+              <div key={index} className="flex items-center space-x-2">
+                <span className="text-blue-500">
+                  {" "}
                   {frontedIconsArray[index]}
-                  <li className="p-1 text-center border border-black rounded-md md:px-2">
-                    {item.name}
-                  </li>
-                </div>
-              ))}
-            </ul>
+                </span>
+                <span className="p-1 text-center border border-black rounded-md md:px-2">
+                  {item.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="w-full">
-          <p className="text-xl font-medium text-center text-gray-600 md:mb-5">
-            Backend
-          </p>
-          <div className="flex flex-col justify-center items-center h-[20rem]">
-            <ul className="flex flex-col space-y-2 font-bold md:text-xl">
-              {technologies.slice(6).map((item, index) => (
-                <div key={index} className="flex items-center space-x-2">
+        <div className="flex flex-col items-end justify-center">
+          <div className="flex flex-col space-y-2 font-bold md:text-xl">
+            <span className="font-medium text-gray-500">Backend</span>
+            {technologies.slice(6).map((item, index) => (
+              <div key={index} className="flex items-center space-x-2">
+                <span className="text-blue-500">
                   {backendIconsArray[index]}
-                  <li className="p-1 text-center border border-black rounded-md md:px-2">
-                    {item.name}
-                  </li>
-                </div>
-              ))}
-            </ul>
+                </span>
+                <span className="p-1 text-center border border-black rounded-md md:px-2">
+                  {item.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
-    // <div id="technologies" className="flex items-center bg-gray-100">
-    //   <div className="container px-4 py-40 mx-auto sm:px-6 lg:px-8">
-    //     <div className="text-center">
-    //       <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-    //         Technologies I am Using
-    //       </h2>
-    //     </div>
-
-    //     <div className="flex flex-col items-center justify-center mt-2">
-    //       <div className="bg-red">
-    //         <p className="my-5 text-xl font-medium text-center text-gray-600">
-    //           Frontend
-    //         </p>
-    //         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-    //           {technologies.slice(0, 4).map((technology, index) => (
-    //             <div
-    //               key={index}
-    //               className="flex flex-col items-center justify-center rounded-lg shadow-lg"
-    //             >
-    //               <div className="bg-white w-[10rem] h-[10rem] flex items-center justify-center">
-    //                 <img
-    //                   className="w-[7rem] h-[7rem] object-contain"
-    //                   alt={technology.name}
-    //                   src={technology.image}
-    //                 />
-    //               </div>
-    //               <h3 className="my-2 text-lg text-black">{technology.name}</h3>
-    //             </div>
-    //           ))}
-    //         </div>
-    //       </div>
-
-    //       <div className="flex flex-col items-center">
-    //         <p className="mt-10 mb-5 text-xl font-medium text-gray-600">
-    //           Backend
-    //         </p>
-    //         <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
-    //           {technologies.slice(4).map((technology, index) => (
-    //             <div
-    //               key={index}
-    //               className="flex flex-col items-center justify-center overflow-hidden bg-gray-100 rounded-lg shadow-lg"
-    //             >
-    //               <div className="bg-white w-[10rem] h-[8rem] flex items-center justify-center lg:h-[10rem]">
-    //                 <img
-    //                   className="w-[7rem] h-[7rem] object-contain"
-    //                   alt={technology.name}
-    //                   src={technology.image}
-    //                 />
-    //               </div>
-    //               <h3 className="my-2 text-lg text-black">{technology.name}</h3>
-    //             </div>
-    //           ))}
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

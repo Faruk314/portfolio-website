@@ -48,10 +48,10 @@ const Navbar = () => {
             <span className="text-gray-500">Full Stack Web Dev</span>
           </div>
 
-          <div className="relative">
+          <div className="relative p-2 bg-gray-200 rounded-md">
             <GiHamburgerMenu
-              className="md:hidden hover:cursor-pointer"
-              size={25}
+              className="text-blue-600 md:hidden hover:cursor-pointer"
+              size={20}
               onClick={toggleNav}
             />
 
@@ -59,25 +59,25 @@ const Navbar = () => {
           </div>
 
           <div className="items-center justify-center hidden md:flex">
-            <div className="flex items-center font-medium text-[1.09rem]">
+            <div className="flex items-center  text-[1.09rem]">
               <span
                 onClick={() => scrollToPage("about")}
-                className="ml-8 hover:text-blue-500 hover:cursor-pointer"
+                className="ml-6 hover:text-blue-500 hover:cursor-pointer"
               >
                 About
               </span>
               <span
                 onClick={() => scrollToPage("technologies")}
-                className="ml-8 hover:text-blue-500 hover:cursor-pointer"
+                className="ml-6 hover:text-blue-500 hover:cursor-pointer"
               >
                 Technologies
               </span>
 
               <button
                 onClick={() => scrollToPage("projects")}
-                className="flex ml-8 items-center justify-center w-full px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-md md:px-4 md:py-2 hover:bg-transparent hover:text-blue-500"
+                className="flex ml-6 items-center justify-center w-full px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-md md:px-4 md:py-2 hover:bg-transparent hover:text-blue-500"
               >
-                <span>projects</span>
+                <span>Projects</span>
               </button>
 
               {/* <span

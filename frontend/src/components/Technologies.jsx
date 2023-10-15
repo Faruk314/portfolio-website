@@ -12,8 +12,18 @@ import { FaNodeJs, FaDocker } from "react-icons/fa";
 import { DiMysql, DiCss3 } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
 import { AiFillHtml5 } from "react-icons/ai";
+import { useInView } from "react-intersection-observer";
+import classNames from "classnames";
 
 const Technologies = () => {
+  const {
+    ref: myRef,
+    inView: myElementVisible,
+    entry,
+  } = useInView({
+    triggerOnce: true,
+  });
+
   const technologies = [
     { name: "React" },
     {
@@ -64,9 +74,17 @@ const Technologies = () => {
   ];
 
   return (
-    <div id="technologies" className="md:py-20">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-xl font-extrabold text-gray-900 md:text-3xl">
+    <div id="technologies" className="px-4 py-5 lg:px-0 md:py-20">
+      <div className="max-w-5xl md:mx-auto">
+        <h2
+          ref={myRef}
+          className={classNames(
+            "text-2xl font-extrabold text-gray-900 md:text-3xl",
+            {
+              "animate-up": myElementVisible,
+            }
+          )}
+        >
           Technologies I am Using
         </h2>
       </div>
@@ -81,7 +99,7 @@ const Technologies = () => {
                   {" "}
                   {frontedIconsArray[index]}
                 </span>
-                <span className="p-1 text-center border border-black rounded-md md:px-2">
+                <span className="p-1 text-center text-black border rounded-md shadow-lg md:px-2">
                   {item.name}
                 </span>
               </div>
@@ -97,7 +115,7 @@ const Technologies = () => {
                 <span className="text-blue-500">
                   {backendIconsArray[index]}
                 </span>
-                <span className="p-1 text-center border border-black rounded-md md:px-2">
+                <span className="p-1 text-center text-black border rounded-md shadow-lg md:px-2">
                   {item.name}
                 </span>
               </div>

@@ -1,11 +1,12 @@
-import React from "react";
-import { AiOutlineGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
+import React, { useState } from "react";
 import me from "../images/me.jpg";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import GitButton from "./utils/GitButton";
+import Contact from "./Contact";
 
 const About = () => {
+  const [openContact, setOpenContact] = useState(false);
   const {
     ref: myRef,
     inView: myElementVisible,
@@ -13,11 +14,6 @@ const About = () => {
   } = useInView({
     triggerOnce: true,
   });
-
-  const scrollToPage = (id) => {
-    const page = document.getElementById(id);
-    page.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div
@@ -27,29 +23,16 @@ const About = () => {
         "py-10 px-2 md:px-0 md:py-0 md:h-[70vh] bg-[url(../public/images/grid.jpg)] gradient flex"
       )}
     >
-      <div className="z-10 flex flex-col items-center justify-center md:space-x-20 md:flex-row md:max-w-5xl md:mx-auto">
-        {/* <img
-          className={classNames(
-            "h-[19rem] md:hidden md:w-max md:h-[25rem] noSelect",
-            {
-              "animate-right": myElementVisible,
-            }
-          )}
-          src={me}
-          alt="Portfolio"
-        /> */}
-
+      <div className="z-10 flex flex-col items-center justify-center px-4 lg:px-0 md:space-x-20 md:flex-row md:max-w-5xl md:mx-auto">
         <div
-          className={classNames(
-            "flex flex-col items-center px-2 text-center md:text-left md:items-start"
-          )}
+          className={classNames("flex flex-col md:text-left md:items-start")}
         >
           <div
-            className={classNames("flex flex-col items-center md:items-start", {
+            className={classNames("flex flex-col md:items-start", {
               "animate-up": myElementVisible,
             })}
           >
-            <h1 className="flex mb-4 space-x-2 text-2xl font-bold text-gray-900 md:text-3xl">
+            <h1 className="flex mb-1 space-x-2 text-2xl font-bold text-gray-900 md:mb-4 md:text-3xl">
               <span className="md:text-3xl">Hi, I am Faruk Spahic</span>{" "}
               <span className="emoji">👋</span>
             </h1>
@@ -91,11 +74,12 @@ const About = () => {
 
           <div className="flex flex-col w-full my-10 space-y-2 md:space-y-0 md:space-x-2 md:w-max md:flex-row md:text-lg">
             <button
-              onClick={() => scrollToPage("projects")}
+              onClick={() => {
+                setOpenContact(true);
+              }}
               className="flex items-center justify-center w-full hover:bg-white px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-md md:px-4 md:py-2 hover:bg-transparent hover:text-blue-500"
             >
-              <span className="icon"> visibility</span>
-              <span>My projects</span>
+              <span>Contact me</span>
             </button>
 
             <GitButton />
@@ -113,6 +97,8 @@ const About = () => {
           alt="Portfolio"
         />
       </div>
+
+      {openContact && <Contact setOpenContact={setOpenContact} />}
     </div>
   );
 };

@@ -24,7 +24,6 @@ const Projects = () => {
         "Socket.io",
       ],
       gitLink: "https://github.com/Faruk314/UnityNetWeb",
-      liveLink: "https://tuzlataxi.com",
       desc: "A versatile social media app that empowers users to chat, add friends, edit profiles, create posts, change profile pictures and cover photos, and receive notifications. With its user-friendly interface, UnityNet provides a seamless platform for connecting with others, expressing yourself, and staying updated on the latest activities.",
       image: "/images/socialMedia.png",
     },
@@ -40,7 +39,6 @@ const Projects = () => {
         "Redis",
       ],
       gitLink: "https://github.com/Faruk314/OnlineLudoGame",
-      liveLink: "https://tuzlataxi.com",
       desc: "An online Ludo game that offers local and multiplayer modes, so you can enjoy matches with friends or find opponents easily.",
       image: "/images/ludoImages/login.png",
     },
@@ -56,7 +54,6 @@ const Projects = () => {
         "Redis",
       ],
       gitLink: "https://github.com/Faruk314/ChessOnline",
-      liveLink: "https://tuzlataxi.com",
       desc: "Online Chess game that lets players enjoy multiplayer matches with friends and build their friends list. This game focuses on social interactions and multiplayer chess experiences.",
       image: "/images/chessImages/menu.png",
     },
@@ -72,7 +69,6 @@ const Projects = () => {
         "Redis",
       ],
       gitLink: "https://github.com/Faruk314/Slagalica",
-      liveLink: "https://tuzlataxi.com",
       desc: "An engaging game that offers fun and challenges for players of all ages. Test your knowledge and skills across various categories, including puzzles, trivia, and word games. Have the exciting opportunity to invite your friends to play and also enjoy single-player gameplay.",
       image: "/images/slagalica.png",
     },
@@ -110,7 +106,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid gap-10 my-10 md:px-4 lg:px-0 md:grid-cols-2">
+        <div className="grid gap-10 my-5 md:my-10 md:px-4 lg:px-0 md:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} index={index} />
           ))}

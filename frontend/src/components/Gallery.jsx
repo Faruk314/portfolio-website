@@ -39,12 +39,12 @@ const Gallery = ({
       </button>
       <div
         ref={modalRef}
-        className="flex flex-col  md:w-[56rem] justify-center p-6 space-y-4 bg-white rounded-md"
+        className="flex flex-col md:w-[56rem] justify-center p-6 space-y-4 bg-white rounded-xl"
       >
         <div
           onMouseOver={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
-          className="relative flex items-center justify-center w-full h-[20rem] md:h-[35rem] border border-blue-200 "
+          className="relative flex items-center justify-center w-full h-[20rem] md:h-[35rem] border border-gray-300 "
         >
           <img
             src={images[currentIndex]}
@@ -61,7 +61,7 @@ const Gallery = ({
                   setCurrentIndex(images.length - 1);
                 }
               }}
-              className="absolute flex items-center justify-center top-[50%] left-0 w-[3rem] bg-[rgb(0,0,0,0.4)] p-4 text-xl text-white bg-white"
+              className="absolute flex items-center justify-center top-[50%] left-0 w-[3rem] bg-[rgb(0,0,0,0.4)] p-4 text-xl text-white "
             >
               <AiOutlineLeft size={30} />
             </button>
@@ -76,7 +76,7 @@ const Gallery = ({
                   setCurrentIndex(0);
                 }
               }}
-              className="absolute flex items-center justify-center right-0 w-[3rem] top-[50%] bg-[rgb(0,0,0,0.4)] p-4 text-white text-xl bg-white"
+              className="absolute flex items-center justify-center right-0 w-[3rem] top-[50%] bg-[rgb(0,0,0,0.4)] p-4 text-white text-xl "
             >
               <AiOutlineRight size={25} className="" />
             </button>
@@ -92,14 +92,14 @@ const Gallery = ({
             {technologies?.map((item, index) => (
               <div
                 key={index}
-                className="p-[0.2rem] md:p-1 md:px-2 text-sm md:text-lg font-bold text-black border border-black rounded-md"
+                className="p-[0.2rem] md:p-1 md:px-2 text-sm md:text-lg font-bold text-black border shadow-md rounded-md"
               >
                 {item}
               </div>
             ))}
           </div>
 
-          <div className="flex space-x-2">
+          <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-2">
             {liveLink && (
               <a
                 href={liveLink}

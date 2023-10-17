@@ -74,19 +74,22 @@ const Technologies = () => {
   ];
 
   return (
-    <div id="technologies" className="px-4 py-5 lg:px-0 md:py-20">
-      <div className="max-w-5xl md:mx-auto">
+    <div id="technologies" className="px-4 py-5 lg:px-0 md:py-[10rem]">
+      <div
+        className={classNames("max-w-5xl md:mx-auto", {
+          "animate-up": myElementVisible,
+        })}
+      >
         <h2
           ref={myRef}
-          className={classNames(
-            "text-2xl font-extrabold text-gray-900 md:text-3xl",
-            {
-              "animate-up": myElementVisible,
-            }
-          )}
+          className="mb-1 text-2xl font-extrabold text-gray-900 md:mb-2 md:text-3xl"
         >
-          Technologies I am Using
+          Technologies
         </h2>
+
+        <span className="text-gray-600 md:text-xl">
+          Technologies I am using
+        </span>
       </div>
 
       <div className="flex justify-between max-w-5xl mx-2 mt-10 md:mx-auto">

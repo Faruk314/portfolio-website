@@ -114,7 +114,7 @@ const ProjectCard = ({
             <h2 className="text-xl font-bold md:text-2xl">{title}</h2>
 
             <img
-              className="border h-[15rem] md:h-[20rem]"
+              className="border border-gray-300 h-[15rem] md:h-[20rem]"
               src={imageCategories[title].images[0]}
             />
 

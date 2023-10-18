@@ -56,10 +56,12 @@ const ProjectCard = ({
     OnlineLudoGame: {
       images: [
         "/images/ludoImages/login.png",
-        "/images/ludoImages/game.png",
         "/images/ludoImages/menu.png",
-        "/images/ludoImages/findMatch1.png",
         "/images/ludoImages/findMatch2.png",
+        "/images/ludoImages/game.png",
+        "/images/ludoImages/left.png",
+        "/images/ludoImages/players.png",
+        "/images/ludoImages/colors.png",
       ],
     },
     "TicTacToe Online": {

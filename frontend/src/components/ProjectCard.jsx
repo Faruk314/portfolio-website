@@ -81,6 +81,11 @@ const ProjectCard = ({
         "/images/slagalicaImages/invite.png",
         "/images/slagalicaImages/multiplayer.png",
         "/images/slagalicaImages/game.png",
+        "/images/slagalicaImages/combination.png",
+        "/images/slagalicaImages/word.png",
+        "/images/slagalicaImages/wordWin.png",
+        "/images/slagalicaImages/number.png",
+        "/images/slagalicaImages/numberWin.png",
       ],
     },
     "Fashion Flock": {

@@ -69,7 +69,6 @@ const Technologies = () => {
     <DiMysql size={30} />,
     <SiMongodb size={30} />,
     <SiSocketdotio size={30} />,
-    <FaDocker size={30} />,
     <SiRedis size={30} />,
   ];
 

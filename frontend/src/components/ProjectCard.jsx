@@ -26,7 +26,14 @@ const ProjectCard = ({
     UnityNet: {
       images: [
         "/images/socialMediaImages/socialMedia.png",
+        "/images/socialMediaImages/login.png",
+        "/images/socialMediaImages/register.png",
         "/images/socialMediaImages/createPost.png",
+        "/images/socialMediaImages/liked.png",
+        "/images/socialMediaImages/photo.png",
+        "/images/socialMediaImages/shared.png",
+        "/images/socialMediaImages/share.png",
+        "/images/socialMediaImages/shares.png",
         "/images/socialMediaImages/comments.png",
         "/images/socialMediaImages/profile.png",
         "/images/socialMediaImages/photoOpened.png",

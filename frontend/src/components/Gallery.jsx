@@ -83,7 +83,7 @@ const Gallery = ({
           )}
         </div>
 
-        <div className="flex flex-col p-6 space-y-4">
+        <div className="flex flex-col h-[15rem] md:h-max overflow-scroll md:overflow-hidden overflow-x-hidden p-6 space-y-4">
           <h2 className="text-3xl font-bold">{title}</h2>
 
           <p className="max-w-2xl leading-6">{desc}</p>

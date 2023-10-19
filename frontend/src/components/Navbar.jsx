@@ -61,7 +61,7 @@ const Navbar = () => {
               }
             )}
           >
-            <div className="py-4 text-gray-700 bg-white border-b border-blue-500">
+            <div className="py-4 text-gray-700 bg-white border-b">
               <span
                 onClick={() => scrollToPage("about")}
                 className="block px-4 py-2 hover:bg-blue-600 hover:text-white hover:cursor-pointer"

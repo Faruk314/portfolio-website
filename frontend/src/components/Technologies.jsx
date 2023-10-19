@@ -73,7 +73,7 @@ const Technologies = () => {
   ];
 
   return (
-    <div id="technologies" className="px-4 py-5 lg:px-0 md:py-[10rem]">
+    <div id="technologies" className="px-4 lg:px-0 py-[5rem] md:py-[10rem]">
       <div
         className={classNames("max-w-5xl md:mx-auto", {
           "animate-up": myElementVisible,

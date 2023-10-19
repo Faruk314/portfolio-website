@@ -123,7 +123,7 @@ const ProjectCard = ({
       >
         <div className="h-[15rem] md:h-[20rem] lg:h-[23rem]">
           <img
-            className="rounded-xl h-full shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+            className="rounded-xl w-full h-full shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
             src={imageCategories[title]?.images[0]}
           />
         </div>

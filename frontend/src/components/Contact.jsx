@@ -3,6 +3,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Contact = ({ setOpenContact }) => {
   const [name, setName] = useState("");
@@ -39,8 +40,11 @@ const Contact = ({ setOpenContact }) => {
     e.preventDefault();
 
     if (!name || !email || !message) {
-      setOpenModal(true);
-      setNotif("Please fill out all the fields before submitting the form.");
+      toast.error("Please fill out all the fields", {
+        position: "top-right",
+        closeButton: false,
+      });
+
       return;
     }
 
@@ -56,16 +60,32 @@ const Contact = ({ setOpenContact }) => {
           message,
         }
       );
-      setNotif(response.data);
+
+      if (response.status === 200) {
+        toast.success(response.data, {
+          position: "top-right",
+        });
+      }
+
       setLoading(false);
+      setOpenModal(true);
       setName("");
       setEmail("");
       setMessage("");
     } catch (error) {
       console.log(error);
       setLoading(false);
-      setNotif(
-        " There was an issue sending your message. Please try again or contact me directly at farukspahicdev@gmail.com."
+      toast(
+        " There was an issue sending your message. Please try again or contact me directly at farukspahicdev@gmail.com",
+        {
+          position: "top-right",
+          closeButton: true,
+          closeOnClick: false,
+          draggable: false,
+          progressStyle: {
+            background: "red",
+          },
+        }
       );
     }
   };
@@ -131,11 +151,10 @@ const Contact = ({ setOpenContact }) => {
               />
             </div>
 
-            <button className="flex items-center w-full justify-center py-[0.6rem] border-blue-500 text-[0.9rem] md:text-lg space-x-1 md:space-x-2 font-medium text-white hover:text-blue-500 bg-blue-600 rounded-md hover:bg-transparent hover:border-blue-500 border">
-              <span>Send</span>
+            <button className="flex items-center w-full justify-center py-[0.6rem] border-blue-500 text-[0.9rem] md:text-lg space-x-1 md:space-x-2 font-medium text-white  bg-blue-600 rounded-md border">
+              {!loading && <span>Send</span>}
+              {loading && <span className="loader"></span>}
             </button>
-
-            {notif && <span className="text-center text-red-500">{notif}</span>}
           </div>
         </form>
       </div>

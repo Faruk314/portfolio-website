@@ -39,17 +39,17 @@ const Gallery = ({
       </button>
       <div
         ref={modalRef}
-        className="flex flex-col md:w-[56rem] justify-center p-6 space-y-4 bg-white rounded-xl"
+        className="flex flex-col md:w-[56rem] justify-center space-y-4 bg-white rounded-xl"
       >
         <div
           onMouseOver={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
-          className="relative flex items-center justify-center w-full h-[20rem] md:h-[35rem] border border-gray-300 "
+          className="relative flex items-center justify-center w-full rounded-t-xl h-[20rem] md:h-[35rem] border border-gray-300 "
         >
           <img
             src={images[currentIndex]}
             alt=""
-            className="object-contain h-full"
+            className="object-contain h-full rounded-t-xl"
           />
 
           {isHovering && (
@@ -83,7 +83,7 @@ const Gallery = ({
           )}
         </div>
 
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col p-6 space-y-4">
           <h2 className="text-3xl font-bold">{title}</h2>
 
           <p className="max-w-2xl leading-6">{desc}</p>
@@ -92,7 +92,7 @@ const Gallery = ({
             {technologies?.map((item, index) => (
               <div
                 key={index}
-                className="p-[0.2rem] md:p-1 md:px-2 text-sm md:text-lg font-bold text-black border shadow-md rounded-md"
+                className="p-[0.2rem] md:p-1 md:px-2 text-sm md:text-lg font-bold text-black shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md"
               >
                 {item}
               </div>

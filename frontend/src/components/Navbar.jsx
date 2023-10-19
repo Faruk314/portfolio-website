@@ -34,10 +34,10 @@ const Navbar = () => {
             <span className="text-gray-500">Full Stack Web Dev</span>
           </div>
 
-          <div className="p-2 bg-gray-200 rounded-md">
+          <div className="p-2 bg-gray-200 rounded-md md:hidden">
             {!isOpen && (
               <GiHamburgerMenu
-                className="text-blue-600 md:hidden hover:cursor-pointer"
+                className="text-blue-600 hover:cursor-pointer"
                 size={20}
                 onClick={toggleNav}
               />
@@ -45,7 +45,7 @@ const Navbar = () => {
 
             {isOpen && (
               <IoMdClose
-                className="text-blue-600 md:hidden hover:cursor-pointer"
+                className="text-blue-600 hover:cursor-pointer"
                 size={20}
                 onClick={toggleNav}
               />
@@ -54,7 +54,7 @@ const Navbar = () => {
 
           <div
             className={classNames(
-              "absolute right-0 w-full bg-white translate-y-[-30rem] top-[5.5rem] md:hidden",
+              "absolute right-0 w-full bg-white top-[5.5rem] md:hidden",
               {
                 open: isOpen,
                 close: !isOpen,

@@ -15,6 +15,7 @@ const Projects = () => {
   const projects = [
     {
       title: "UnityNet",
+      shortDesc: "Social Media Site",
       technologies: [
         "React",
         "Typescript",
@@ -28,7 +29,8 @@ const Projects = () => {
       image: "/images/socialMedia.png",
     },
     {
-      title: "OnlineLudoGame",
+      title: "LudoGame",
+      shortDesc: "Online Game",
       technologies: [
         "React",
         "Typescript",
@@ -43,7 +45,8 @@ const Projects = () => {
       image: "/images/ludoImages/login.png",
     },
     {
-      title: "ChessOnline",
+      title: "Chess",
+      shortDesc: "Online Game",
       technologies: [
         "React",
         "Typescript",
@@ -58,7 +61,8 @@ const Projects = () => {
       image: "/images/chessImages/menu.png",
     },
     {
-      title: "Slagalica",
+      title: "Mastermind",
+      shortDesc: "Online Game",
       technologies: [
         "React",
         "Typescript",
@@ -74,6 +78,7 @@ const Projects = () => {
     },
     {
       title: "Fashion Flock",
+      shortDesc: "E-Commerc Site",
       technologies: ["React", "NodeJS", "Tailwind", "MongoDB"],
       desc: "FashionFlock is designed to provide a seamless online shopping experience. With a user-friendly interface, secure payment integration using Stripe, and a versatile shopping cart feature, FashionFlock ensures an enjoyable and hassle-free journey for shoppers.",
       image: "/images/fashionFlock.png",
@@ -82,6 +87,7 @@ const Projects = () => {
     },
     {
       title: "Tuzla Taxi",
+      shortDesc: "Taxi Company Site",
       technologies: ["React", "Tailwind", "PHP"],
       desc: "A client project I developed for a local taxi company in Tuzla. This website enables customers to conveniently book taxis through a user-friendly form. As the developer, I optimized the site for a seamless booking experience and enhanced the client's online presence.",
       image: "/images/tuzlaTaxi.png",
@@ -106,7 +112,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid gap-10 my-5 md:my-10 md:px-4 lg:px-0 md:grid-cols-2">
+        <div className="grid gap-10 px-4 my-5 md:my-10 md:px-4 lg:px-0 md:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} index={index} />
           ))}

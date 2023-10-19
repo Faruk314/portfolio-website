@@ -24,7 +24,7 @@ const NavigateBtn = () => {
   }, [setIsVisible]);
 
   return (
-    <div className="fixed bottom-10 right-10">
+    <div className="fixed bottom-5 right-5 md:bottom-10 md:right-10">
       {isVisible && (
         <button
           className="bg-blue-600 text-white rounded-lg h-[2.8rem] w-[2.8rem] flex items-center justify-center"

@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <nav className="z-20 text-black bg-white">
       <div className="px-4 mx-auto border-black lg:px-8">
-        <div className="flex items-center justify-between max-w-5xl mx-auto py-7">
+        <div className="flex items-center justify-between max-w-5xl mx-auto py-7 md:py-10 ">
           {/* <a
             href="mailto:farukspahicdev@gmail.com"
             className="flex items-center space-x-2 font-bold underline text hover:text-gray-600"

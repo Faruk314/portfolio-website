@@ -101,7 +101,7 @@ const Technologies = () => {
                   {" "}
                   {frontedIconsArray[index]}
                 </span>
-                <span className="p-1 text-center text-black border rounded-md shadow-lg md:px-2">
+                <span className="p-1 text-center text-black rounded-md  shadow-[0_3px_10px_rgb(0,0,0,0.2)] md:px-2">
                   {item.name}
                 </span>
               </div>
@@ -117,7 +117,7 @@ const Technologies = () => {
                 <span className="text-blue-500">
                   {backendIconsArray[index]}
                 </span>
-                <span className="p-1 text-center text-black border rounded-md shadow-lg md:px-2">
+                <span className="p-1 text-center text-black rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] md:px-2">
                   {item.name}
                 </span>
               </div>

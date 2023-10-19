@@ -82,7 +82,7 @@ const About = () => {
               <span>Contact me</span>
             </button>
 
-            <GitButton />
+            <GitButton link={"https://github.com/Faruk314"} />
           </div>
         </div>
 

@@ -110,7 +110,7 @@ const Gallery = ({
               </a>
             )}
 
-            {gitLink && <GitButton />}
+            {gitLink && <GitButton link={gitLink} />}
           </div>
         </div>
       </div>

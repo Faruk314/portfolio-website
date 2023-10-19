@@ -52,8 +52,9 @@ const Contact = ({ setOpenContact }) => {
     setOpenModal(true);
 
     try {
+      // localhost:9998
       const response = await axios.post(
-        "http://localhost:9998/api/contact/sendMail",
+        "https://contact.farukspahic.com/api/contact/sendMail",
         {
           name,
           email,

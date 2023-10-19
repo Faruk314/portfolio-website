@@ -1,28 +1,14 @@
-import React, { useState, useEffect } from "react";
+import classNames from "classnames";
+import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import MobileNav from "./MobileNav";
-import { AiOutlineMail } from "react-icons/ai";
+import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
-  const [scroll, setScroll] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
   };
-
-  const handleScroll = () => {
-    if (window.scrollY > 40) {
-      setScroll(true);
-    } else {
-      setScroll(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const scrollToPage = (id) => {
     const page = document.getElementById(id);
@@ -30,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="z-20 text-black bg-white">
+    <nav className="relative z-20 text-black bg-white">
       <div className="px-4 mx-auto border-black lg:px-8">
         <div className="flex items-center justify-between max-w-5xl mx-auto py-7 md:py-10 ">
           {/* <a
@@ -48,14 +34,53 @@ const Navbar = () => {
             <span className="text-gray-500">Full Stack Web Dev</span>
           </div>
 
-          <div className="relative p-2 bg-gray-200 rounded-md">
-            <GiHamburgerMenu
-              className="text-blue-600 md:hidden hover:cursor-pointer"
-              size={20}
-              onClick={toggleNav}
-            />
+          <div className="p-2 bg-gray-200 rounded-md">
+            {!isOpen && (
+              <GiHamburgerMenu
+                className="text-blue-600 md:hidden hover:cursor-pointer"
+                size={20}
+                onClick={toggleNav}
+              />
+            )}
 
-            {isOpen && <MobileNav scrollToPage={scrollToPage} />}
+            {isOpen && (
+              <IoMdClose
+                className="text-blue-600 md:hidden hover:cursor-pointer"
+                size={20}
+                onClick={toggleNav}
+              />
+            )}
+          </div>
+
+          <div
+            className={classNames(
+              "absolute right-0 w-full bg-white translate-y-[-30rem] top-[5.5rem] md:hidden",
+              {
+                open: isOpen,
+                close: !isOpen,
+              }
+            )}
+          >
+            <div className="py-4 text-gray-700 bg-white border-b border-blue-500">
+              <span
+                onClick={() => scrollToPage("about")}
+                className="block px-4 py-2 hover:bg-blue-600 hover:text-white hover:cursor-pointer"
+              >
+                About
+              </span>
+              <span
+                onClick={() => scrollToPage("technologies")}
+                className="block px-4 py-2 hover:bg-blue-600 hover:text-white hover:cursor-pointer"
+              >
+                Technologies
+              </span>
+              <span
+                onClick={() => scrollToPage("projects")}
+                className="block px-4 py-2 hover:bg-blue-600 hover:text-white hover:cursor-pointer"
+              >
+                Projects
+              </span>
+            </div>
           </div>
 
           <div className="items-center justify-center hidden md:flex">

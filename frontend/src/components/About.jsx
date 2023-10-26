@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import GitButton from "./utils/GitButton";
 import Contact from "./Contact";
+import { HiMail } from "react-icons/hi";
 
 const About = () => {
   const [openContact, setOpenContact] = useState(false);
@@ -20,7 +21,7 @@ const About = () => {
       ref={myRef}
       id="about"
       className={classNames(
-        "py-10 px-2 md:px-0 md:py-0 md:h-[75vh] bg-[url(../public/images/grid.jpg)] gradient flex"
+        "py-10  md:px-0 md:py-0 md:h-[75vh] bg-[url(../public/images/grid.jpg)] gradient flex"
       )}
     >
       <div className="z-10 flex flex-col items-center justify-center px-4 lg:px-0 md:space-x-20 md:flex-row md:max-w-5xl md:mx-auto">
@@ -79,7 +80,8 @@ const About = () => {
               }}
               className="flex items-center justify-center w-full hover:bg-white px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-md md:px-4 md:py-2 hover:bg-transparent hover:text-blue-500"
             >
-              <span>Contact me</span>
+              <HiMail size={20} />
+              <span>Contact</span>
             </button>
 
             <GitButton link={"https://github.com/Faruk314"} />

@@ -8,13 +8,12 @@ import {
   SiRedis,
 } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
-import { FaNodeJs, FaDocker } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa";
 import { DiMysql, DiCss3 } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
 import { AiFillHtml5 } from "react-icons/ai";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
-import { SiNginx, SiVite } from "react-icons/si";
 
 const Technologies = () => {
   const {
@@ -51,10 +50,6 @@ const Technologies = () => {
       name: "Socket.io",
     },
     { name: "Redis" },
-
-    { name: "Docker" },
-    { name: "Nginx" },
-    { name: "Vite" },
   ];
   let frontedIconsArray = [
     <FaReact size={30} />,
@@ -72,12 +67,6 @@ const Technologies = () => {
     <SiMongodb size={30} />,
     <SiSocketdotio size={30} />,
     <SiRedis size={30} />,
-  ];
-
-  let toolsIconsArray = [
-    <FaDocker size={30} />,
-    <SiNginx size={30} />,
-    <SiVite size={30} />,
   ];
 
   return (
@@ -125,20 +114,6 @@ const Technologies = () => {
                 <span className="text-blue-500">
                   {backendIconsArray[index]}
                 </span>
-                <span className="p-1 text-center text-black w-[5.5rem] md:w-[7rem] rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] md:px-2">
-                  {item.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="hidden md:flex md:flex-col">
-          <div className="flex flex-col space-y-2 font-bold md:text-xl">
-            <span className="font-medium text-gray-500">Tools</span>
-            {technologies.slice(12).map((item, index) => (
-              <div key={index} className="flex items-center space-x-2">
-                <span className="text-blue-500">{toolsIconsArray[index]}</span>
                 <span className="p-1 text-center text-black w-[5.5rem] md:w-[7rem] rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] md:px-2">
                   {item.name}
                 </span>

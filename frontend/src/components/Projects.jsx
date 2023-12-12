@@ -29,6 +29,23 @@ const Projects = () => {
       image: "/images/socialMedia.png",
     },
     {
+      title: "Chess",
+      shortDesc: "Online Game",
+      technologies: [
+        "React",
+        "Typescript",
+        "NodeJS",
+        "Tailwind",
+        "MySQL",
+        "Socket.io",
+        "Redis",
+      ],
+      gitLink: "https://github.com/Faruk314/ChessOnline",
+      desc: "Online Chess game that lets players enjoy multiplayer matches with friends and build their friends list. This game focuses on social interactions and multiplayer chess experiences.",
+      image: "/images/chessImages/menu.png",
+      liveLink: "https://chess.farukspahic.com/",
+    },
+    {
       title: "LudoGame",
       shortDesc: "Online Game",
       technologies: [
@@ -44,22 +61,7 @@ const Projects = () => {
       desc: "An online Ludo game that offers local and multiplayer modes, so you can enjoy matches with friends or find opponents easily.",
       image: "/images/ludoImages/login.png",
     },
-    {
-      title: "Chess",
-      shortDesc: "Online Game",
-      technologies: [
-        "React",
-        "Typescript",
-        "NodeJS",
-        "Tailwind",
-        "MySQL",
-        "Socket.io",
-        "Redis",
-      ],
-      gitLink: "https://github.com/Faruk314/ChessOnline",
-      desc: "Online Chess game that lets players enjoy multiplayer matches with friends and build their friends list. This game focuses on social interactions and multiplayer chess experiences.",
-      image: "/images/chessImages/menu.png",
-    },
+
     {
       title: "Mastermind",
       shortDesc: "Online Game",
@@ -83,7 +85,6 @@ const Projects = () => {
       desc: "FashionFlock is designed to provide a seamless online shopping experience. With a user-friendly interface, secure payment integration using Stripe, and a versatile shopping cart feature, FashionFlock ensures an enjoyable and hassle-free journey for shoppers.",
       image: "/images/fashionFlock.png",
       gitLink: "https://github.com/Faruk314/FashionFlock",
-      liveLink: "https://fashionflock.farukspahic.com/",
     },
     {
       title: "Tuzla Taxi",

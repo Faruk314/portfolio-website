@@ -22,6 +22,7 @@ const ProjectCard = ({
     triggerOnce: true,
   });
   const [galleryOpen, setOpenGallery] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
 
   const imageCategories = {
     UnityNet: {
@@ -111,6 +112,8 @@ const ProjectCard = ({
   return (
     <>
       <div
+        onMouseOver={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
         ref={myRef}
         className={classNames("cursor-pointer", {
           "animate-left": index % 2 === 0 && myElementVisible,
@@ -128,12 +131,13 @@ const ProjectCard = ({
           />
         </div>
 
-        <div className="flex flex-col mt-4 space-y-1">
-          <h2 className="text-xl font-bold md:text-2xl">{title}</h2>
-          <span className="text-[1rem] md:text-[1.1rem] text-gray-600">
-            {shortDesc}
-          </span>
-        </div>
+        {isHovering && (
+          <div className="bg-[rgba(0,0,0,0.5)] inset-0 fixed rounded-xl flex justify-center items-center">
+            <h2 className="text-2xl md:text-3xl text-white font-bold">
+              {title}
+            </h2>
+          </div>
+        )}
       </div>
       {galleryOpen && (
         <Gallery

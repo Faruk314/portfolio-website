@@ -3,6 +3,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 import NavigateBtn from "./components/utils/NavigateBtn";
+import ClientProjects from "./components/ClientProjects";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <About />
       <Technologies />
+      <ClientProjects />
       <Projects />
       <NavigateBtn />
       {/* <ContactForm /> */}

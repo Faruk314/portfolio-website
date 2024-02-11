@@ -21,18 +21,14 @@ const About = () => {
       ref={myRef}
       id="about"
       className={classNames(
-        "py-10  md:px-0 md:py-0 md:h-[75vh] bg-[url(../public/images/grid.jpg)] gradient flex"
+        "py-10  md:px-0 md:py-0 md:h-[80vh] bg-[url(../public/images/grid.jpg)] gradient flex"
       )}
     >
-      <div className="z-10 flex flex-col items-center justify-center px-4 lg:px-0 md:space-x-20 md:flex-row md:max-w-5xl md:mx-auto">
+      <div className="z-10 flex flex-col items-center justify-center px-4 lg:px-0 md:space-x-40 md:flex-row md:max-w-6xl md:mx-auto">
         <div
           className={classNames("flex flex-col md:text-left md:items-start")}
         >
-          <div
-            className={classNames("flex flex-col md:items-start", {
-              "animate-up": myElementVisible,
-            })}
-          >
+          <div className={classNames("flex flex-col md:items-start", {})}>
             <h1 className="flex mb-1 space-x-2 text-2xl font-bold text-gray-900 md:mb-2 md:text-3xl">
               <span className="md:text-3xl">Hi, I am Faruk Spahic</span>{" "}
               <span className="emoji">👋</span>
@@ -46,9 +42,7 @@ const About = () => {
           <p
             className={classNames(
               "pt-4 leading-7 text-sm md:text-[1rem] md:leading-loose",
-              {
-                "animate-up": myElementVisible,
-              }
+              {}
             )}
           >
             Hi, I am Faruk Spahic, a Full Stack Developer specializing in

@@ -72,7 +72,7 @@ const Technologies = () => {
   return (
     <div id="technologies" className="px-4 lg:px-0 py-[5rem] md:py-[10rem]">
       <div
-        className={classNames("max-w-5xl md:mx-auto", {
+        className={classNames("max-w-6xl md:mx-auto", {
           "animate-up": myElementVisible,
         })}
       >
@@ -88,7 +88,7 @@ const Technologies = () => {
         </span>
       </div>
 
-      <div className="flex justify-between max-w-5xl mt-10 md:mx-auto">
+      <div className="flex justify-between max-w-6xl mt-10 md:mx-auto">
         <div className="flex flex-col">
           <div className="flex flex-col space-y-2 font-bold md:text-xl">
             <span className="font-medium text-gray-500">Frontend</span>

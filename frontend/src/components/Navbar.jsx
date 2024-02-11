@@ -16,19 +16,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative z-20 text-black bg-white">
+    <nav className="relative z-20 text-black bg-white                                                                                                                                                                           ">
       <div className="px-4 mx-auto border-black lg:px-8">
-        <div className="flex items-center justify-between max-w-5xl mx-auto py-7 md:py-10 ">
-          {/* <a
-            href="mailto:farukspahicdev@gmail.com"
-            className="flex items-center space-x-2 font-bold underline text hover:text-gray-600"
-          >
-            <AiOutlineMail size={25} />
-            <span className="text-[0.9rem] md:text-[1rem]">
-              farukspahicdev@gmail.com
-            </span>
-          </a> */}
-
+        <div className="flex items-center justify-between max-w-6xl mx-auto py-7 md:py-10 ">
           <div>
             <h1 className="text-2xl font-bold">Faruk Spahic</h1>
             <span className="text-gray-500">Full Stack Web Dev</span>

@@ -123,7 +123,6 @@ const Contact = ({ setOpenContact }) => {
                 <label className="text-[1.1rem]">Name</label>
                 <input
                   className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
-                  placeholder="Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -134,7 +133,6 @@ const Contact = ({ setOpenContact }) => {
                 <input
                   type="email"
                   className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
-                  placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -146,7 +144,6 @@ const Contact = ({ setOpenContact }) => {
               <textarea
                 rows={4}
                 className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
-                placeholder="Message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />

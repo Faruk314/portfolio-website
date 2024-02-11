@@ -86,19 +86,14 @@ const Projects = () => {
       image: "/images/fashionFlock.png",
       gitLink: "https://github.com/Faruk314/FashionFlock",
     },
-    {
-      title: "Tuzla Taxi",
-      shortDesc: "Taxi Company Site",
-      technologies: ["React", "Tailwind", "PHP"],
-      desc: "A client project I developed for a local taxi company in Tuzla. This website enables customers to conveniently book taxis through a user-friendly form. As the developer, I optimized the site for a seamless booking experience and enhanced the client's online presence.",
-      image: "/images/tuzlaTaxi.png",
-      liveLink: "https://tuzlataxi.com",
-    },
   ];
 
   return (
-    <section id="projects" className="w-full overflow-x-hidden">
-      <div className="flex flex-col max-w-5xl mx-auto">
+    <section
+      id="projects"
+      className="w-full overflow-x-hidden py-[5rem] md:py-[10rem]"
+    >
+      <div className="flex flex-col max-w-6xl mx-auto">
         <div
           ref={myRef}
           className={classNames("p-4 lg:p-0", {
@@ -106,7 +101,7 @@ const Projects = () => {
           })}
         >
           <h1 className="mb-1 text-2xl font-bold text-gray-900 md:mb-2 md:text-3xl">
-            My Projects
+            Personal Projects
           </h1>
           <p className="text-gray-600 md:text-xl">
             Check out some of my recent work.

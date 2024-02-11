@@ -107,6 +107,18 @@ const ProjectCard = ({
         "/images/taxiImages/contact.png",
       ],
     },
+
+    "A-FARM": {
+      images: [
+        "/images/AfarmImages/home.png",
+        "/images/AfarmImages/cart.png",
+        "/images/AfarmImages/store.png",
+        "/images/AfarmImages/login.png",
+        "/images/AfarmImages/register.png",
+        "/images/AfarmImages/order.png",
+        "/images/AfarmImages/contact.png",
+      ],
+    },
   };
 
   return (
@@ -124,7 +136,7 @@ const ProjectCard = ({
           setOpenGallery(true);
         }}
       >
-        <div className="h-[15rem] md:h-[20rem] lg:h-[23rem]">
+        <div className="h-[15rem] md:h-[20rem] lg:h-[25rem]">
           <img
             className="rounded-xl w-full h-full shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
             src={imageCategories[title]?.images[0]}

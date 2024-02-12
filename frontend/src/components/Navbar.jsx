@@ -17,12 +17,12 @@ const Navbar = () => {
 
   return (
     <nav className="relative z-20 text-black bg-white                                                                                                                                                                           ">
-      <div className="px-4 mx-auto border-black lg:px-8">
-        <div className="flex items-center justify-between max-w-6xl mx-auto py-7 md:py-10 ">
-          <div>
-            <h1 className="text-2xl font-bold">Faruk Spahic</h1>
-            <span className="text-gray-500">Full Stack Web Dev</span>
-          </div>
+      <div className="px-4 mx-auto border-black lg:px-8 border border-gray-200 shadow-md">
+        <div className="flex items-center justify-between max-w-6xl mx-auto py-4 md:py-7">
+          <h1 className="text-xl md:text-2xl cursor-pointer text-blue-600 font-bold border-[0.3rem] border-blue-600 h-[3rem] w-[3rem] md:w-[3.6rem] md:h-[3.5rem] flex justify-center items-center rounded-full">
+            <span>F</span>
+            <span>S</span>
+          </h1>
 
           <div className="p-2 bg-gray-200 rounded-md md:hidden">
             {!isOpen && (
@@ -44,7 +44,7 @@ const Navbar = () => {
 
           <div
             className={classNames(
-              "absolute right-0 w-full bg-white top-[5.5rem] md:hidden",
+              "absolute right-0 w-full bg-white top-[5rem] md:hidden",
               {
                 open: isOpen,
                 close: !isOpen,

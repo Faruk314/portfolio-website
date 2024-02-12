@@ -138,7 +138,8 @@ const ProjectCard = ({
       >
         <div className="h-[15rem] md:h-[20rem] lg:h-[25rem]">
           <img
-            className="rounded-xl w-full h-full shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+            alt=""
+            className="rounded-xl w-full object-cover h-full shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
             src={imageCategories[title]?.images[0]}
           />
         </div>

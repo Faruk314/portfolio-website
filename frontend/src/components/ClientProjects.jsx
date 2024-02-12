@@ -7,10 +7,9 @@ const ClientProjects = () => {
     {
       title: "A-FARM",
       shortDesc: "Herbal pharmacy",
-      technologies: ["NextJS", "Tailwind", "Medusa"],
-      desc: "A client project I developed for a local taxi company in Tuzla. This website enables customers to conveniently book taxis through a user-friendly form. As the developer, I optimized the site for a seamless booking experience and enhanced the client's online presence.",
-      image: "/images/AfarmImages/home.png",
-      liveLink: "https://tuzlataxi.com",
+      technologies: ["NextJS", "Tailwind"],
+      desc: "Developed a comprehensive Next.js e-commerce site for a herbal pharmacy. The site features a wide range of herbal products categorized by various health concerns, enabling customers to easily find natural remedies for their needs. Leveraged Next.js for a smooth and dynamic user experience.",
+      liveLink: "https://afarm-biljoteka.com/",
     },
 
     {

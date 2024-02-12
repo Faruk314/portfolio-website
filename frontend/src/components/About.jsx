@@ -28,7 +28,23 @@ const About = () => {
         <div
           className={classNames("flex flex-col md:text-left md:items-start")}
         >
-          <div className={classNames("flex flex-col md:items-start", {})}>
+          <img
+            className={classNames(
+              "h-[12rem] w-[12rem] md:hidden noSelect mx-auto",
+              {
+                "animate-right": myElementVisible,
+              }
+            )}
+            src={me}
+            alt="Portfolio"
+          />
+
+          <div
+            className={classNames(
+              "flex flex-col items-center md:items-start",
+              {}
+            )}
+          >
             <h1 className="flex mb-1 space-x-2 text-2xl font-bold text-gray-900 md:mb-2 md:text-3xl">
               <span className="md:text-3xl">Hi, I am Faruk Spahic</span>{" "}
               <span className="emoji">👋</span>
@@ -41,7 +57,7 @@ const About = () => {
           </div>
           <p
             className={classNames(
-              "pt-4 leading-7 text-sm md:text-[1rem] md:leading-loose",
+              "pt-4 leading-7 text-center md:text-left text-sm md:text-[1rem] md:leading-loose",
               {}
             )}
           >
@@ -84,7 +100,7 @@ const About = () => {
 
         <img
           className={classNames(
-            "h-[19rem] hidden md:block md:w-max md:h-[25rem] noSelect",
+            "h-[19rem] hidden lg:block md:w-max md:h-[25rem] noSelect",
             {
               "animate-right": myElementVisible,
             }

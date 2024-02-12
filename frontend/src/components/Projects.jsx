@@ -78,20 +78,12 @@ const Projects = () => {
       desc: "An engaging game that offers fun and challenges for players of all ages. Test your knowledge and skills across various categories, including puzzles, trivia, and word games. Have the exciting opportunity to invite your friends to play and also enjoy single-player gameplay.",
       image: "/images/slagalica.png",
     },
-    {
-      title: "Fashion Flock",
-      shortDesc: "E-Commerc Site",
-      technologies: ["React", "NodeJS", "Tailwind", "MongoDB"],
-      desc: "FashionFlock is designed to provide a seamless online shopping experience. With a user-friendly interface, secure payment integration using Stripe, and a versatile shopping cart feature, FashionFlock ensures an enjoyable and hassle-free journey for shoppers.",
-      image: "/images/fashionFlock.png",
-      gitLink: "https://github.com/Faruk314/FashionFlock",
-    },
   ];
 
   return (
     <section
       id="projects"
-      className="w-full overflow-x-hidden py-[5rem] md:py-[10rem]"
+      className="w-full overflow-x-hidden py-[5rem] md:py-[7rem]"
     >
       <div className="flex flex-col max-w-6xl mx-auto">
         <div

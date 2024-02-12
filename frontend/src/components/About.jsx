@@ -32,7 +32,7 @@ const About = () => {
             className={classNames(
               "h-[12rem] w-[12rem] md:hidden noSelect mx-auto",
               {
-                "animate-right": myElementVisible,
+                scrolled: myElementVisible,
               }
             )}
             src={me}
@@ -40,17 +40,18 @@ const About = () => {
           />
 
           <div
-            className={classNames(
-              "flex flex-col items-center md:items-start",
-              {}
-            )}
+            className={classNames("flex flex-col items-center md:items-start", {
+              scrolled: myElementVisible,
+            })}
           >
             <h1 className="flex mb-1 space-x-2 text-2xl font-bold text-gray-900 md:mb-2 md:text-3xl">
               <span className="md:text-3xl">Hi, I am Faruk Spahic</span>{" "}
               <span className="emoji">👋</span>
             </h1>
             <p
-              className={classNames("flex space-x-2 text-gray-500 md:text-xl")}
+              className={classNames("flex space-x-2 text-gray-500 md:text-xl", {
+                scrolled: myElementVisible,
+              })}
             >
               Full Stack Web Developer
             </p>
@@ -58,7 +59,9 @@ const About = () => {
           <p
             className={classNames(
               "pt-4 leading-7 text-center md:text-left text-sm md:text-[1rem] md:leading-loose",
-              {}
+              {
+                scrolled: myElementVisible,
+              }
             )}
           >
             Hi, I am Faruk Spahic, a Full Stack Developer specializing in
@@ -102,7 +105,7 @@ const About = () => {
           className={classNames(
             "h-[19rem] hidden lg:block md:w-max md:h-[25rem] noSelect",
             {
-              "animate-right": myElementVisible,
+              scrolled: myElementVisible,
             }
           )}
           src={me}

@@ -93,7 +93,14 @@ const Technologies = () => {
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-4 mt-10">
         {technologies.map((item, index) => (
-          <div className="shadow-md border flex items-center justify-center py-8 rounded-xl">
+          <div
+            className={classNames(
+              "shadow-md border flex items-center justify-center py-8 rounded-xl",
+              {
+                scrolled: myElementVisible,
+              }
+            )}
+          >
             <div className="flex flex-col items-center space-y-2">
               <span className="text-blue-600">{icons[index]}</span>
               <h3 className="font-bold">{item.name}</h3>

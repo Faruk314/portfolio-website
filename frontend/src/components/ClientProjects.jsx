@@ -1,8 +1,17 @@
 import React from "react";
 import classNames from "classnames";
 import ProjectCard from "./ProjectCard";
+import { useInView } from "react-intersection-observer";
 
 const ClientProjects = () => {
+  const {
+    ref: myRef,
+    inView: myElementVisible,
+    entry,
+  } = useInView({
+    triggerOnce: true,
+  });
+
   const projects = [
     {
       title: "A-FARM",
@@ -24,8 +33,12 @@ const ClientProjects = () => {
 
   return (
     <section id="projects" className="w-full overflow-x-hidden">
-      <div className="flex flex-col max-w-6xl mx-auto">
-        <div className={classNames("p-4 lg:p-0", {})}>
+      <div ref={myRef} className="flex flex-col max-w-6xl mx-auto">
+        <div
+          className={classNames("p-4 lg:p-0", {
+            "animate-up": myElementVisible,
+          })}
+        >
           <h1 className="mb-1 text-2xl font-bold text-gray-900 md:mb-2 md:text-3xl">
             Client projects
           </h1>

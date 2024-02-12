@@ -128,8 +128,7 @@ const ProjectCard = ({
         onMouseLeave={() => setIsHovering(false)}
         ref={myRef}
         className={classNames("cursor-pointer", {
-          "animate-left": index % 2 === 0 && myElementVisible,
-          "animate-right": index % 2 !== 0 && myElementVisible,
+          scrolled: myElementVisible,
         })}
         onClick={(e) => {
           e.stopPropagation();

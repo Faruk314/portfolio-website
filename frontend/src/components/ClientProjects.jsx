@@ -47,7 +47,7 @@ const ClientProjects = () => {
           </p>
         </div>
 
-        <div className="grid justify-center gap-10 px-4 my-5 md:my-10 md:px-4 lg:px-0 md:grid-cols-2">
+        <div className="grid justify-center gap-4 md:gap-10 px-4 my-5 md:my-10 md:px-4 lg:px-0 md:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} index={index} />
           ))}

@@ -30,7 +30,7 @@ const About = () => {
         >
           <img
             className={classNames(
-              "h-[12rem] w-[12rem] md:hidden noSelect mx-auto",
+              "h-[11.5rem] w-[12rem] md:hidden noSelect mx-auto",
               {
                 scrolled: myElementVisible,
               }

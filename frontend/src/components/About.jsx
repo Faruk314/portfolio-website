@@ -2,10 +2,9 @@ import me from "../images/me.jpg";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import GitButton from "./utils/GitButton";
-import Contact from "./Contact";
 import { HiMail } from "react-icons/hi";
 
-const About = ({ setOpenContact, openContact }) => {
+const About = ({ setOpenContact }) => {
   const {
     ref: myRef,
     inView: myElementVisible,
@@ -75,18 +74,10 @@ const About = ({ setOpenContact, openContact }) => {
             </span>
           </p>
 
-          {/* <div className="flex items-center my-5 space-x-1"> */}
-          {/* <a href="">
-              <AiFillLinkedin size={30} className="text-gray-900" />
-            </a> */}
-          {/* <a href="https://github.com/Faruk314" className="text-gray-900">
-              <AiOutlineGithub className="" size={30} />
-            </a> */}
-          {/* </div> */}
-
           <div className="flex flex-col w-full my-10 space-y-2 md:space-y-0 md:space-x-2 md:w-max md:flex-row md:text-lg">
             <button
               onClick={() => {
+                document.body.classList.add("no-overflow");
                 setOpenContact(true);
               }}
               className="flex items-center justify-center w-full hover:bg-white px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-md md:px-4 md:py-2 hover:bg-transparent hover:text-blue-500"
@@ -110,8 +101,6 @@ const About = ({ setOpenContact, openContact }) => {
           alt="Portfolio"
         />
       </div>
-
-      {openContact && <Contact setOpenContact={setOpenContact} />}
     </div>
   );
 };

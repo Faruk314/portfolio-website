@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -12,13 +12,13 @@ function App() {
 
   return (
     <>
-      <Navbar setOpenContact={setOpenContact} />
-      <About setOpenContact={setOpenContact} openContact={openContact} />
+      <Navbar setOpenContact={setOpenContact} openContact={openContact} />
+      <About setOpenContact={setOpenContact} />
       <Technologies />
       <ClientProjects />
       <Projects />
       <NavigateBtn />
-      {/* <ContactForm /> */}
+      {openContact && <Contact setOpenContact={setOpenContact} />}
     </>
   );
 }

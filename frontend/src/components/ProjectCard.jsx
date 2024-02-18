@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import Gallery from "./Gallery";
-import { TbListDetails } from "react-icons/tb";
 
 const ProjectCard = ({
   title,
@@ -132,6 +131,7 @@ const ProjectCard = ({
         })}
         onClick={(e) => {
           e.stopPropagation();
+          document.body.classList.add("no-overflow");
           setOpenGallery(true);
         }}
       >

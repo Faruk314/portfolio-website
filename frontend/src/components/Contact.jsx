@@ -15,6 +15,7 @@ const Contact = ({ setOpenContact }) => {
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (formRef.current && !formRef.current.contains(event.target)) {
+        document.body.classList.remove("no-overflow");
         setOpenContact(false);
       }
     };
@@ -71,6 +72,7 @@ const Contact = ({ setOpenContact }) => {
       setEmail("");
       setMessage("");
       setOpenContact(false);
+      document.body.classList.remove("no-overflow");
     } catch (error) {
       console.log(error);
       setLoading(false);
@@ -101,7 +103,11 @@ const Contact = ({ setOpenContact }) => {
         )}
       >
         <button
-          onClick={() => setOpenContact(false)}
+          onClick={(e) => {
+            e.stopPropagation();
+            document.body.classList.remove("no-overflow");
+            setOpenContact(false);
+          }}
           className="absolute top-2 right-0 h-[2rem] w-[2rem] text-xl text-black rounded-full"
         >
           <AiOutlineClose size={17} />

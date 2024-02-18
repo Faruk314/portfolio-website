@@ -5,9 +5,11 @@ import { IoMdClose } from "react-icons/io";
 
 const Navbar = ({ setOpenContact }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [closed, setClosed] = useState(false);
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
+    setClosed(true);
   };
 
   const scrollToPage = (id) => {
@@ -44,10 +46,10 @@ const Navbar = ({ setOpenContact }) => {
 
           <div
             className={classNames(
-              "absolute right-0 w-full bg-white top-[5rem] md:hidden",
+              "absolute translate-x-[100%] right-0 w-full bg-white top-[5rem] md:hidden",
               {
                 open: isOpen,
-                close: !isOpen,
+                close: !isOpen && closed,
               }
             )}
           >
@@ -71,7 +73,10 @@ const Navbar = ({ setOpenContact }) => {
                 Projects
               </span>
               <span
-                onClick={() => setOpenContact(true)}
+                onClick={() => {
+                  document.body.classList.add("no-overflow");
+                  setOpenContact(true);
+                }}
                 className="block px-4 py-2 hover:bg-blue-600 hover:text-white hover:cursor-pointer"
               >
                 Contact
@@ -96,7 +101,7 @@ const Navbar = ({ setOpenContact }) => {
 
               <span
                 onClick={() => scrollToPage("projects")}
-                className="ml-8 hover:text-gray-300 hover:cursor-pointer"
+                className="ml-5 hover:text-gray-300 hover:cursor-pointer"
               >
                 Projects
               </span>

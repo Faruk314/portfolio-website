@@ -9,9 +9,7 @@ const Contact = ({ setOpenContact }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [notif, setNotif] = useState("");
   const [loading, setLoading] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
   const formRef = useRef();
 
   useEffect(() => {
@@ -49,12 +47,12 @@ const Contact = ({ setOpenContact }) => {
     }
 
     setLoading(true);
-    setOpenModal(true);
 
     try {
-      // localhost:9998
+      axios.defaults.timeout = 5000;
+
       const response = await axios.post(
-        "https://contact.farukspahic.com/api/contact/sendMail",
+        process.env.REACT_APP_CONTACT_ENDPOINT,
         {
           name,
           email,
@@ -69,10 +67,10 @@ const Contact = ({ setOpenContact }) => {
       }
 
       setLoading(false);
-      setOpenModal(true);
       setName("");
       setEmail("");
       setMessage("");
+      setOpenContact(false);
     } catch (error) {
       console.log(error);
       setLoading(false);
@@ -149,7 +147,10 @@ const Contact = ({ setOpenContact }) => {
               />
             </div>
 
-            <button className="flex items-center w-full justify-center py-[0.6rem] border-blue-500 text-[0.9rem] md:text-lg space-x-1 md:space-x-2 font-medium text-white  bg-blue-600 rounded-md border">
+            <button
+              disabled={loading}
+              className="flex items-center w-full justify-center py-[0.6rem] border-blue-500 text-[0.9rem] md:text-lg space-x-1 md:space-x-2 font-medium text-white  bg-blue-600 rounded-md border"
+            >
               {!loading && <span>Send</span>}
               {loading && <span className="loader"></span>}
             </button>

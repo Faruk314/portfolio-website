@@ -12,17 +12,17 @@ export const sendMail = asyncHandler(async (req, res) => {
   }
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD,
     },
   });
 
   const mailOptions = {
     from: `${email}`,
-    to: process.env.TO_EMAIL,
+    to: process.env.CONTACT_EMAIL,
     html: `
     
     <!DOCTYPE html>

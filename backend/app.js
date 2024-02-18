@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: ["https://farukspahic.com", "https://www.farukspahic.com"],
+    origin: true,
   })
 );
 

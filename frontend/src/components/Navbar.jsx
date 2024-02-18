@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 
-const Navbar = () => {
+const Navbar = ({ setOpenContact }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = () => {
@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <nav className="relative z-20 text-black bg-white                                                                                                                                                                           ">
-      <div className="px-4 mx-auto border-black lg:px-8 border border-gray-200 shadow-md">
+      <div className="px-4 mx-auto  lg:px-8 border border-gray-200 shadow-md">
         <div className="flex items-center justify-between max-w-6xl mx-auto py-4 md:py-7">
           <h1 className="text-xl md:text-2xl cursor-pointer text-blue-600 font-bold border-[0.3rem] border-blue-600 h-[3rem] w-[3rem] md:w-[3.6rem] md:h-[3.5rem] flex justify-center items-center rounded-full">
             <span>F</span>
@@ -70,6 +70,12 @@ const Navbar = () => {
               >
                 Projects
               </span>
+              <span
+                onClick={() => setOpenContact(true)}
+                className="block px-4 py-2 hover:bg-blue-600 hover:text-white hover:cursor-pointer"
+              >
+                Contact
+              </span>
             </div>
           </div>
 
@@ -88,19 +94,19 @@ const Navbar = () => {
                 Technologies
               </span>
 
-              <button
+              <span
                 onClick={() => scrollToPage("projects")}
-                className="flex ml-5 items-center justify-center w-full px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-md md:px-4 md:py-2 hover:bg-transparent hover:text-blue-500"
-              >
-                <span>Projects</span>
-              </button>
-
-              {/* <span
-                onClick={() => scrollToPage("contact")}
                 className="ml-8 hover:text-gray-300 hover:cursor-pointer"
               >
-                Contact
-              </span> */}
+                Projects
+              </span>
+
+              <button
+                onClick={() => setOpenContact(true)}
+                className="flex ml-5 items-center justify-center w-full px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-md md:px-4 md:py-2 hover:bg-transparent hover:text-blue-500"
+              >
+                <span>Contact</span>
+              </button>
             </div>
           </div>
         </div>

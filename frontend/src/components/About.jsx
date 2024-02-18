@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import me from "../images/me.jpg";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
@@ -6,8 +5,7 @@ import GitButton from "./utils/GitButton";
 import Contact from "./Contact";
 import { HiMail } from "react-icons/hi";
 
-const About = () => {
-  const [openContact, setOpenContact] = useState(false);
+const About = ({ setOpenContact, openContact }) => {
   const {
     ref: myRef,
     inView: myElementVisible,

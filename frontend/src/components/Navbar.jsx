@@ -18,8 +18,8 @@ const Navbar = ({ setOpenContact }) => {
   };
 
   return (
-    <nav className="relative z-20 text-black bg-white                                                                                                                                                                           ">
-      <div className="px-4 mx-auto  lg:px-8 border border-gray-200 shadow-md">
+    <nav className="relative z-20 text-black bg-white">
+      <div className="px-4 mx-auto lg:px-8 border border-gray-200 shadow-md">
         <div className="flex items-center justify-between max-w-6xl mx-auto py-4 md:py-7">
           <h1 className="text-xl md:text-2xl cursor-pointer text-blue-600 font-bold border-[0.3rem] border-blue-600 h-[3rem] w-[3rem] md:w-[3.6rem] md:h-[3.5rem] flex justify-center items-center rounded-full">
             <span>F</span>
@@ -46,7 +46,7 @@ const Navbar = ({ setOpenContact }) => {
 
           <div
             className={classNames(
-              "absolute translate-x-[100%] right-0 w-full bg-white top-[5rem] md:hidden",
+              "absolute translate-y-[-40rem] right-0 w-full bg-white top-[5rem] md:hidden",
               {
                 open: isOpen,
                 close: !isOpen && closed,

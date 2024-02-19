@@ -91,7 +91,7 @@ const Technologies = () => {
         </span>
       </div>
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-4 mt-10">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
         {technologies.map((item, index) => (
           <div
             className={classNames(

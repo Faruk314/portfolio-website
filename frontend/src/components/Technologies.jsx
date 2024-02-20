@@ -95,7 +95,7 @@ const Technologies = () => {
         {technologies.map((item, index) => (
           <div
             className={classNames(
-              "shadow-md border flex items-center justify-center py-8 rounded-xl",
+              "shadow-[0_3px_10px_rgb(0,0,0,0.15)] flex items-center justify-center py-8 rounded-xl",
               {
                 scrolled: myElementVisible,
               }

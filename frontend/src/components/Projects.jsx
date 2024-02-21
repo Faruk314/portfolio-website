@@ -2,8 +2,10 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation("personal");
   const {
     ref: myRef,
     inView: myElementVisible,
@@ -25,7 +27,7 @@ const Projects = () => {
         "Socket.io",
       ],
       gitLink: "https://github.com/Faruk314/UnityNetWeb",
-      desc: "A versatile social media app that empowers users to chat, add friends, edit profiles, create posts, change profile pictures and cover photos, and receive notifications. With its user-friendly interface, UnityNet provides a seamless platform for connecting with others, expressing yourself, and staying updated on the latest activities.",
+      desc: t("unityNetText"),
       image: "/images/socialMedia.png",
     },
     {
@@ -41,7 +43,7 @@ const Projects = () => {
         "Redis",
       ],
       gitLink: "https://github.com/Faruk314/ChessOnline",
-      desc: "Online Chess game that lets players enjoy multiplayer matches with friends and build their friends list. This game focuses on social interactions and multiplayer chess experiences.",
+      desc: t("chessText"),
       image: "/images/chessImages/menu.png",
       liveLink: "https://chess.farukspahic.com/",
     },
@@ -58,7 +60,7 @@ const Projects = () => {
         "Redis",
       ],
       gitLink: "https://github.com/Faruk314/OnlineLudoGame",
-      desc: "An online Ludo game that offers local and multiplayer modes, so you can enjoy matches with friends or find opponents easily.",
+      desc: t("ludoText"),
       image: "/images/ludoImages/login.png",
     },
 
@@ -75,7 +77,7 @@ const Projects = () => {
         "Redis",
       ],
       gitLink: "https://github.com/Faruk314/Slagalica",
-      desc: "An engaging game that offers fun and challenges for players of all ages. Test your knowledge and skills across various categories, including puzzles, trivia, and word games. Have the exciting opportunity to invite your friends to play and also enjoy single-player gameplay.",
+      desc: t("mastermindText"),
       image: "/images/slagalica.png",
     },
   ];
@@ -93,11 +95,9 @@ const Projects = () => {
           })}
         >
           <h1 className="mb-1 text-2xl font-bold text-gray-900 md:mb-2 md:text-3xl">
-            Personal Projects
+            {t("titleOne")}
           </h1>
-          <p className="text-gray-600 md:text-xl">
-            Check out some of my recent work.
-          </p>
+          <p className="text-gray-600 md:text-xl">{t("titleTwo")}</p>
         </div>
 
         <div className="grid justify-center gap-4 md:gap-10 px-4 my-5 md:my-10 md:px-4 lg:px-0 md:grid-cols-2">

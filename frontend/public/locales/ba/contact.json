@@ -1,0 +1,10 @@
+{
+  "contactTitle": "Razgovarajmo o vašem web projektu!",
+  "nameLabel": "Ime",
+  "emailLabel": "Email",
+  "messageLabel": "Poruka",
+  "buttonText": "Pošalji",
+  "emptyFieldsText": "Molimo popunite sva polja",
+  "contactFail": "Došlo je do problema prilikom slanja vaše poruke. Molimo pokušajte ponovo ili me kontaktirajte direktno na farukspahictz@gmail.com",
+  "contactSuccess": "Vaša poruka je uspješno poslana. Hvala vam što ste se javili!"
+}

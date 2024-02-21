@@ -1,7 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import getUnicodeFlagIcon from "country-flag-icons/unicode";
+import { useTranslation } from "react-i18next";
+import classNames from "classnames";
 
 const Translation = ({ setOpenTranslations }) => {
+  const [t, i18n] = useTranslation("common");
+  const currentLanguage = i18n.language;
   const modalRef = useRef();
 
   useEffect(() => {
@@ -19,14 +23,34 @@ const Translation = ({ setOpenTranslations }) => {
   }, []);
 
   return (
-    <div className="absolute top-10 right-[-2rem] shadow-[0_3px_10px_rgb(0,0,0,0.15)] z-20 bg-white rounded-xl p-2 w-[9rem]">
+    <div className="absolute top-10 right-[-2rem] shadow-[0_3px_10px_rgb(0,0,0,0.15)] bg-white rounded-xl p-2 w-[9rem]">
       <div ref={modalRef}>
-        <button className="flex space-x-2 hover:bg-gray-200 pl-3 py-2 rounded-xl w-full">
+        <button
+          onClick={() => {
+            i18n.changeLanguage("ba");
+          }}
+          className={classNames(
+            "flex space-x-2 hover:bg-gray-200 pl-3 py-2 rounded-xl w-full",
+            {
+              "text-blue-600": currentLanguage === "ba",
+            }
+          )}
+        >
           <span>{getUnicodeFlagIcon("BA")}</span>
           <span>BiH</span>
         </button>
 
-        <button className="flex space-x-2 hover:bg-gray-200 py-2 rounded-xl pl-3 w-full">
+        <button
+          onClick={() => {
+            i18n.changeLanguage("en");
+          }}
+          className={classNames(
+            "flex space-x-2 hover:bg-gray-200 py-2 rounded-xl pl-3 w-full",
+            {
+              "text-blue-600": currentLanguage === "en",
+            }
+          )}
+        >
           <span>{getUnicodeFlagIcon("GB")}</span>
           <span>EN</span>
         </button>

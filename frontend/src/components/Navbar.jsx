@@ -4,11 +4,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import getUnicodeFlagIcon from "country-flag-icons/unicode";
 import Translation from "./Translation";
+import { useTranslation } from "react-i18next";
 
-const Navbar = ({ setOpenContact }) => {
+const Navbar = ({ setOpenContact, currentLanguage }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [closed, setClosed] = useState(false);
   const [openTranslations, setOpenTranslations] = useState(false);
+  const { t } = useTranslation("navbar");
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
@@ -43,19 +45,19 @@ const Navbar = ({ setOpenContact }) => {
                 onClick={() => scrollToPage("about")}
                 className="block px-4 py-2 hover:bg-blue-600 hover:text-white hover:cursor-pointer"
               >
-                About
+                {t("listItemOne")}
               </span>
               <span
                 onClick={() => scrollToPage("technologies")}
                 className="block px-4 py-2 hover:bg-blue-600 hover:text-white hover:cursor-pointer"
               >
-                Technologies
+                {t("listItemTwo")}
               </span>
               <span
                 onClick={() => scrollToPage("projects")}
                 className="block px-4 py-2 hover:bg-blue-600 hover:text-white hover:cursor-pointer"
               >
-                Projects
+                {t("listItemThree")}
               </span>
               <span
                 onClick={() => {
@@ -64,7 +66,7 @@ const Navbar = ({ setOpenContact }) => {
                 }}
                 className="block px-4 py-2 hover:bg-blue-600 hover:text-white hover:cursor-pointer"
               >
-                Contact
+                {t("listItemFour")}
               </span>
             </div>
           </div>
@@ -76,10 +78,21 @@ const Navbar = ({ setOpenContact }) => {
                   e.stopPropagation();
                   setOpenTranslations((prev) => !prev);
                 }}
-                className="flex space-x-2 mr-4 md:mr-0"
+                className="flex space-x-2 mr-4 md:mr-0 hover:text-blue-600"
               >
-                <span>{getUnicodeFlagIcon("BA")}</span>
-                <span>BiH</span>
+                {currentLanguage === "en" && (
+                  <>
+                    <span>{getUnicodeFlagIcon("GB")}</span>
+                    <span>EN</span>
+                  </>
+                )}
+
+                {currentLanguage === "ba" && (
+                  <>
+                    <span>{getUnicodeFlagIcon("BA")}</span>
+                    <span>BiH</span>
+                  </>
+                )}
               </button>
 
               {openTranslations && (
@@ -95,20 +108,20 @@ const Navbar = ({ setOpenContact }) => {
                   onClick={() => scrollToPage("about")}
                   className="ml-5 hover:text-blue-500 hover:cursor-pointer"
                 >
-                  About
+                  {t("listItemOne")}
                 </span>
                 <span
                   onClick={() => scrollToPage("technologies")}
                   className="ml-5 hover:text-blue-500 hover:cursor-pointer"
                 >
-                  Technologies
+                  {t("listItemTwo")}
                 </span>
 
                 <span
                   onClick={() => scrollToPage("projects")}
-                  className="ml-5 hover:text-gray-300 hover:cursor-pointer"
+                  className="ml-5 hover:text-blue-500 hover:cursor-pointer"
                 >
-                  Projects
+                  {t("listItemThree")}
                 </span>
 
                 <button
@@ -118,7 +131,7 @@ const Navbar = ({ setOpenContact }) => {
                   }}
                   className="flex ml-5 items-center justify-center w-full px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-md md:px-4 md:py-2 hover:bg-transparent hover:text-blue-500"
                 >
-                  <span>Contact</span>
+                  <span> {t("listItemFour")}</span>
                 </button>
               </div>
             </div>

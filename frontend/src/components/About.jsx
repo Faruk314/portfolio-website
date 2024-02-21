@@ -1,10 +1,12 @@
 import me from "../images/me.jpg";
+import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import GitButton from "./utils/GitButton";
 import { HiMail } from "react-icons/hi";
 
 const About = ({ setOpenContact }) => {
+  const { t } = useTranslation("about");
   const {
     ref: myRef,
     inView: myElementVisible,
@@ -42,7 +44,7 @@ const About = ({ setOpenContact }) => {
             })}
           >
             <h1 className="flex mb-1 space-x-2 text-2xl font-bold text-gray-900 md:mb-2 md:text-3xl">
-              <span className="md:text-3xl">Hi, I am Faruk Spahic</span>{" "}
+              <span className="md:text-3xl text-center">{t("title")}</span>{" "}
               <span className="emoji">👋</span>
             </h1>
             <p
@@ -55,23 +57,24 @@ const About = ({ setOpenContact }) => {
           </div>
           <p
             className={classNames(
-              "pt-4 leading-7 text-center md:text-left text-sm md:text-[1rem] md:leading-loose",
+              "pt-4 leading-7 hidden md:block text-center md:text-left text-sm md:text-[1rem] md:leading-loose",
               {
                 scrolled: myElementVisible,
               }
             )}
           >
-            Hi, I am Faruk Spahic, a Full Stack Developer specializing in
-            creating dynamic web applications that solve real-world problems.
-            With skills in both front-end and back-end development, I can
-            deliver seamless user experiences.
-            <span className="hidden md:inline">
-              {" "}
-              From e-commerce to social media platforms, I have experience
-              working on a range of web applications, both large and small. I'm
-              always looking to learn and incorporate new technologies to create
-              innovative and impactful solutions that make a difference.
-            </span>
+            {t("text")}
+          </p>
+
+          <p
+            className={classNames(
+              "pt-4 leading-7 md:hidden text-center md:text-left text-sm md:text-[1rem] md:leading-loose",
+              {
+                scrolled: myElementVisible,
+              }
+            )}
+          >
+            {t("mobileText")}
           </p>
 
           <div className="flex flex-col w-full my-10 space-y-2 md:space-y-0 md:space-x-2 md:w-max md:flex-row md:text-lg">
@@ -83,7 +86,7 @@ const About = ({ setOpenContact }) => {
               className="flex items-center justify-center w-full hover:bg-white px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-md md:px-4 md:py-2 hover:bg-transparent hover:text-blue-500"
             >
               <HiMail size={20} />
-              <span>Contact</span>
+              <span>{t("buttonText")}</span>
             </button>
 
             <GitButton link={"https://github.com/Faruk314"} />

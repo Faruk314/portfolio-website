@@ -3,6 +3,7 @@ import { AiOutlineLeft, AiOutlineRight, AiOutlineClose } from "react-icons/ai";
 import GitButton from "./utils/GitButton";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
+import { useTranslation } from "react-i18next";
 
 const Gallery = ({
   images,
@@ -13,6 +14,7 @@ const Gallery = ({
   liveLink,
   gitLink,
 }) => {
+  const { t } = useTranslation("client");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const modalRef = useRef();
@@ -122,7 +124,7 @@ const Gallery = ({
                   className="flex w-full md:w-max items-center justify-center py-[0.5rem] border-blue-500 px-4 text-[0.9rem] md:text-lg space-x-1 md:space-x-2 font-medium text-white hover:text-blue-500 bg-blue-600 rounded-md hover:bg-transparent hover:border-blue-500 border"
                 >
                   <span className="icon"> visibility</span>
-                  <span>View live</span>
+                  <span>{t("buttonText")}</span>
                 </a>
               )}
 

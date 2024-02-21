@@ -14,10 +14,11 @@ import { IoLogoJavascript } from "react-icons/io";
 import { AiFillHtml5 } from "react-icons/ai";
 import { useInView } from "react-intersection-observer";
 import { TbBrandReactNative, TbBrandNextjs } from "react-icons/tb";
-
+import { useTranslation } from "react-i18next";
 import classNames from "classnames";
 
 const Technologies = () => {
+  const { t } = useTranslation("technologies");
   const {
     ref: myRef,
     inView: myElementVisible,
@@ -55,6 +56,7 @@ const Technologies = () => {
     },
     { name: "Redis" },
   ];
+
   let icons = [
     <FaReact size={35} />,
     <TbBrandReactNative size={35} />,
@@ -83,17 +85,16 @@ const Technologies = () => {
           ref={myRef}
           className="mb-1 text-2xl font-extrabold text-gray-900 md:mb-2 md:text-3xl"
         >
-          Technologies
+          {t("titleOne")}
         </h2>
 
-        <span className="text-gray-600 md:text-xl">
-          Technologies I am using
-        </span>
+        <span className="text-gray-600 md:text-xl">{t("titleTwo")}</span>
       </div>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
         {technologies.map((item, index) => (
           <div
+            key={index}
             className={classNames(
               "shadow-[0_3px_10px_rgb(0,0,0,0.15)] flex items-center justify-center py-8 rounded-xl",
               {

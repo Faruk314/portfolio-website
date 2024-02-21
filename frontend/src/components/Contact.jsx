@@ -4,8 +4,10 @@ import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
 
 const Contact = ({ setOpenContact }) => {
+  const { t } = useTranslation("contact");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -39,7 +41,7 @@ const Contact = ({ setOpenContact }) => {
     e.preventDefault();
 
     if (!name || !email || !message) {
-      toast.error("Please fill out all the fields", {
+      toast.error(t("emptyFieldsText"), {
         position: "top-right",
         closeButton: false,
       });
@@ -62,7 +64,7 @@ const Contact = ({ setOpenContact }) => {
       );
 
       if (response.status === 200) {
-        toast.success(response.data, {
+        toast.success(t("contactSuccess"), {
           position: "top-right",
         });
       }
@@ -76,18 +78,15 @@ const Contact = ({ setOpenContact }) => {
     } catch (error) {
       console.log(error);
       setLoading(false);
-      toast(
-        " There was an issue sending your message. Please try again or contact me directly at farukspahicdev@gmail.com",
-        {
-          position: "top-right",
-          closeButton: true,
-          closeOnClick: false,
-          draggable: false,
-          progressStyle: {
-            background: "red",
-          },
-        }
-      );
+      toast(t("contactFail"), {
+        position: "top-right",
+        closeButton: true,
+        closeOnClick: false,
+        draggable: false,
+        progressStyle: {
+          background: "red",
+        },
+      });
     }
   };
 
@@ -120,11 +119,11 @@ const Contact = ({ setOpenContact }) => {
         >
           <div className="flex flex-col space-y-5 max-w-[30rem]">
             <h2 className="text-2xl font-bold text-center md:text-4xl">
-              Let’s work together to create something great.
+              {t("contactTitle")}
             </h2>
             <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-2 md:items-center md:flex-row">
               <div>
-                <label className="text-[1.1rem]">Name</label>
+                <label className="text-[1.1rem]">{t("nameLabel")}</label>
                 <input
                   className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
                   value={name}
@@ -133,7 +132,7 @@ const Contact = ({ setOpenContact }) => {
               </div>
 
               <div>
-                <label className="text-[1.1rem]">Email</label>
+                <label className="text-[1.1rem]">{t("emailLabel")}</label>
                 <input
                   type="email"
                   className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
@@ -144,7 +143,7 @@ const Contact = ({ setOpenContact }) => {
             </div>
 
             <div>
-              <label className="text-[1.1rem]">Message</label>
+              <label className="text-[1.1rem]">{t("messageLabel")}</label>
               <textarea
                 rows={4}
                 className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
@@ -157,7 +156,7 @@ const Contact = ({ setOpenContact }) => {
               disabled={loading}
               className="flex items-center w-full justify-center py-[0.6rem] border-blue-500 text-[0.9rem] md:text-lg space-x-1 md:space-x-2 font-medium text-white  bg-blue-600 rounded-md border"
             >
-              {!loading && <span>Send</span>}
+              {!loading && <span>{t("buttonText")}</span>}
               {loading && <span className="loader"></span>}
             </button>
           </div>

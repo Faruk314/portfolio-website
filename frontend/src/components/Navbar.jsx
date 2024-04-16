@@ -6,11 +6,13 @@ import getUnicodeFlagIcon from "country-flag-icons/unicode";
 import Translation from "./Translation";
 import { useTranslation } from "react-i18next";
 
-const Navbar = ({ setOpenContact, currentLanguage }) => {
+const Navbar = ({ setOpenContact }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [closed, setClosed] = useState(false);
   const [openTranslations, setOpenTranslations] = useState(false);
-  const { t } = useTranslation("navbar");
+  const { i18n, t } = useTranslation("navbar");
+
+  const currentLanguage = i18n.language || "en";
 
   const toggleNav = () => {
     setIsOpen(!isOpen);

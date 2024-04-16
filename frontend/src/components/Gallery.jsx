@@ -110,7 +110,7 @@ const Gallery = ({
               {technologies?.map((item, index) => (
                 <div
                   key={index}
-                  className="p-[0.2rem] md:p-1 md:px-2 text-sm md:text-lg font-bold text-black shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md"
+                  className="p-[0.4rem] md:p-1 md:px-2 text-sm md:text-lg font-bold text-black shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md"
                 >
                   {item}
                 </div>

@@ -37,8 +37,8 @@ const ClientProjects = () => {
     <section id="projects" className="w-full overflow-x-hidden">
       <div ref={myRef} className="flex flex-col max-w-6xl mx-auto">
         <div
-          className={classNames("p-4 lg:p-0", {
-            "animate-up": myElementVisible,
+          className={classNames("p-4 lg:p-0 opacity-0", {
+            "fade-in": myElementVisible,
           })}
         >
           <h1 className="mb-1 text-2xl font-bold text-gray-900 md:mb-2 md:text-3xl">

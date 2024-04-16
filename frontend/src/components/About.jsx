@@ -20,7 +20,7 @@ const About = ({ setOpenContact }) => {
       ref={myRef}
       id="about"
       className={classNames(
-        "py-10  md:px-0 md:py-0 md:h-[80vh] bg-[url(../public/images/grid.jpg)] gradient flex"
+        "py-7 md:px-0 md:py-0 md:h-[80vh] bg-[url(../public/images/grid.jpg)] gradient flex"
       )}
     >
       <div className="z-10 flex flex-col items-center justify-center px-4 lg:px-0 md:space-x-40 md:flex-row md:max-w-6xl md:mx-auto">
@@ -29,7 +29,7 @@ const About = ({ setOpenContact }) => {
         >
           <img
             className={classNames(
-              "h-[11.5rem] w-[12rem] md:hidden noSelect mx-auto",
+              "h-[12rem] w-[12.5rem] md:hidden noSelect mx-auto",
               {
                 scrolled: myElementVisible,
               }
@@ -77,7 +77,7 @@ const About = ({ setOpenContact }) => {
             {t("mobileText")}
           </p>
 
-          <div className="flex flex-col w-full my-10 space-y-2 md:space-y-0 md:space-x-2 md:w-max md:flex-row md:text-lg">
+          <div className="flex flex-col w-full my-7 space-y-2 md:space-y-0 md:space-x-2 md:w-max md:flex-row md:text-lg">
             <button
               onClick={() => {
                 document.body.classList.add("no-overflow");

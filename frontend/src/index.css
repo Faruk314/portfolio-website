@@ -144,6 +144,16 @@ body.no-overflow {
   animation: closeHamburger 1s forwards;
 }
 
+.fade-in {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.card-fade-in {
+  opacity: 1;
+  transition: all 2s;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

@@ -16,6 +16,7 @@ import { useInView } from "react-intersection-observer";
 import { TbBrandReactNative, TbBrandNextjs } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 import classNames from "classnames";
+import TechCard from "./TechCard";
 
 const Technologies = () => {
   const { t } = useTranslation("technologies");
@@ -77,8 +78,8 @@ const Technologies = () => {
   return (
     <div id="technologies" className="px-4 lg:px-0 py-[5rem] md:py-[7rem]">
       <div
-        className={classNames("max-w-6xl md:mx-auto", {
-          "animate-up": myElementVisible,
+        className={classNames("max-w-6xl md:mx-auto opacity-0", {
+          "fade-in": myElementVisible,
         })}
       >
         <h2
@@ -91,22 +92,9 @@ const Technologies = () => {
         <span className="text-gray-600 md:text-xl">{t("titleTwo")}</span>
       </div>
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
         {technologies.map((item, index) => (
-          <div
-            key={index}
-            className={classNames(
-              "shadow-[0_3px_10px_rgb(0,0,0,0.15)] flex items-center justify-center py-8 rounded-xl",
-              {
-                scrolled: myElementVisible,
-              }
-            )}
-          >
-            <div className="flex flex-col items-center space-y-2">
-              <span className="text-blue-600">{icons[index]}</span>
-              <h3 className="font-bold">{item.name}</h3>
-            </div>
-          </div>
+          <TechCard key={index} item={item} icon={icons[index]} />
         ))}
       </div>
     </div>

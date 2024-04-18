@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 import NavigateBtn from "./components/utils/NavigateBtn";
 import ClientProjects from "./components/ClientProjects";
-import Loader from "./components/Loader.jsx";
+import Loader from "./components/Loader";
 
 function App() {
   const [openContact, setOpenContact] = useState(false);

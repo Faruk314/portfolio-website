@@ -15,8 +15,12 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
+    debug: true,
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json",
+    },
+    react: {
+      useSuspense: false,
     },
   });
 

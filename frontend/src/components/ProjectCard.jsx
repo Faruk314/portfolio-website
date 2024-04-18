@@ -126,8 +126,8 @@ const ProjectCard = ({
         onMouseOver={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
         ref={myRef}
-        className={classNames("cursor-pointer", {
-          scrolled: myElementVisible,
+        className={classNames("relative cursor-pointer opacity-0", {
+          "card-fade-in": myElementVisible,
         })}
         onClick={(e) => {
           e.stopPropagation();
@@ -144,7 +144,7 @@ const ProjectCard = ({
         </div>
 
         {isHovering && (
-          <div className="bg-[rgba(0,0,0,0.5)] inset-0 fixed rounded-xl flex justify-center items-center">
+          <div className="bg-[rgba(0,0,0,0.5)] inset-0 absolute rounded-xl flex justify-center items-center">
             <h2 className="text-2xl md:text-3xl text-white font-bold">
               {title}
             </h2>

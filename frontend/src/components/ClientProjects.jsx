@@ -20,6 +20,7 @@ const ClientProjects = () => {
       shortDesc: "Herbal pharmacy",
       technologies: ["NextJS", "Tailwind"],
       desc: t("aFarmText"),
+      image: "/images/apharmlogo.jpg",
       liveLink: "https://afarm-biljoteka.com/",
     },
 

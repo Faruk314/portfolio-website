@@ -12,7 +12,9 @@ const Navbar = ({ setOpenContact }) => {
   const [openTranslations, setOpenTranslations] = useState(false);
   const { i18n, t } = useTranslation("navbar");
 
-  const currentLanguage = i18n.language || "en";
+  const currentLanguage = i18n.languages[0];
+
+  console.log(currentLanguage, "cur lg");
 
   const toggleNav = () => {
     setIsOpen(!isOpen);

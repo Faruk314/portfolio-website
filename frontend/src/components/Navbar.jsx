@@ -12,10 +12,6 @@ const Navbar = ({ setOpenContact }) => {
   const [openTranslations, setOpenTranslations] = useState(false);
   const { i18n, t } = useTranslation("navbar");
 
-  const currentLanguage = i18n.languages[0];
-
-  console.log(currentLanguage, "cur lg");
-
   const toggleNav = () => {
     setIsOpen(!isOpen);
     setClosed(true);
@@ -84,17 +80,15 @@ const Navbar = ({ setOpenContact }) => {
                 }}
                 className="flex space-x-2 mr-4 md:mr-0 hover:text-blue-600"
               >
-                {currentLanguage === "en" && (
-                  <>
-                    <span>{getUnicodeFlagIcon("GB")}</span>
-                    <span>EN</span>
-                  </>
-                )}
-
-                {currentLanguage === "ba" && (
+                {i18n.language === "bs" ? (
                   <>
                     <span>{getUnicodeFlagIcon("BA")}</span>
                     <span>BiH</span>
+                  </>
+                ) : (
+                  <>
+                    <span>{getUnicodeFlagIcon("GB")}</span>
+                    <span>EN</span>
                   </>
                 )}
               </button>

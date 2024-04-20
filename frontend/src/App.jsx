@@ -6,11 +6,14 @@ import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 import NavigateBtn from "./components/utils/NavigateBtn";
 import ClientProjects from "./components/ClientProjects";
+import { useTranslation } from "react-i18next";
+import Loader from "./components/Loader";
 
 function App() {
   const [openContact, setOpenContact] = useState(false);
+  const { ready } = useTranslation();
 
-  return (
+  return ready ? (
     <>
       <Navbar setOpenContact={setOpenContact} openContact={openContact} />
       <About setOpenContact={setOpenContact} />
@@ -20,6 +23,8 @@ function App() {
       <NavigateBtn />
       {openContact && <Contact setOpenContact={setOpenContact} />}
     </>
+  ) : (
+    <Loader />
   );
 }
 

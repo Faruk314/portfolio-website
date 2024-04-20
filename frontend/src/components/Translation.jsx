@@ -27,12 +27,12 @@ const Translation = ({ setOpenTranslations }) => {
       <div ref={modalRef}>
         <button
           onClick={() => {
-            i18n.changeLanguage("ba");
+            i18n.changeLanguage("bs");
           }}
           className={classNames(
             "flex space-x-2 hover:bg-gray-200 pl-3 py-2 rounded-xl w-full",
             {
-              "text-blue-600": currentLanguage === "ba",
+              "text-blue-600": currentLanguage === "bs",
             }
           )}
         >

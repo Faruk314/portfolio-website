@@ -5,6 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import getUnicodeFlagIcon from "country-flag-icons/unicode";
 import Translation from "./Translation";
 import { useTranslation } from "react-i18next";
+import Logo from "./utils/Logo";
 
 const Navbar = ({ setOpenContact }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,13 +24,10 @@ const Navbar = ({ setOpenContact }) => {
   };
 
   return (
-    <nav className="relative z-20 text-black bg-white">
-      <div className="px-4 mx-auto lg:px-8 border border-gray-200 shadow-md">
-        <div className="flex items-center justify-between max-w-6xl mx-auto py-4 md:py-7">
-          <h1 className="text-xl md:text-2xl cursor-pointer text-blue-600 font-bold border-[0.3rem] border-blue-600 h-[3rem] w-[3rem] md:w-[3.6rem] md:h-[3.5rem] flex justify-center items-center rounded-full">
-            <span>F</span>
-            <span>S</span>
-          </h1>
+    <nav className="relative z-20 text-black bg-white tracking-wider">
+      <div className="px-4 mx-auto lg:px-8">
+        <div className="flex items-center justify-between max-w-6xl mx-auto py-4 md:py-6">
+          <Logo />
 
           <div
             className={classNames(
@@ -127,7 +125,7 @@ const Navbar = ({ setOpenContact }) => {
                     document.body.classList.add("no-overflow");
                     setOpenContact(true);
                   }}
-                  className="flex ml-5 items-center justify-center w-full px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-md md:px-4 md:py-2 hover:bg-transparent hover:text-blue-500"
+                  className="flex ml-5 items-center tracking-wider shadow-md justify-center w-full px-2 py-[0.6rem] border border-blue-500 space-x-2 font-medium text-white bg-blue-600 rounded-full md:px-7 md:py-2 hover:bg-transparent hover:text-blue-500"
                 >
                   <span> {t("listItemFour")}</span>
                 </button>

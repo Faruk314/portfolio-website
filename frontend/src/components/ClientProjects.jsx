@@ -3,6 +3,7 @@ import classNames from "classnames";
 import ProjectCard from "./ProjectCard";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
+import AfarmLogo from "./utils/AfarmLogo";
 
 const ClientProjects = () => {
   const { t } = useTranslation("client");
@@ -16,21 +17,14 @@ const ClientProjects = () => {
 
   const projects = [
     {
-      title: "A-FARM",
-      shortDesc: "Herbal pharmacy",
-      technologies: ["NextJS", "Tailwind"],
-      desc: t("aFarmText"),
+      id: 1,
       image: "/images/apharmlogo.jpg",
-      liveLink: "https://afarm-biljoteka.com/",
+      logo: <AfarmLogo />,
     },
 
     {
-      title: "Tuzla Taxi",
-      shortDesc: "Taxi Company Site",
-      technologies: ["React", "Tailwind", "PHP"],
-      desc: t("tuzlaTaxiText"),
-      image: "/images/tuzlaTaxi.png",
-      liveLink: "https://tuzlataxi.com",
+      id: 2,
+      image: "/images/taxiImages/tuzlaTaxiLogo.png",
     },
   ];
 
@@ -42,13 +36,13 @@ const ClientProjects = () => {
             "fade-in": myElementVisible,
           })}
         >
-          <h1 className="mb-1 text-2xl font-bold text-gray-900 md:mb-2 md:text-3xl">
+          <h1 className="mb-1 text-3xl uppercase font-black text-gray-900 md:text-4xl">
             {t("titleOne")}
           </h1>
           <p className="text-gray-600 md:text-xl">{t("titleTwo")}</p>
         </div>
 
-        <div className="grid justify-center gap-4 md:gap-10 px-4 my-5 md:my-10 md:px-4 lg:px-0 md:grid-cols-2">
+        <div className="grid gap-4 lg:gap-10 px-4 my-5 md:my-10 md:px-4 lg:px-0 md:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} index={index} />
           ))}

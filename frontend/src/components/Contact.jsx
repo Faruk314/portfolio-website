@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -28,14 +27,6 @@ const Contact = ({ setOpenContact }) => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, []);
-
-  const {
-    ref: myRef,
-    inView: myElementVisible,
-    entry,
-  } = useInView({
-    triggerOnce: true,
-  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -93,12 +84,8 @@ const Contact = ({ setOpenContact }) => {
   return (
     <div className="fixed inset-0 bg-[rgb(0,0,0,0.7)] z-40 flex items-center justify-center">
       <div
-        ref={myRef}
         className={classNames(
-          "grid items-center mx-auto mt-10 bg-white rounded-lg md:mt-0",
-          {
-            "animate-up": myElementVisible,
-          }
+          "grid items-center mx-2 md:mx-auto mt-10 bg-white rounded-lg md:mt-0 animate-up"
         )}
       >
         <button
@@ -117,25 +104,26 @@ const Contact = ({ setOpenContact }) => {
           onSubmit={handleSubmit}
           className="flex flex-col items-center justify-center px-6 py-10 space-y-5 shadow-md md:p-20"
         >
+          HiViewBoards
           <div className="flex flex-col space-y-5 max-w-[30rem]">
             <h2 className="text-2xl font-bold text-center md:text-4xl">
               {t("contactTitle")}
             </h2>
             <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-2 md:items-center md:flex-row">
               <div>
-                <label className="text-[1.1rem]">{t("nameLabel")}</label>
+                <label className="md:text-[1.1rem]">{t("nameLabel")}</label>
                 <input
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
+                  className="w-full p-1 md:p-2 border border-gray-300 rounded-md focus:outline-none"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
 
               <div>
-                <label className="text-[1.1rem]">{t("emailLabel")}</label>
+                <label className="md:text-[1.1rem]">{t("emailLabel")}</label>
                 <input
                   type="email"
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
+                  className="w-full p-1 md:p-2 border border-gray-300 rounded-md focus:outline-none"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -143,10 +131,10 @@ const Contact = ({ setOpenContact }) => {
             </div>
 
             <div>
-              <label className="text-[1.1rem]">{t("messageLabel")}</label>
+              <label className="md:text-[1.1rem]">{t("messageLabel")}</label>
               <textarea
                 rows={4}
-                className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
+                className="w-full p-1 md:p-2 border border-gray-300 rounded-md focus:outline-none"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
@@ -154,7 +142,7 @@ const Contact = ({ setOpenContact }) => {
 
             <button
               disabled={loading}
-              className="flex items-center w-full justify-center py-[0.6rem] border-blue-500 text-[0.9rem] md:text-lg space-x-1 md:space-x-2 font-medium text-white  bg-blue-600 rounded-md border"
+              className="flex items-center w-full justify-center py-[0.6rem] border-blue-500 text-[0.9rem] md:text-lg space-x-1 md:space-x-2 font-medium text-white  bg-blue-600 rounded-full border"
             >
               {!loading && <span>{t("buttonText")}</span>}
               {loading && <span className="loader"></span>}

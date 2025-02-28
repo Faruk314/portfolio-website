@@ -48,7 +48,7 @@ const About = ({ setOpenContact }) => {
           </div>
           <p
             className={classNames(
-              "pt-2 md:pt-4 md:block text-center max-w-[40rem] text-[1rem] md:text-left text-sm md:text-[1.2rem] leading-7 tracking-wider",
+              "pt-2 md:pt-4 md:block text-center max-w-[36rem] text-[1rem] md:text-left text-sm md:text-[1.2rem] leading-7 tracking-wider",
               {
                 scrolled: myElementVisible,
               }

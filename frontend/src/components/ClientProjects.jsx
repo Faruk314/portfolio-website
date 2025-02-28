@@ -42,7 +42,7 @@ const ClientProjects = () => {
           <p className="text-gray-600 md:text-xl">{t("titleTwo")}</p>
         </div>
 
-        <div className="grid gap-4 lg:gap-10 px-4 my-5 md:my-10 md:px-4 lg:px-0 md:grid-cols-2">
+        <div className="client-projects_container grid gap-4 lg:gap-10 px-4 my-5 md:my-10 md:px-4 lg:px-0 md:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} index={index} />
           ))}

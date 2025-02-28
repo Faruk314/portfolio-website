@@ -23,13 +23,13 @@ const About = ({ setOpenContact }) => {
         "py-7 md:px-0 md:py-0 md:h-[80vh] gradient flex justify-center"
       )}
     >
-      <div className="z-10 flex flex-col items-center justify-center px-4 xl:px-0 md:space-x-40 md:flex-row md:max-w-6xl md:mx-auto">
+      <div className="z-10 flex flex-col items-center justify-center px-4 xl:px-0 md:flex-row md:max-w-6xl md:mx-auto">
         <div
           className={classNames("flex flex-col md:text-left md:items-start")}
         >
           <img
             className={classNames(
-              "h-[12rem] w-[12.5rem] lg:hidden noSelect mx-auto"
+              "h-[12rem] w-[12.5rem] md:hidden noSelect mx-auto"
             )}
             src={me}
             alt="Portfolio"
@@ -48,7 +48,7 @@ const About = ({ setOpenContact }) => {
           </div>
           <p
             className={classNames(
-              "pt-2 md:pt-4 md:block text-center text-[1rem] md:text-left text-sm md:text-[1.2rem] leading-7 tracking-wider",
+              "pt-2 md:pt-4 md:block text-center max-w-[40rem] text-[1rem] md:text-left text-sm md:text-[1.2rem] leading-7 tracking-wider",
               {
                 scrolled: myElementVisible,
               }
@@ -75,7 +75,7 @@ const About = ({ setOpenContact }) => {
 
         <img
           className={classNames(
-            "h-[19rem] hidden lg:block md:w-max md:h-[25rem] noSelect"
+            "h-[19rem] hidden md:block md:w-max md:h-[20rem] lg:h-[25rem] noSelect"
           )}
           src={me}
           alt="Portfolio"

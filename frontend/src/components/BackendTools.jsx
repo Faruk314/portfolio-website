@@ -25,7 +25,7 @@ const BackendTools = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto grid grid-cols-3 md:grid-cols-4 lg:flex lg:justify-center gap-2 mt-2">
+    <div className="backend-tools_container max-w-6xl mx-auto grid grid-cols-3 md:grid-cols-4 lg:flex lg:justify-center gap-2 mt-2">
       {tools.map((item, index) => (
         <TechCard
           animationDuration={index * 200}

@@ -27,7 +27,7 @@ const FrontendTools = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto grid grid-cols-3 md:grid-cols-4 lg:flex gap-2 mt-2 mb-6">
+    <div className="frontend-tools_container max-w-6xl mx-auto grid grid-cols-3 md:grid-cols-4 lg:flex gap-2 mt-2 mb-6">
       {tools.map((item, index) => (
         <TechCard
           animationDuration={index * 100}

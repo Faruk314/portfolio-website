@@ -162,7 +162,7 @@ const Project = () => {
             {project.images.map((image, index) => (
               <SwiperSlide key={index}>
                 <img
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-cover"
                   alt=""
                   src={image}
                 />

@@ -95,7 +95,7 @@ const Project = () => {
         "Socket.io",
         "Redis",
       ],
-      gitLink: "https://github.com/Faruk314/ChessOnline",
+      gitLink: "https://github.com/Faruk314/PokerOnline",
       desc: t("pokerText"),
       liveLink: "https://poker.farukspahic.com/",
       images: [
@@ -191,7 +191,7 @@ const Project = () => {
               <span>{t("buttonText")}</span>
             </Link>
 
-            <GitButton link={"https://github.com/Faruk314"} />
+            {project.gitLink && <GitButton link={project.gitLink} />}
           </div>
         </div>
       </div>

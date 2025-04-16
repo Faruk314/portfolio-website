@@ -97,7 +97,18 @@ const Project = () => {
       ],
       gitLink: "https://github.com/Faruk314/ChessOnline",
       desc: t("pokerText"),
-      liveLink: "https://chess.farukspahic.com/",
+      liveLink: "https://poker.farukspahic.com/",
+      images: [
+        "/images/pokerImages/login.png",
+        "/images/pokerImages/menu.png",
+        "/images/pokerImages/createGame.png",
+        "/images/pokerImages/joinGame.png",
+        "/images/pokerImages/shop.png",
+        "/images/pokerImages/payment.png",
+        "/images/pokerImages/table.png",
+        "/images/pokerImages/table2.png",
+        "/images/pokerImages/tableWinner.png",
+      ],
     },
   ];
 

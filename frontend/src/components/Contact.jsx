@@ -109,20 +109,20 @@ const Contact = ({ setOpenContact }) => {
               {t("contactTitle")}
             </h2>
             <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-2 md:items-center md:flex-row">
-              <div>
+              <div className="flex-1">
                 <label className="md:text-[1.1rem]">{t("nameLabel")}</label>
                 <input
-                  className="w-full p-1 md:p-2 border border-gray-300 rounded-md focus:outline-none"
+                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
 
-              <div>
+              <div className="flex-1">
                 <label className="md:text-[1.1rem]">{t("emailLabel")}</label>
                 <input
                   type="email"
-                  className="w-full p-1 md:p-2 border border-gray-300 rounded-md focus:outline-none"
+                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -133,7 +133,7 @@ const Contact = ({ setOpenContact }) => {
               <label className="md:text-[1.1rem]">{t("messageLabel")}</label>
               <textarea
                 rows={4}
-                className="w-full p-1 md:p-2 border border-gray-300 rounded-md focus:outline-none"
+                className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
@@ -141,7 +141,7 @@ const Contact = ({ setOpenContact }) => {
 
             <button
               disabled={loading}
-              className="flex items-center w-full justify-center py-[0.6rem] border-blue-500 text-[0.9rem] md:text-lg space-x-1 md:space-x-2 font-medium text-white  bg-blue-600 rounded-full border"
+              className="bg-[#2b6faf] flex items-center w-full justify-center py-[0.5rem] md:py-[0.7rem] text-2xl md:text-xl space-x-1 md:space-x-2 font-black uppercase text-white rounded-full border"
             >
               {!loading && <span>{t("buttonText")}</span>}
               {loading && <span className="loader"></span>}

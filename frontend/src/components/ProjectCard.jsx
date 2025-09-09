@@ -1,46 +1,46 @@
-import React from "react";
-import { useInView } from "react-intersection-observer";
-import classNames from "classnames";
-import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import PrimaryBtn from "./PrimaryBtn";
+import Tag from "./Tag";
 
-const ProjectCard = ({ image, logo, id }) => {
-  const location = useLocation();
+export const ProjectCard = ({ isActive, card, index }) => {
+  const shouldAnimate = index < 3;
 
-  const {
-    ref: myRef,
-    inView: myElementVisible,
-    entry,
-  } = useInView({
-    triggerOnce: true,
-  });
+  const delay = index === 0 || (index === 2 && shouldAnimate) ? 0 : 0.5;
 
   return (
-    <Link to={`/project/${id}`} state={{ previousLocation: location }}>
-      <div
-        ref={myRef}
-        className={classNames(
-          "holographic-card border border-gray-300 rounded-3xl relative cursor-pointer",
-          {
-            "animate-zoom-in-up": myElementVisible,
-          }
-        )}
-      >
-        <div className="h-[15rem] md:h-[20rem] lg:h-[24rem]">
-          <div className="flex items-center justify-center w-full object-cover h-full bg-white">
-            {logo ? (
-              logo
-            ) : (
-              <img
-                className="h-[8rem] w-[8rem] md:h-[10rem] md:w-[10rem]"
-                alt=""
-                src={image}
-              />
-            )}
+    <motion.div
+      initial={{ opacity: 0, y: 70 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        scale: isActive ? 1 : 0.85,
+      }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay }}
+      className="card-container my-10"
+      onClick={(e) => e.currentTarget.classList.toggle("flipped")}
+    >
+      <div className="card">
+        <img src={card.src} alt="Front" className="card-front" />
+        <div className="card-back bg-gray-100 flex flex-col border border-gray-400 shadow-md">
+          <div className="h-[14rem] w-full bg-primary rounded-t-3xl"></div>
+
+          <div className="flex flex-col justify-between h-full p-6 break-keep">
+            <div className="flex flex-col space-y-2">
+              <h2 className="text-4xl">{card.name}</h2>
+              <p className="text-xl">{card.desc}</p>
+
+              <div className="flex flex-wrap">
+                {card.technologies?.map((item) => (
+                  <Tag key={item} name={item} />
+                ))}
+              </div>
+            </div>
+
+            <PrimaryBtn className="w-full">View live</PrimaryBtn>
           </div>
         </div>
       </div>
-    </Link>
+    </motion.div>
   );
 };
-
-export default ProjectCard;

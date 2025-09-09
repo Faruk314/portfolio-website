@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
-import Tools from "../components/Tools";
-import ClientProjects from "../components/ClientProjects";
+import { Skills } from "../components/Skills";
 import NavigateBtn from "../components/utils/NavigateBtn";
 import Contact from "../components/Contact";
-import PersonalProjects from "../components/PersonalProjects";
+import Projects from "../components/Projects";
+import { Footer } from "../components/Footer";
 
 const Main = () => {
   const [openContact, setOpenContact] = useState(false);
@@ -14,9 +14,9 @@ const Main = () => {
     <>
       <Navbar setOpenContact={setOpenContact} openContact={openContact} />
       <About setOpenContact={setOpenContact} />
-      <Tools />
-      <ClientProjects />
-      <PersonalProjects />
+      <Skills />
+      <Projects />
+      <Footer setOpenContact={setOpenContact} />
       <NavigateBtn />
 
       {openContact && <Contact setOpenContact={setOpenContact} />}

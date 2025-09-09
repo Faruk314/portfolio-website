@@ -5,10 +5,10 @@ const GitButton = ({ link }) => {
   return (
     <a
       href={link}
-      className="flex bg-white shadow-md border items-center md:w-max justify-center px-7 py-[0.6rem] space-x-1 font-medium text-blue-500 rounded-full md:space-x-2 md:px-12 md:py-[0.65rem]"
+      className="bg-[#2b6faf] flex items-center duration-200 justify-center px-7 px-2 py-[0.6rem] space-x-2 font-black text-white rounded-full md:px-12 md:py-3 text-xl"
     >
       <AiOutlineGithub className="" size={20} />
-      <span>GitHub</span>
+      <span>GITHUB</span>
     </a>
   );
 };

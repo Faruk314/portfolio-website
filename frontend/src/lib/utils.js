@@ -5,6 +5,11 @@ export function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
+export const scrollToPage = (id) => {
+  const page = document.getElementById(id);
+  page.scrollIntoView({ behavior: "smooth" });
+};
+
 // const projects = [
 //     {
 //       id: 1,

@@ -23,36 +23,37 @@ const Translation = ({ setOpenTranslations }) => {
   }, []);
 
   return (
-    <div className="absolute top-10 right-[-2rem] shadow-[0_3px_10px_rgb(0,0,0,0.15)] bg-white rounded-xl p-2 w-[9rem]">
-      <div ref={modalRef}>
+    <div
+      className="absolute top-12 right-0 w-40 bg-white rounded-2xl shadow-lg p-2 text-black 
+             border border-gray-100 animate-fadeIn"
+    >
+      <div ref={modalRef} className="flex flex-col gap-1">
         <button
-          onClick={() => {
-            i18n.changeLanguage("bs");
-          }}
+          onClick={() => i18n.changeLanguage("bs")}
           className={classNames(
-            "flex space-x-2 hover:bg-gray-200 pl-3 py-2 rounded-xl w-full",
+            "flex items-center gap-3 px-3 py-1 rounded-lg transition-colors duration-200",
+            "hover:bg-gray-100",
             {
-              "text-blue-600": currentLanguage === "bs",
+              "text-primary bg-gray-100": currentLanguage === "bs",
             }
           )}
         >
-          <span>{getUnicodeFlagIcon("BA")}</span>
-          <span>BiH</span>
+          <span className="text-lg">{getUnicodeFlagIcon("BA")}</span>
+          <span className="font-medium">BiH</span>
         </button>
 
         <button
-          onClick={() => {
-            i18n.changeLanguage("en");
-          }}
+          onClick={() => i18n.changeLanguage("en")}
           className={classNames(
-            "flex space-x-2 hover:bg-gray-200 py-2 rounded-xl pl-3 w-full",
+            "flex items-center gap-3 px-3 py-1 rounded-lg transition-colors duration-200",
+            "hover:bg-gray-100",
             {
-              "text-blue-600": currentLanguage === "en",
+              "text-primary bg-gray-100": currentLanguage === "en",
             }
           )}
         >
-          <span>{getUnicodeFlagIcon("GB")}</span>
-          <span>EN</span>
+          <span className="text-lg">{getUnicodeFlagIcon("US")}</span>
+          <span className="font-medium">EN</span>
         </button>
       </div>
     </div>

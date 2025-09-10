@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import PrimaryBtn from "./PrimaryBtn";
+import { useTranslation } from "react-i18next";
 import Tag from "./Tag";
 
 export const ProjectCard = ({ isActive, card, index }) => {
+  const { t } = useTranslation("projects");
+
   const shouldAnimate = index < 3;
 
   const delay = index === 0 || (index === 2 && shouldAnimate) ? 0 : 0.5;
@@ -37,7 +40,7 @@ export const ProjectCard = ({ isActive, card, index }) => {
               </div>
             </div>
 
-            <PrimaryBtn className="w-full">View live</PrimaryBtn>
+            <PrimaryBtn className="w-full">{t("buttonText")}</PrimaryBtn>
           </div>
         </div>
       </div>

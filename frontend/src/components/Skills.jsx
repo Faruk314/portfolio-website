@@ -92,7 +92,7 @@ const renderFrontendSkills = () => {
   return (
     <div>
       <p className="text-primary text-2xl md:text-3xl mb-2">Frontend</p>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-2 md:gap-4">
         {frontendSkills.map((item, index) => (
           <SkillItem
             key={item.name}
@@ -110,7 +110,7 @@ const renderBackendSkills = () => {
   return (
     <div>
       <p className="text-primary text-2xl md:text-3xl mb-2">Backend</p>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-2 md:gap-4">
         {backendSkills.map((item, index) => (
           <SkillItem
             key={item.name}

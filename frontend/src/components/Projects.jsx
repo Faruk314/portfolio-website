@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { ProjectSlider } from "./ProjectSlider";
 
 const Projects = () => {
-  const { t } = useTranslation("about");
+  const { t } = useTranslation("projects");
 
   return (
     <section
@@ -12,10 +12,10 @@ const Projects = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col items-center">
-          <h2 className="text-5xl md:text-[5rem] leading-none">My projects</h2>
-          <p className="text-primary text-2xl md:text-3xl">
-            Check out some of my recent work
-          </p>
+          <h2 className="text-5xl md:text-[5rem] leading-none">
+            {t("titleOne")}
+          </h2>
+          <p className="text-primary text-2xl md:text-3xl">{t("titleTwo")}</p>
         </div>
 
         <ProjectSlider />

@@ -105,7 +105,7 @@ const Contact = ({ setOpenContact }) => {
           className="flex flex-col items-center justify-center px-6 py-10 space-y-5 shadow-md md:p-20"
         >
           <div className="flex flex-col space-y-5 max-w-[30rem]">
-            <h2 className="text-2xl font-bold text-center md:text-4xl">
+            <h2 className="text-2xl text-center md:text-5xl">
               {t("contactTitle")}
             </h2>
             <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-2 md:items-center md:flex-row">
@@ -132,7 +132,7 @@ const Contact = ({ setOpenContact }) => {
             <div>
               <label className="md:text-[1.1rem]">{t("messageLabel")}</label>
               <textarea
-                rows={4}
+                rows={5}
                 className="w-full p-2 border border-gray-300 rounded-md focus:outline-none"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}

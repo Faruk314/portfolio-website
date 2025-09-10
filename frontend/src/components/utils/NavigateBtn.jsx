@@ -27,7 +27,7 @@ const NavigateBtn = () => {
     <div className="fixed bottom-5 right-5 md:bottom-10 md:right-10">
       {isVisible && (
         <button
-          className="bg-[#2b6faf] text-white rounded-full h-[3rem] w-[3rem] flex items-center justify-center"
+          className="bg-[#2b6faf] text-white rounded-full h-[3.5rem] w-[3.5rem] flex items-center justify-center"
           onClick={goTopHandler}
         >
           <IoIosArrowUp size={30} className="" />

@@ -23,7 +23,7 @@ const About = ({ setOpenContact }) => {
             alt="Logo"
             width={200}
             height={200}
-            className="md:hidden rounded-full"
+            className="md:hidden rounded-full unselectable"
           />
 
           <div
@@ -50,7 +50,7 @@ const About = ({ setOpenContact }) => {
           alt="Logo"
           width={370}
           height={370}
-          className="hidden md:block"
+          className="hidden md:block unselectable"
         />
       </div>
     </section>

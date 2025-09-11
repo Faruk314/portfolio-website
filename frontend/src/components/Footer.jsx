@@ -42,7 +42,7 @@ export const Footer = ({ setOpenContact }) => {
       style={{ backgroundImage: "url(/images/background.jpg)" }}
       className="relative bg-cover"
     >
-      <div className="absolute inset-0 bg-blue-200/10" />
+      <div className="absolute inset-0 bg-blue-300/10" />
 
       <div className="relative container mx-auto px-6 flex flex-col items-center text-center pt-20">
         <p className="text-4xl md:text-7xl">{t("contactTitle")}</p>
@@ -55,15 +55,15 @@ export const Footer = ({ setOpenContact }) => {
         </PrimaryBtn>
 
         {/* Footer/Nav */}
-        <div className="grid grid-cols-3 items-center w-full text-sm md:text-xl text-black/80 py-10 border-t-2 border-primary/40">
+        <div className="grid md:grid-cols-3 items-center w-full text-sm md:text-xl text-black/80 py-10 border-t-2 border-primary/40">
           {/* Left */}
-          <p className="justify-self-start">{`© ${new Date().getFullYear()} Faruk Spahic`}</p>
+          <p className="md:justify-self-start">{`© ${new Date().getFullYear()} Faruk Spahic`}</p>
 
           {/* Center Nav */}
           {renderNav()}
 
           {/* Right */}
-          <div className="flex justify-end space-x-6">
+          <div className="flex justify-center md:justify-end space-x-6">
             <a
               href="https://github.com/Faruk314"
               target="_blank"

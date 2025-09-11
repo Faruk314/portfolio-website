@@ -104,7 +104,7 @@ const Contact = ({ setOpenContact }) => {
           onSubmit={handleSubmit}
           className="flex flex-col items-center justify-center px-6 py-10 space-y-5 shadow-md md:p-20"
         >
-          <div className="flex flex-col space-y-5 max-w-[30rem]">
+          <div className="flex flex-col space-y-2 md:space-y-5 max-w-[30rem]">
             <h2 className="text-2xl text-center md:text-5xl">
               {t("contactTitle")}
             </h2>

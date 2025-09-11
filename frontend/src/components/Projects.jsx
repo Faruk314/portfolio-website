@@ -8,10 +8,10 @@ const Projects = () => {
     <section
       id="projects"
       style={{ backgroundImage: "url(/images/background.jpg)" }}
-      className="flex items-center bg-cover py-40"
+      className="flex items-center bg-cover py-20 md:py-40"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center text-center">
           <h2 className="text-5xl md:text-[5rem] leading-none">
             {t("titleOne")}
           </h2>

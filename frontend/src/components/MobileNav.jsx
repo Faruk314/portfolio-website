@@ -23,7 +23,7 @@ export const MobileNav = ({ setOpenContact }) => {
       />
 
       <nav
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-[18rem] bg-white shadow-lg z-50 transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } flex flex-col p-6 space-y-6`}
       >

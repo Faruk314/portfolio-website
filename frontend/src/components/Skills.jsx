@@ -69,7 +69,7 @@ export const Skills = () => {
     <section
       id="skills"
       style={{ backgroundImage: "url(/images/background.jpg)" }}
-      className="flex items-center bg-cover"
+      className="bg-cover"
     >
       <div className="container mx-auto">
         <div className="flex flex-col">

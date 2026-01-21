@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import AFarmLogo from "../components/utils/AfarmLogo";
 import Tag from "./Tag";
 
 export const ProjectCard = ({ isActive, card, index }) => {
@@ -27,7 +28,22 @@ export const ProjectCard = ({ isActive, card, index }) => {
       onClick={(e) => e.currentTarget.classList.toggle("flipped")}
     >
       <div className="card">
-        <img src={card.src} alt="Front" className="card-front" />
+        <div className="card-front bg-primary flex flex-col items-center justify-center p-8 comic-card">
+          <h2 className="text-5xl font-bold text-white mb-8 comic-text">
+            {card.name}
+          </h2>
+          <div className="flex-1 flex items-center justify-center">
+            {card.name === "A-FARM" ? (
+              <AFarmLogo />
+            ) : (
+              <img
+                src={card.logo}
+                alt={card.alt}
+                className="max-w-[250px] max-h-[250px] object-contain comic-logo"
+              />
+            )}
+          </div>
+        </div>
         <div className="card-back bg-gray-100 flex flex-col shadow-md">
           <img
             alt={card.alt}

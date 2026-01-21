@@ -8,7 +8,7 @@ const Navbar = ({ setOpenContact }) => {
   const { t } = useTranslation("navbar");
 
   return (
-    <nav className="md:bg-primary h-20 md:h-28 text-white bg-gray-100 shadow-[0_25px_40px_-12px_rgba(0,0,0,0.5)] z-20">
+    <nav className="md:bg-primary h-20 md:h-32 text-white bg-gray-100 z-20">
       <div className="container flex items-center justify-between h-full">
         <div className="text-6xl"></div>
 

@@ -73,6 +73,34 @@ body {
   transform: rotateY(180deg);
 }
 
+/* Comic book styles */
+.comic-card {
+  box-shadow: 
+    0 8px 0 rgba(0, 0, 0, 0.2),
+    0 16px 0 rgba(0, 0, 0, 0.1),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.comic-text {
+  text-shadow: 
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  letter-spacing: 1px;
+  font-family: "Bebas Neue", cursive;
+}
+
+.comic-logo {
+  filter: 
+    drop-shadow(3px 3px 0 #000)
+    drop-shadow(-1px -1px 0 #000)
+    drop-shadow(1px -1px 0 #000)
+    drop-shadow(-1px 1px 0 #000)
+    drop-shadow(1px 1px 0 #000);
+}
+
 @keyframes slideInFromUp {
   0% {
     transform: translateY(100%);
@@ -95,6 +123,30 @@ body {
   user-select: none;
 }
 
+@keyframes subtlePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(43, 111, 175, 0.4);
+  }
+  70% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 10px rgba(43, 111, 175, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(43, 111, 175, 0);
+  }
+}
+
+.profile-image-hover {
+  transition: all 0.3s ease;
+}
+
+.profile-image-hover:hover {
+  animation: subtlePulse 1.5s infinite;
+  transform: scale(1.02);
+}
+
 .swiper-pagination {
   display: flex;
   justify-content: center;
@@ -111,3 +163,93 @@ body {
   background-color: #2b6faf !important;
   opacity: 1;
 }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.skill-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.skill-float-delay-1 {
+  animation: float 3s ease-in-out infinite 0.5s;
+}
+
+.skill-float-delay-2 {
+  animation: float 3s ease-in-out infinite 1s;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(43, 111, 175, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(43, 111, 175, 0.5);
+  }
+}
+
+.skill-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bubbleAppear {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+  }
+  20%, 80% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.profile-image-float {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+.bubble-icon {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(43, 111, 175, 0.1);
+  backdrop-filter: blur(4px);
+  border: 2px solid rgba(43, 111, 175, 0.3);
+}
+
+.bubble-react {
+  animation: bubbleAppear 8s ease-in-out infinite;
+}
+
+.bubble-node {
+  animation: bubbleAppear 10s ease-in-out infinite 2s;
+}
+
+

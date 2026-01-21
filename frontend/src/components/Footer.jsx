@@ -38,21 +38,26 @@ export const Footer = ({ setOpenContact }) => {
   }
 
   return (
-    <section
-      style={{ backgroundImage: "url(/images/background.jpg)" }}
-      className="relative bg-cover"
-    >
+    <section className="relative">
       <div className="absolute inset-0 bg-blue-300/10" />
 
       <div className="relative container mx-auto px-6 flex flex-col items-center text-center pt-20">
-        <p className="text-4xl md:text-7xl">{t("contactTitle")}</p>
+        <div className="flex flex-col items-center text-center space-y-4 mb-20">
+          <span className="inline-block w-max px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-sm md:text-base">
+            KONTAKT INFO
+          </span>
 
-        <PrimaryBtn
-          onClick={() => setOpenContact(true)}
-          className="px-10 md:px-16 py-4 text-lg md:text-2xl mt-6 mb-20"
-        >
-          Get in touch
-        </PrimaryBtn>
+          <p className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            {t("contactTitle")}
+          </p>
+
+          <PrimaryBtn
+            onClick={() => setOpenContact(true)}
+            className="px-10 md:px-16 py-4 text-lg md:text-2xl mt-6 mb-20"
+          >
+            Get in touch
+          </PrimaryBtn>
+        </div>
 
         {/* Footer/Nav */}
         <div className="grid md:grid-cols-3 items-center w-full text-sm md:text-xl text-black/80 py-10 border-t-2 border-primary/40">

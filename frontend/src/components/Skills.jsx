@@ -66,60 +66,67 @@ export const Skills = () => {
   const { t } = useTranslation("technologies");
 
   return (
-    <section
-      id="skills"
-      style={{ backgroundImage: "url(/images/background.jpg)" }}
-      className="bg-cover"
-    >
+    <section id="skills" className="py-20 md:py-28">
       <div className="container mx-auto">
-        <div className="flex flex-col">
-          <h2 className="text-5xl md:text-[5rem] leading-none">
-            {t("mainTitle")}
-          </h2>
+        <div className="flex flex-col space-y-16">
+          {/* Header Section */}
+          <div className="text-center space-y-4">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-sm md:text-base">
+              TECHNICAL EXPERTISE
+            </span>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              My <span className="text-primary">Skills</span> & Technologies
+            </h2>
+            <p className="text-xl md:text-2xl text-primary max-w-3xl mx-auto">
+              A comprehensive toolkit for building modern, scalable web
+              applications
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-            {renderFrontendSkills()}
+          {/* Skills Grid */}
+          <div className="space-y-16">
+            {/* Frontend Skills */}
+            <div className="space-y-8">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-1 bg-primary rounded-full"></div>
+                <h3 className="text-3xl md:text-4xl font-bold">
+                  Frontend Development
+                </h3>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+                {frontendSkills.map((item, index) => (
+                  <SkillItem
+                    key={item.name}
+                    animationDuration={index * 50}
+                    name={item.name}
+                    icon={item.icon}
+                  />
+                ))}
+              </div>
+            </div>
 
-            {renderBackendSkills()}
+            {/* Backend Skills */}
+            <div className="space-y-8">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-1 bg-primary rounded-full"></div>
+                <h3 className="text-3xl md:text-4xl font-bold">
+                  Backend Development
+                </h3>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+                {backendSkills.map((item, index) => (
+                  <SkillItem
+                    key={item.name}
+                    animationDuration={index * 50}
+                    name={item.name}
+                    icon={item.icon}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
-
-const renderFrontendSkills = () => {
-  return (
-    <div>
-      <p className="text-primary text-2xl md:text-3xl mb-2">Frontend</p>
-      <div className="grid grid-cols-3 gap-2 md:gap-4">
-        {frontendSkills.map((item, index) => (
-          <SkillItem
-            key={item.name}
-            animationDuration={index * 100}
-            name={item.name}
-            icon={item.icon}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const renderBackendSkills = () => {
-  return (
-    <div>
-      <p className="text-primary text-2xl md:text-3xl mb-2">Backend</p>
-      <div className="grid grid-cols-3 gap-2 md:gap-4">
-        {backendSkills.map((item, index) => (
-          <SkillItem
-            key={item.name}
-            animationDuration={index * 100}
-            name={item.name}
-            icon={item.icon}
-          />
-        ))}
-      </div>
-    </div>
   );
 };

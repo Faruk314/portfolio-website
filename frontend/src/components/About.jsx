@@ -37,13 +37,13 @@ const About = ({ setOpenContact }) => {
           </div>
 
           <div
-            className={classNames("flex flex-col space-y-4 items-center md:items-start", {
+            className={classNames("flex flex-col space-y-4", {
               "transition-left": aboutVisible,
             })}
           >
-            <p className="inline-block w-max px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-sm md:text-base">
+            <span className="inline-block self-center md:self-start w-max px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-sm md:text-base">
               FARUK SPAHIC
-            </p>
+            </span>
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
               {t("title")}
             </h2>

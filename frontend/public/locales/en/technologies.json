@@ -1,5 +1,7 @@
 {
-  "mainTitle": "MY SKILLS",
-  "titleOne": "FRONTEND",
-  "titleTwo": "BACKEND"
+  "badgeText": "TECHNICAL EXPERTISE",
+  "mainTitle": "My Skills & Technologies",
+  "titleTwo": "A comprehensive toolkit for building modern, scalable web applications",
+  "frontendTitle": "Frontend Development",
+  "backendTitle": "Backend Development"
 }

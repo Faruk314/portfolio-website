@@ -43,13 +43,13 @@ const ClientProjects = () => {
       <div className="container mx-auto">
         <div className="text-center space-y-4">
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-sm md:text-base">
-            CLIENT PROJECTS
+            {t("badgeText")}
           </span>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            Projects for Clients
+            {t("titleOne")}
           </h2>
           <p className="text-xl md:text-2xl text-primary max-w-3xl mx-auto">
-            Professional work delivered to real clients
+            {t("titleTwo")}
           </p>
         </div>
 

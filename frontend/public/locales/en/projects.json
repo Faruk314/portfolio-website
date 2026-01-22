@@ -1,10 +1,9 @@
 {
-  "titleOne": "My projects",
-  "titleTwo": "Check out some of my recent work",
-  "buttonText": "View live",
   "aFarmText": "I created a Next.js e-commerce site for an herbal pharmacy, allowing customers to easily find natural remedies for their health needs.",
   "tuzlaTaxiText": "I developed a website for a taxi company in Tuzla, optimized for simple online booking and an improved user experience, enhancing the client’s digital presence.",
-  "chessText": "Online Chess game that lets players enjoy multiplayer matches with friends and build their friends list.",
-  "pokerText": "Online Poker game where players can create games, join existing poker rooms, and play real-time multiplayer matches with others.",
-  "echoText": "Video conferencing application with real-time communication, screen sharing, and chat features using WebRTC and Mediasoup."
+  "metalRemontText": "I developed a corporate website for Metal Remont, focusing on a professional design and clear information presentation to highlight their services and industry expertise.",
+  "badgeText": "CLIENT PROJECTS",
+  "titleOne": "Projects for Clients",
+  "titleTwo": "Professional work delivered to real clients",
+  "buttonText": "View live"
 }

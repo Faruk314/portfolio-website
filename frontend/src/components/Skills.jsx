@@ -72,14 +72,13 @@ export const Skills = () => {
           {/* Header Section */}
           <div className="text-center space-y-4">
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-sm md:text-base">
-              TECHNICAL EXPERTISE
+              {t("badgeText")}
             </span>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              My <span className="text-primary">Skills</span> & Technologies
+              {t("mainTitle")}
             </h2>
             <p className="text-xl md:text-2xl text-primary max-w-3xl mx-auto">
-              A comprehensive toolkit for building modern, scalable web
-              applications
+              {t("titleTwo")}
             </p>
           </div>
 
@@ -90,7 +89,7 @@ export const Skills = () => {
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-1 bg-primary rounded-full"></div>
                 <h3 className="text-3xl md:text-4xl font-bold">
-                  Frontend Development
+                  {t("frontendTitle")}
                 </h3>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
@@ -110,7 +109,7 @@ export const Skills = () => {
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-1 bg-primary rounded-full"></div>
                 <h3 className="text-3xl md:text-4xl font-bold">
-                  Backend Development
+                  {t("backendTitle")}
                 </h3>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">

@@ -1,10 +1,9 @@
 {
-  "titleOne": "Moji Projekti",
-  "titleTwo": "Pogledajte moje nedavne projekte",
-  "buttonText": "Pogledaj",
   "aFarmText": "Kreirao sam Next.js e-trgovinski sajt za biljnu apoteku koji omogućava kupcima da lako pronađu prirodne lekove prema svojim zdravstvenim potrebama.",
   "tuzlaTaxiText": "Razvio sam web sajt za taksi kompaniju u Tuzli, optimizovan za jednostavnu online rezervaciju i bolje korisničko iskustvo, čime je unaprijeđeno digitalno prisustvo klijenta.",
-  "chessText": "Online šah igra koja omogućava igračima da uživaju u multiplayer mečevima sa prijateljima i da grade svoju listu prijatelja.",
-  "pokerText": "Online poker igra u kojoj igrači mogu kreirati partije, pridružiti se postojećim sobama i igrati poker u stvarnom vremenu s drugim igračima.",
-  "echoText": "Aplikacija za video konferencije sa komunikacijom u realnom vremenu, dijeljenjem ekrana i chat funkcijama koristeći WebRTC i Mediasoup."
+  "metalRemontText": "Razvio sam web sajt za Metal Remont, fokusiran na profesionalan dizajn i jasnu prezentaciju informacija kako bih istakao njihove usluge i stručnost.",
+  "badgeText": "KLIJENTSKI PROJEKTI",
+  "titleOne": "Projekti za klijente",
+  "titleTwo": "Profesionalni rad isporučen klijentima",
+  "buttonText": "Pogledaj"
 }

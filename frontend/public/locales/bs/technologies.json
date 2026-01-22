@@ -1,5 +1,7 @@
 {
-  "mainTitle": "MY SKILLS",
-  "titleOne": "FRONTEND",
-  "titleTwo": "BACKEND"
+  "badgeText": "TEHNIČKA EKSPERTIZA",
+  "mainTitle": "Moje Vještine i Tehnologije",
+  "titleTwo": "Sveobuhvatan set alata za izradu modernih, skalabilnih web aplikacija",
+  "frontendTitle": "Frontend Razvoj",
+  "backendTitle": "Backend Razvoj"
 }

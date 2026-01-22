@@ -5,7 +5,7 @@ import PrimaryBtn from "./PrimaryBtn";
 import { FaGithub } from "react-icons/fa";
 
 const About = ({ setOpenContact }) => {
-  const { t } = useTranslation("about");
+  const { t } = useTranslation(["about", "common"]);
   const { ref: aboutRef, inView: aboutVisible } = useInView({
     triggerOnce: true,
   });
@@ -42,7 +42,7 @@ const About = ({ setOpenContact }) => {
             })}
           >
             <span className="inline-block self-center md:self-start w-max px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-sm md:text-base">
-              FARUK SPAHIC
+              {t("common:name")}
             </span>
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
               {t("title")}

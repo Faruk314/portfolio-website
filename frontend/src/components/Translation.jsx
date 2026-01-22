@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import classNames from "classnames";
 
 const Translation = ({ setOpenTranslations }) => {
-  const [t, i18n] = useTranslation("common");
+  const { i18n } = useTranslation("common");
   const currentLanguage = i18n.language;
   const modalRef = useRef();
 
@@ -20,12 +20,12 @@ const Translation = ({ setOpenTranslations }) => {
     return () => {
       document.removeEventListener("click", handleOutsideClick);
     };
-  }, []);
+  }, [setOpenTranslations]);
 
   return (
     <div
-      className="absolute top-12 right-0 w-40 bg-white rounded-2xl shadow-lg p-2 text-black 
-             border border-gray-100 animate-fadeIn"
+      className="absolute top-12 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-0 w-40 bg-white rounded-2xl shadow-lg p-2 text-black 
+             border border-gray-100 animate-fadeIn z-50"
     >
       <div ref={modalRef} className="flex flex-col gap-1">
         <button

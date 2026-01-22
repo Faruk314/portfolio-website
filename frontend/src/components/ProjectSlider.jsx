@@ -1,13 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { ProjectCard } from "./ProjectCard";
-import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/pagination";
 
 export const ProjectSlider = ({ projectCards }) => {
-  const { t } = useTranslation("projects");
-
   return (
     <div className="unselectable">
       <Swiper

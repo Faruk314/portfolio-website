@@ -3,7 +3,7 @@ import PrimaryBtn from "./PrimaryBtn";
 import { useTranslation } from "react-i18next";
 
 export const Footer = ({ setOpenContact }) => {
-  const { t } = useTranslation("contact");
+  const { t } = useTranslation(["contact", "common"]);
   const { t: tNav } = useTranslation("navbar");
 
   function renderNav() {
@@ -44,18 +44,18 @@ export const Footer = ({ setOpenContact }) => {
       <div className="relative container mx-auto px-6 flex flex-col items-center text-center pt-20">
         <div className="flex flex-col items-center text-center space-y-4 mb-20">
           <span className="inline-block w-max px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-sm md:text-base">
-            KONTAKT INFO
+            {t("common:contactInfo")}
           </span>
 
           <p className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            {t("contactTitle")}
+            {t("contact:contactTitle")}
           </p>
 
           <PrimaryBtn
             onClick={() => setOpenContact(true)}
             className="px-10 md:px-16 py-4 text-lg md:text-2xl mt-6 mb-20"
           >
-            Get in touch
+            {t("common:getInTouch")}
           </PrimaryBtn>
         </div>
 

@@ -1,0 +1,10 @@
+{
+  "badgeText": " PERSONAL PROJECTS",
+  "titleOne": "My projects",
+  "titleTwo": "Check out some of my recent work",
+  "buttonText": "View live",
+
+  "chessText": "Online Chess game that lets players enjoy multiplayer matches with friends and build their friends list.",
+  "pokerText": "Online Poker game where players can create games, join existing poker rooms, and play real-time multiplayer matches with others.",
+  "echoText": "Video conferencing application with real-time communication, screen sharing, and chat features using WebRTC and Mediasoup."
+}

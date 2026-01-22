@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { ProjectSlider } from "./ProjectSlider";
 
 const PersonalProjects = () => {
-  const { t } = useTranslation("projects");
+  const { t } = useTranslation("personalProjects");
 
   const projectCards = [
     {
@@ -66,7 +66,7 @@ const PersonalProjects = () => {
       <div className="container mx-auto">
         <div className="text-center space-y-4">
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-sm md:text-base">
-            PERSONAL PROJECTS
+            {t("badgeText")}
           </span>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
             {t("titleOne")}

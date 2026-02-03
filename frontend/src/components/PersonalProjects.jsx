@@ -15,7 +15,7 @@ const PersonalProjects = () => {
         "Typescript",
         "NodeJS",
         "Tailwind",
-        "MySQL",
+        "postgres",
         "Socket.io",
         "Redis",
       ],
@@ -49,12 +49,11 @@ const PersonalProjects = () => {
         "Typescript",
         "NodeJS",
         "Tailwind",
-        "WebRTC",
         "Socket.io",
         "Mediasoup",
       ],
-      image: "/images/placeholder-project.svg",
-      link: "#",
+      image: "/images/echoRoomImages/echoRoom.png",
+      link: "https://video-room.farukspahic.com/",
     },
   ];
 

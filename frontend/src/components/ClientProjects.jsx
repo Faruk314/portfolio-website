@@ -30,7 +30,7 @@ const ClientProjects = () => {
       alt: "MetalRemont",
       desc: t("metalRemontText"),
       technologies: ["React", "Tailwind"],
-      image: "/images/metalRemontImages/metalRemontLogo.png",
+      image: "/images/metalRemontImages/metalRemont.png",
       link: "https://www.metalremont.com/",
     },
   ];

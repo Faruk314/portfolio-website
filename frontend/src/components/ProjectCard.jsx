@@ -10,9 +10,7 @@ export const ProjectCard = ({ isActive, card, index }) => {
   const { t } = useTranslation("projects");
   const [showPreview, setShowPreview] = useState(false);
 
-  const shouldAnimate = index < 3;
-
-  const delay = index === 0 || (index === 2 && shouldAnimate) ? 0 : 0.5;
+  const delay = isActive ? 0 : 0.5;
 
   const handleImageClick = (e) => {
     e.stopPropagation();

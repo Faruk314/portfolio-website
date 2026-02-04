@@ -10,7 +10,14 @@ const Navbar = ({ setOpenContact }) => {
   return (
     <nav className="md:bg-primary h-20 md:h-32 text-white bg-gray-100 z-20">
       <div className="container flex items-center justify-between h-full">
-        <div className="text-6xl"></div>
+        <div className="flex items-center">
+          <img 
+            src="/images/logo.png" 
+            alt="Logo" 
+            className="h-16 md:h-24 w-auto object-contain cursor-pointer comic-logo"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          />
+        </div>
 
         <div className="hidden md:flex items-center space-x-6 text-3xl cursor-pointer">
           <TranslateBtn />

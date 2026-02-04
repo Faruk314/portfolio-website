@@ -252,4 +252,15 @@ body {
   animation: bubbleAppear 10s ease-in-out infinite 2s;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: #2b6faf !important;
+  font-weight: bold;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 2rem !important;
+}
+
 

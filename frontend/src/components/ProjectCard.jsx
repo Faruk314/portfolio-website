@@ -1,16 +1,23 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import { Maximize2 } from "lucide-react";
 import AFarmLogo from "../components/utils/AfarmLogo";
 import Tag from "./Tag";
 
-export const ProjectCard = ({ isActive, card, index }) => {
+export const ProjectCard = ({ isActive, card, index, onClick }) => {
   const { t } = useTranslation("projects");
   const [showPreview, setShowPreview] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
 
   const delay = isActive ? 0 : 0.5;
+
+  useEffect(() => {
+    if (!isActive) {
+      setIsFlipped(false);
+    }
+  }, [isActive]);
 
   const handleImageClick = (e) => {
     e.stopPropagation();
@@ -20,6 +27,15 @@ export const ProjectCard = ({ isActive, card, index }) => {
   const closePreview = (e) => {
     e?.stopPropagation();
     setShowPreview(false);
+  };
+
+  const handleMainAction = (e) => {
+    e.stopPropagation();
+    if (isActive) {
+      setIsFlipped(!isFlipped);
+    } else if (onClick) {
+      onClick();
+    }
   };
 
   return (
@@ -37,15 +53,19 @@ export const ProjectCard = ({ isActive, card, index }) => {
           },
         }}
         viewport={{ once: true }}
-        className="card-container h-[34rem] w-[20rem] md:w-[21rem] mx-auto h-[35rem] md:h-[40rem] my-10"
-        onClick={(e) => e.currentTarget.classList.toggle("flipped")}
+        className={`card-container h-[34rem] w-[20rem] md:w-[21rem] mx-auto h-[35rem] md:h-[40rem] my-10 ${
+          isFlipped ? "flipped" : ""
+        }`}
       >
         <div className="card">
-          <div className="card-front bg-primary flex flex-col items-center justify-center p-8 comic-card">
+          <div className="card-front bg-primary flex flex-col items-center justify-center p-8 comic-card cursor-default">
             <h2 className="text-5xl font-bold text-white mb-8 comic-text">
               {card.name}
             </h2>
-            <div className="flex-1 flex items-center justify-center">
+            <div 
+              className="flex-1 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300"
+              onClick={handleMainAction}
+            >
               {card.name === "A-FARM" ? (
                 <AFarmLogo />
               ) : (
@@ -57,7 +77,10 @@ export const ProjectCard = ({ isActive, card, index }) => {
               )}
             </div>
           </div>
-          <div className="card-back bg-gray-100 flex flex-col shadow-md">
+          <div 
+            className="card-back bg-gray-100 flex flex-col shadow-md cursor-pointer"
+            onClick={() => setIsFlipped(false)}
+          >
             <div
               className="relative group h-[20rem] w-full rounded-t-[1.4rem] overflow-hidden cursor-pointer"
               onClick={handleImageClick}

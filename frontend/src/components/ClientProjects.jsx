@@ -23,16 +23,16 @@ const ClientProjects = () => {
       image: "/images/AfarmImages/home.png",
       link: "https://afarm-biljoteka.com/",
     },
-    {
-      name: "METAL REMONT",
-      logo: "/images/metalRemontImages/metalRemontLogo.png",
-      src: "/images/cards/afarm.jpg",
-      alt: "MetalRemont",
-      desc: t("metalRemontText"),
-      technologies: ["React", "Tailwind"],
-      image: "/images/metalRemontImages/metalRemont.png",
-      link: "https://www.metalremont.com/",
-    },
+    // {
+    //   name: "METAL REMONT",
+    //   logo: "/images/metalRemontImages/metalRemontLogo.png",
+    //   src: "/images/cards/afarm.jpg",
+    //   alt: "MetalRemont",
+    //   desc: t("metalRemontText"),
+    //   technologies: ["React", "Tailwind"],
+    //   image: "/images/metalRemontImages/metalRemont.png",
+    //   link: "https://www.metalremont.com/",
+    // },
   ];
 
   return (

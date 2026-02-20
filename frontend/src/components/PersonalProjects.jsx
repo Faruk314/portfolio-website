@@ -50,6 +50,8 @@ const PersonalProjects = () => {
         "NodeJS",
         "Tailwind",
         "Socket.io",
+        "postgres",
+        "Redis",
         "Mediasoup",
       ],
       image: "/images/echoRoomImages/echoRoom.png",
